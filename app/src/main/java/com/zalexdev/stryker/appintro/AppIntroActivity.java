@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import androidx.core.view.WindowCompat;
 import com.airbnb.lottie.LottieAnimationView;
 import android.widget.LinearLayout;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.annotation.NonNull;
 import androidx.core.view.WindowInsetsCompat;
@@ -148,7 +147,7 @@ public class AppIntroActivity extends FragmentActivity {
         mPager.post(() -> bindChrome(mPager.getCurrentItem()));
     }
 
-    @override
+    @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
