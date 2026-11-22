@@ -20,9 +20,18 @@ import android.view.View;
 public class IntroBackgroundView extends View {
 
     private static final int[] LIGHT_BG = {0xFFFDFEFF, 0xFFECF5FF};
-    private static final int[] DARK_BG = {0xFF060E21, 0xFF02050D};
+    private static final int[] DARK_BG = {
+        0xFF050A0E,
+        0xFF020508
+    };
+
     private static final int[] LIGHT_BLOBS = {0xB866C2FF, 0x8C3894FF, 0xC794E0FF, 0x8052A8FF};
-    private static final int[] DARK_BLOBS = {0x991F6BFF, 0x804DB8FF, 0xA61A42D9, 0x805ABFFF};
+    private static final int[] DARK_BLOBS = {
+        0x9918C7E8,
+        0x80FF9A52,
+        0xA61A9AB8,
+        0x805ABFFF
+    };
 
     private static final float[][] BASE = {{-0.20f, -0.30f}, {0.24f, -0.05f}, {-0.14f, 0.20f}, {0.16f, 0.34f}};
     private static final float[] RADIUS = {0.22f, 0.19f, 0.21f, 0.16f};

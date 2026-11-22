@@ -1,3 +1,4 @@
+
 package com.zalexdev.stryker.appintro.slides;
 
 import android.content.Context;
@@ -18,26 +19,28 @@ import com.zalexdev.stryker.utils.Core;
 
 public class Slide1 extends Fragment implements IntroPage {
 
-    private static final int SIGNATURE_LAST_FRAME = 220;
-
-    private com.airbnb.lottie.LottieAnimationView hand;
-
     private Core core;
     private ViewPager2 mPager;
-    private MaterialCheckBox box1, box2, box3;
+
+    private MaterialCheckBox box1;
+    private MaterialCheckBox box2;
+    private MaterialCheckBox box3;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.new_slide1, container, false);
-        core = new Core(getContext());
-        mPager = requireActivity().findViewById(R.id.view_pager);
+    public View onCreateView(
+            LayoutInflater inflater,
+            @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState
+    ) {
+        View view = inflater.inflate(
+                R.layout.new_slide1,
+                container,
+                false
+        );
 
-        hand = view.findViewById(R.id.consent_hand);
-        hand.setMaxFrame(SIGNATURE_LAST_FRAME);
-        com.zalexdev.stryker.appintro.IntroLayout.centerOn(
-                hand, view.findViewById(R.id.consent_eyebrow));
+        core = new Core(requireContext());
+        mPager = requireActivity().findViewById(R.id.view_pager);
 
         box1 = view.findViewById(R.id.slide_checkbox);
         box2 = view.findViewById(R.id.slide_checkbox2);
@@ -46,22 +49,39 @@ public class Slide1 extends Fragment implements IntroPage {
         bindRow(view, R.id.consent_row_1, box1);
         bindRow(view, R.id.consent_row_2, box2);
         bindRow(view, R.id.consent_row_3, box3);
+
         return view;
+    }
+
+    private void bindRow(View root, int rowId, MaterialCheckBox box) {
+
+        // Checkbox itself handles direct checkbox taps.
+        box.setClickable(true);
+        box.setFocusable(true);
+
+        // Refresh Continue button whenever checked state changes.
+        box.setOnCheckedChangeListener((button, checked) -> {
+            refreshContinue();
+        });
+
+        // Tapping anywhere else on the row toggles the checkbox.
+        View row = root.findViewById(rowId);
+
+        row.setOnClickListener(v -> {
+            box.setChecked(!box.isChecked());
+        });
+    }
+
+    private void refreshContinue() {
+        if (getActivity() instanceof AppIntroActivity) {
+            ((AppIntroActivity) getActivity()).refreshPrimary();
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (hand != null && hand.getProgress() == 0f) hand.playAnimation();
-    }
-
-    private void bindRow(View root, int rowId, MaterialCheckBox box) {
-        root.findViewById(rowId).setOnClickListener(v -> {
-            box.setChecked(!box.isChecked());
-            if (getActivity() instanceof AppIntroActivity) {
-                ((AppIntroActivity) getActivity()).refreshPrimary();
-            }
-        });
+        refreshContinue();
     }
 
     @Override
@@ -71,13 +91,18 @@ public class Slide1 extends Fragment implements IntroPage {
 
     @Override
     public boolean primaryEnabled() {
-        return box1 != null && box1.isChecked()
-                && box2 != null && box2.isChecked()
-                && box3 != null && box3.isChecked();
+        return box1 != null
+                && box2 != null
+                && box3 != null
+                && box1.isChecked()
+                && box2.isChecked()
+                && box3.isChecked();
     }
 
     @Override
     public void onPrimary() {
+        if (!primaryEnabled()) return;
+
         core.moveNext(mPager);
     }
 }

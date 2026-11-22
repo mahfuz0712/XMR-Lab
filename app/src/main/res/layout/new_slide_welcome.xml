@@ -1,30 +1,47 @@
+
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/IntroContent">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/welcome_wave"
-        android:tag="intro_autoplay"
-        android:layout_width="84dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="4dp"
-        app:lottie_colorFilter="@color/intro_text"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/waving_hand" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="vertical">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/welcome_eyebrow"
-        style="@style/IntroEyebrow"
-        android:text="@string/intro_eyebrow_welcome" />
+    <LinearLayout
+        style="@style/IntroContent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingTop="64dp"
+        android:paddingBottom="116dp"
+        android:gravity="center_vertical">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/welcome_title"
-        style="@style/IntroTitle"
-        android:text="@string/intro_welcome_title" />
+        <com.zalexdev.stryker.appintro.MuxIntroGraphic
+            android:id="@+id/welcome_mark"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/welcome_subtitle"
-        style="@style/IntroSubtitle"
-        android:text="@string/intro_welcome_body" />
-</LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcome_eyebrow"
+            style="@style/IntroEyebrow"
+            android:layout_gravity="center_horizontal"
+            android:text="XMR LAB // INITIALIZATION" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcome_title"
+            style="@style/IntroTitle"
+            android:gravity="center"
+            android:text="Welcome to MUX" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcome_subtitle"
+            style="@style/IntroSubtitle"
+            android:gravity="center"
+            android:text="A mobile Linux security environment. Configure your system and prepare your workspace." />
+
+    </LinearLayout>
+
+</ScrollView>

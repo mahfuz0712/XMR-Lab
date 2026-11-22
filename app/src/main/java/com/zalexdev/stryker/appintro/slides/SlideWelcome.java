@@ -1,3 +1,4 @@
+
 package com.zalexdev.stryker.appintro.slides;
 
 import android.content.Context;
@@ -17,24 +18,28 @@ import com.zalexdev.stryker.appintro.IntroPage;
 
 public class SlideWelcome extends Fragment implements IntroPage {
 
-    private static final long ENTER_MS = 620L;
-    private static final float RISE_DP = 26f;
+    private static final long ENTER_MS = 650L;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.new_slide_welcome, container, false);
+    public View onCreateView(
+            @NonNull LayoutInflater inflater,
+            @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState
+    ) {
+        View view = inflater.inflate(
+                R.layout.new_slide_welcome,
+                container,
+                false
+        );
 
-        com.zalexdev.stryker.appintro.IntroLayout.centerOn(
-                view.findViewById(R.id.welcome_wave),
-                view.findViewById(R.id.welcome_eyebrow));
+        float rise = 20f * getResources()
+                .getDisplayMetrics().density;
 
-        float rise = RISE_DP * getResources().getDisplayMetrics().density;
-        enter(view.findViewById(R.id.welcome_wave), 60L, rise);
-        enter(view.findViewById(R.id.welcome_eyebrow), 140L, rise);
-        enter(view.findViewById(R.id.welcome_title), 240L, rise);
-        enter(view.findViewById(R.id.welcome_subtitle), 340L, rise);
+        enter(view.findViewById(R.id.welcome_mark), 50L, rise);
+        enter(view.findViewById(R.id.welcome_eyebrow), 130L, rise);
+        enter(view.findViewById(R.id.welcome_title), 220L, rise);
+        enter(view.findViewById(R.id.welcome_subtitle), 310L, rise);
 
         return view;
     }
@@ -46,14 +51,20 @@ public class SlideWelcome extends Fragment implements IntroPage {
 
     @Override
     public void onPrimary() {
-        ViewPager2 pager = requireActivity().findViewById(R.id.view_pager);
-        if (pager != null) pager.setCurrentItem(pager.getCurrentItem() + 1);
+        ViewPager2 pager = requireActivity()
+                .findViewById(R.id.view_pager);
+
+        if (pager != null) {
+            pager.setCurrentItem(pager.getCurrentItem() + 1, true);
+        }
     }
 
     private void enter(View view, long delay, float fromY) {
         if (view == null) return;
+
         view.setAlpha(0f);
         view.setTranslationY(fromY);
+
         view.animate()
                 .alpha(1f)
                 .translationY(0f)

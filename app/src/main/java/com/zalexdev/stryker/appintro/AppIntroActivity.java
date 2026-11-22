@@ -1,5 +1,4 @@
 package com.zalexdev.stryker.appintro;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,21 +6,18 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.core.view.WindowCompat;
 import com.airbnb.lottie.LottieAnimationView;
 import android.widget.LinearLayout;
-
-import androidx.activity.EdgeToEdge;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.annotation.NonNull;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
-
 import com.google.android.material.button.MaterialButton;
 import com.zalexdev.stryker.R;
 import com.zalexdev.stryker.appintro.slides.Slide1;
@@ -34,7 +30,6 @@ import com.zalexdev.stryker.appintro.slides.SlidePCheck;
 import com.zalexdev.stryker.appintro.slides.SlideQemuInstall;
 import com.zalexdev.stryker.appintro.slides.SlideWelcome;
 import com.zalexdev.stryker.engine.EngineType;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -95,8 +90,9 @@ public class AppIntroActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_app_intro);
+        WindowCompat.setDecorFitsSystemWindows(getWindow(),false);
+        hideSystemBars();
 
         mPager = findViewById(R.id.view_pager);
         background = findViewById(R.id.intro_background);
@@ -104,7 +100,7 @@ public class AppIntroActivity extends FragmentActivity {
         primary = findViewById(R.id.intro_primary);
         bottomBar = findViewById(R.id.intro_bottom_bar);
         wordmark = findViewById(R.id.intro_wordmark);
-        applyWindowInsets();
+
         setUpSwipes();
 
         if (isMigration()) pages.remove(Page.WELCOME);
@@ -150,6 +146,14 @@ public class AppIntroActivity extends FragmentActivity {
 
         buildDots();
         mPager.post(() -> bindChrome(mPager.getCurrentItem()));
+    }
+
+    @override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            hideSystemBars();
+        }
     }
 
     private final java.util.Map<Fragment, java.util.List<LottieAnimationView>> pausedAnimations =
@@ -202,22 +206,14 @@ public class AppIntroActivity extends FragmentActivity {
         for (int i = 0; i < g.getChildCount(); i++) collectLottie(g.getChildAt(i), out);
     }
 
-    private void applyWindowInsets() {
-        final int wordmarkTop = wordmark.getPaddingTop();
-        final int barBottom = bottomBar.getPaddingBottom();
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content),
-                (v, windowInsets) -> {
-                    Insets bars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
-                    ViewGroup.MarginLayoutParams lp =
-                            (ViewGroup.MarginLayoutParams) wordmark.getLayoutParams();
-                    lp.topMargin = bars.top + wordmarkTop;
-                    wordmark.setLayoutParams(lp);
 
-                    bottomBar.setPadding(bottomBar.getPaddingLeft(), bottomBar.getPaddingTop(),
-                            bottomBar.getPaddingRight(), barBottom + bars.bottom);
-                    mPager.setPadding(0, 0, 0, bars.bottom);
-                    return windowInsets;
-                });
+    private void hideSystemBars() {
+        WindowInsetsControllerCompat controller = WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView());
+        controller.hide(WindowInsetsCompat.Type.systemBars());
+        controller.setSystemBarsBehavior(
+            WindowInsetsControllerCompat
+            .BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        );
     }
 
     private void setUpSwipes() {

@@ -1,67 +1,85 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/IntroContent">
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/consent_hand"
-        android:layout_width="91dp"
-        android:layout_height="91dp"
-        android:layout_marginBottom="4dp"
-        app:lottie_colorFilter="@color/intro_text"
-        app:lottie_loop="false"
-        app:lottie_rawRes="@raw/signing_hand" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/consent_eyebrow"
-        style="@style/IntroEyebrow"
-        android:text="@string/intro_eyebrow_consent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        style="@style/IntroTitle"
-        android:text="@string/intro_consent_title" />
-
-    <com.google.android.material.textview.MaterialTextView
-        style="@style/IntroSubtitle"
-        android:text="@string/intro_consent_body" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="vertical">
 
     <LinearLayout
-        android:id="@+id/consent_row_1"
-        style="@style/IntroConsentRow">
+        style="@style/IntroContent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingTop="64dp"
+        android:paddingBottom="116dp"
+        android:gravity="center_vertical">
 
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/slide_checkbox"
-            style="@style/IntroConsentBox" />
-
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/IntroConsentText"
-            android:text="@string/consent_authorized" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/consent_row_2"
-        style="@style/IntroConsentRow">
-
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/slide_checkbox2"
-            style="@style/IntroConsentBox" />
+        <com.zalexdev.stryker.appintro.MuxIntroGraphic
+            android:id="@+id/consent_mark"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp" />
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/IntroConsentText"
-            android:text="@string/consent_responsibility" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/consent_row_3"
-        style="@style/IntroConsentRow">
-
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/slide_checkbox3"
-            style="@style/IntroConsentBox" />
+            android:id="@+id/consent_eyebrow"
+            style="@style/IntroEyebrow"
+            android:layout_gravity="center_horizontal"
+            android:text="MUX // SECURITY PROTOCOL" />
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/IntroConsentText"
-            android:text="@string/consent_permitted" />
+            style="@style/IntroTitle"
+            android:text="Before we begin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/IntroSubtitle"
+            android:text="Please review and confirm all three statements before continuing." />
+
+        <LinearLayout
+            android:id="@+id/consent_row_1"
+            style="@style/IntroConsentRow">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/slide_checkbox"
+                style="@style/IntroConsentBox" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/IntroConsentText"
+                android:text="@string/consent_authorized" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/consent_row_2"
+            style="@style/IntroConsentRow">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/slide_checkbox2"
+                style="@style/IntroConsentBox" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/IntroConsentText"
+                android:text="@string/consent_responsibility" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/consent_row_3"
+            style="@style/IntroConsentRow">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/slide_checkbox3"
+                style="@style/IntroConsentBox" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/IntroConsentText"
+                android:text="@string/consent_permitted" />
+
+        </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+
+</ScrollView>
