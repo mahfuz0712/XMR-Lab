@@ -23,10 +23,11 @@
         android:layout_gravity="top|start"
         android:layout_marginStart="28dp"
         android:layout_marginTop="22dp"
-        android:letterSpacing="0.01"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.08"
         android:text="XMR LAB"
-        android:textColor="@color/intro_text"
-        android:textSize="15sp"
+        android:textColor="?attr/muxPrimary"
+        android:textSize="13sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -55,6 +56,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/intro_primary"
+            style="@style/Widget.Mux.Button"
             android:layout_width="wrap_content"
             android:layout_height="52dp"
             android:insetTop="0dp"
@@ -62,11 +64,6 @@
             android:minWidth="120dp"
             android:paddingStart="28dp"
             android:paddingEnd="28dp"
-            android:textAllCaps="false"
-            android:textColor="@color/intro_button_text"
-            android:textSize="15sp"
-            app:backgroundTint="@color/intro_button_bg"
-            app:cornerRadius="26dp"
-            app:elevation="0dp" />
+            android:textSize="14sp" />
     </LinearLayout>
 </FrameLayout>

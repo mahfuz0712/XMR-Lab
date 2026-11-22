@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="intro_view_logs">VIEW LOGS ↗</string>
+    <string name="install_state_running">Installing</string>
+    <string name="install_state_done">Installed</string>
+    <string name="install_state_failed">Install failed</string>
+</resources>

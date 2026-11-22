@@ -5,12 +5,12 @@
     </style>
 
     <style name="Widget.Stryker.Button" parent="Widget.Material3.Button">
-        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:fontFamily">monospace</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="Widget.Stryker.TextView" parent="android:TextAppearance.Material.Widget.TextView">
-        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:fontFamily">monospace</item>
     </style>
 
     <style name="Widget.Stryker.CustomBottomSheetStyle" parent="Widget.Material3.BottomSheet.Modal">
@@ -19,9 +19,9 @@
     </style>
 
     <style name="ShapeAppearance.Stryker.BottomSheet" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopLeft">22dp</item>
-        <item name="cornerSizeTopRight">22dp</item>
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">13dp</item>
         <item name="cornerSizeBottomLeft">0dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
@@ -50,6 +50,7 @@
 
     <style name="Widget.Stryker.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:background">@color/light_contrast</item>
+        <item name="dialogCornerRadius">0dp</item>
     </style>
 
     <style name="Widget.Stryker.Switch" parent="Widget.Material3.CompoundButton.Switch">
@@ -57,7 +58,7 @@
     </style>
 
     <style name="ThemeOverlay.App.Switch" parent="">
-        <item name="colorOnSurface">#B518C7E8</item>
+        <item name="colorOnSurface">#B528D8EF</item>
         <item name="colorSecondary">@color/stryker_accent</item>
     </style>
 

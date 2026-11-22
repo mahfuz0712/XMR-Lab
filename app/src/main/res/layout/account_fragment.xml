@@ -38,7 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:elevation="6dp"
-            app:cardCornerRadius="15dp"
             app:strokeColor="@color/grey"
             app:strokeWidth="1dp">
 
@@ -93,7 +92,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:elevation="6dp"
-            app:cardCornerRadius="15dp"
             app:strokeColor="@color/grey"
             app:strokeWidth="1dp">
 

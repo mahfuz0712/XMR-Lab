@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="14dp"
     app:cardBackgroundColor="@color/light_contrast"
-    app:cardCornerRadius="22dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/light_lite_contrast"
     app:strokeWidth="1dp">
@@ -531,7 +530,6 @@
                 android:layout_marginEnd="16dp"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="14dp"
                 app:cardElevation="0dp"
                 app:strokeColor="#43A047"
                 app:strokeWidth="1dp">
@@ -627,7 +625,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/hydra_btn_stop"
-                    style="@style/Widget.Material3.Button.TonalButton"
+                    style="@style/Widget.Mux.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -642,7 +640,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/hydra_btn_close"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

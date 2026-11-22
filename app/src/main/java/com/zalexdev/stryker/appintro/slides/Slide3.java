@@ -140,7 +140,7 @@ public class Slide3 extends Fragment implements IntroPage {
         started = true;
         failed = false;
         refreshChrome();
-        setStatus(StatusKind.RUNNING, "XMR Lab chroot", "Starting...");
+        setStatus(StatusKind.RUNNING, context.getString(R.string.install_state_running), "Starting...");
         log(LogLevel.INFO, "Architecture: arm64-v8a");
         log(LogLevel.INFO, "XMR Lab " + BuildConfig.VERSION_NAME + " · build " + BuildConfig.VERSION_CODE);
         if (activity instanceof AppIntroActivity && ((AppIntroActivity) activity).isUpdate()) {
@@ -223,7 +223,7 @@ public class Slide3 extends Fragment implements IntroPage {
                     log(LogLevel.SUCCESS, "Version marker written");
 
                     markStage(InstallStage.DONE, RowState.DONE);
-                    setStatus(StatusKind.SUCCESS, "XMR Lab chroot",
+                    setStatus(StatusKind.SUCCESS, context.getString(R.string.install_state_done),
                             "Installation complete — moving on...");
                     log(LogLevel.SUCCESS, "All stages passed");
 
@@ -246,7 +246,7 @@ public class Slide3 extends Fragment implements IntroPage {
     }
 
     private void failWith(String reason) {
-        setStatus(StatusKind.FAILED, "XMR Lab chroot", reason);
+        setStatus(StatusKind.FAILED, context.getString(R.string.install_state_failed), reason);
         log(LogLevel.ERROR, reason);
         runOnUi(() -> {
             progress.setIndeterminate(false);

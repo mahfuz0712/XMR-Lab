@@ -18,7 +18,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_rec_back"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Widget.Mux.Button.Ghost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:minWidth="0dp"
@@ -42,7 +42,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_rec_refresh"
-            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            style="@style/Widget.Mux.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:contentDescription="@string/wpair_recordings_refresh"

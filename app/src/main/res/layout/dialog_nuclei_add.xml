@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
     app:cardBackgroundColor="@color/light_contrast"
-    app:cardCornerRadius="22dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/light_lite_contrast"
     app:strokeWidth="1dp">
@@ -127,7 +126,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/nuclei_cancel"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nuclei_dialog_cancel"

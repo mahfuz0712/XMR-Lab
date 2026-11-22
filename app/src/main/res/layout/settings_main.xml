@@ -59,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="18dp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/light_lite_contrast"
                 app:strokeWidth="1dp">
@@ -126,7 +125,6 @@
                 android:layout_marginBottom="10dp"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="18dp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/light_lite_contrast"
                 app:strokeWidth="1dp">
@@ -205,7 +203,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -594,7 +591,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -810,7 +806,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -956,7 +951,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -1095,7 +1089,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -1174,7 +1167,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">

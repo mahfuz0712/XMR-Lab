@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="intro_eyebrow_welcome">欢迎</string>
-    <string name="intro_eyebrow_consent">开始之前</string>
     <string name="intro_eyebrow_check">设备</string>
     <string name="intro_eyebrow_engine">引擎</string>
     <string name="intro_eyebrow_access">权限</string>
     <string name="intro_eyebrow_install">安装</string>
     <string name="intro_eyebrow_ready">就绪</string>
 
-    <string name="intro_welcome_title">口袋里的\n渗透测试实验室</string>
-    <string name="intro_welcome_body">用手机扫描、审计和破解网络。设置只需几分钟。</string>
 
-    <string name="intro_consent_title">仅限\n授权测试</string>
-    <string name="intro_consent_body">安装任何内容之前，需要您同意三件事。</string>
 
     <string name="intro_caps_title">正在检查
 此设备</string>
@@ -26,7 +20,6 @@
     <string name="intro_pcheck_title">此设备上\n哪些功能可用</string>
     <string name="intro_pcheck_body">在安装任何内容之前，先快速查看硬件。</string>
 
-    <string name="intro_install_title">正在设置</string>
     <string name="intro_install_body">需要几分钟。您可以离开此页面。</string>
 
     <string name="intro_ready_title">一切就绪</string>
@@ -35,7 +28,6 @@
     <string name="intro_action_continue">继续</string>
     <string name="intro_action_start">开始使用</string>
     <string name="intro_action_grant">授予权限</string>
-    <string name="intro_action_install">安装</string>
     <string name="intro_action_launch">启动 Stryker</string>
     <string name="intro_action_retry">重试</string>
 
@@ -61,7 +53,6 @@
     <string name="perm_battery_ok">已免除优化</string>
     <string name="perm_battery_pending">让长时间扫描保持运行</string>
     <string name="perm_denied_title">未授予</string>
-    <string name="intro_action_check_again">重新检查</string>
 
     <string name="engine_chroot_name">Root</string>
     <string name="engine_chroot_line">最快。直接使用设备内核和 Wi-Fi。</string>

@@ -35,7 +35,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nmap_full_close"
-            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+            style="@style/Widget.Mux.IconButton"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginStart="8dp"

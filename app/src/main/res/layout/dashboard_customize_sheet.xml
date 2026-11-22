@@ -50,7 +50,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/customize_all"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="0dp"
@@ -58,7 +58,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/customize_none"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="0dp"

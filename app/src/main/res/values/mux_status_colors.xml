@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mux_success">#FF35D58B</color>
+    <color name="mux_terminal_bg">#FF050D13</color>
+    <color name="mux_track">#FF102A36</color>
+</resources>

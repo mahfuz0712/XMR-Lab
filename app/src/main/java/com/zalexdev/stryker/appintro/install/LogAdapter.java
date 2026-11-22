@@ -1,8 +1,6 @@
 package com.zalexdev.stryker.appintro.install;
 
 import android.content.Context;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zalexdev.stryker.R;
+import com.zalexdev.stryker.mux.MuxColors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,25 +85,13 @@ public final class LogAdapter extends RecyclerView.Adapter<LogAdapter.VH> {
     @Override
     public void onBindViewHolder(@NonNull VH holder, int position) {
         LogLine line = lines.get(position);
-        int color = colorFor(line.level);
-        String chipText = chipFor(line.level);
+        MuxColors mux = MuxColors.resolve(context);
 
-        holder.chip.setText(chipText);
-        holder.chip.setTextColor(color);
-
-        if (holder.chip.getBackground() instanceof GradientDrawable) {
-            GradientDrawable bg = (GradientDrawable) holder.chip.getBackground().mutate();
-            bg.setColor((color & 0x00FFFFFF) | 0x33000000);
-            holder.chip.setBackground(bg);
-        } else {
-            holder.chip.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_IN);
-            holder.chip.getBackground().setAlpha(60);
-        }
+        holder.chip.setText(chipFor(line.level));
+        holder.chip.setTextColor(colorFor(line.level, mux));
 
         holder.text.setText(stripPrefix(line.text));
-        holder.text.setTextColor(line.level == LogLevel.ERROR
-                ? ContextCompat.getColor(context, R.color.red)
-                : ContextCompat.getColor(context, R.color.night_contrast));
+        holder.text.setTextColor(line.level == LogLevel.ERROR ? mux.danger : mux.text);
     }
 
     @Override
@@ -112,30 +99,21 @@ public final class LogAdapter extends RecyclerView.Adapter<LogAdapter.VH> {
         return lines.size();
     }
 
-    private int colorFor(LogLevel level) {
-        int res;
+    private int colorFor(LogLevel level, MuxColors mux) {
         switch (level) {
             case SUCCESS:
-                res = R.color.green;
-                break;
+                return ContextCompat.getColor(context, R.color.mux_success);
             case WARN:
-                res = R.color.yellow;
-                break;
-            case ERROR:
-                res = R.color.red;
-                break;
-            case CMD:
-                res = R.color.stryker_accent;
-                break;
             case STEP:
-                res = R.color.stryker_accent_contrast;
-                break;
+                return mux.accent;
+            case ERROR:
+                return mux.danger;
+            case CMD:
+                return mux.primary;
             case INFO:
             default:
-                res = R.color.grey;
-                break;
+                return mux.dim;
         }
-        return ContextCompat.getColor(context, res);
     }
 
     private static String chipFor(LogLevel level) {

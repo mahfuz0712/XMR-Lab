@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Quiet button: transparent fill, dim border and text (Close, Back, Skip) -->
+    <style name="Widget.Mux.Button.Ghost" parent="Widget.Mux.Button">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">?attr/muxDim</item>
+        <item name="iconTint">?attr/muxDim</item>
+        <item name="android:textColor">?attr/muxDim</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+
+    <!-- Icon-only square button, same cut corners as Widget.Mux.Button -->
+    <style name="Widget.Mux.IconButton" parent="Widget.Material3.Button.IconButton.Outlined">
+        <item name="shapeAppearance">@style/ShapeAppearance.Mux.Small</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+        <item name="strokeColor">@color/mux_button_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@color/mux_button_fill</item>
+        <item name="rippleColor">@color/mux_button_ripple</item>
+        <item name="iconTint">@color/mux_button_text</item>
+    </style>
+</resources>
