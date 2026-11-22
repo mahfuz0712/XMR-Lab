@@ -55,7 +55,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ide_save_btn"
-                    style="@style/Widget.Material3.Button.IconButton"
+                    style="@style/Widget.Mux.IconButton"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:contentDescription="@string/hid_save_to_library"
@@ -189,7 +189,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/ide_console_btn"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="0dp"
@@ -200,7 +200,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/ide_stop_btn"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:enabled="false"
@@ -236,7 +236,6 @@
             android:layout_marginBottom="56dp"
             android:visibility="gone"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -266,7 +265,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/ide_console_clear_btn"
-                        style="@style/Widget.Material3.Button.TextButton"
+                        style="@style/Widget.Mux.Button.Ghost"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:minWidth="0dp"
@@ -275,7 +274,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/ide_console_close_btn"
-                        style="@style/Widget.Material3.Button.IconButton"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:icon="@drawable/close"
@@ -319,7 +318,6 @@
         android:layout_gravity="end"
         android:visibility="gone"
         app:cardBackgroundColor="@color/light_contrast"
-        app:cardCornerRadius="0dp"
         app:cardElevation="12dp"
         app:strokeColor="@color/light_lite_contrast"
         app:strokeWidth="1dp">
@@ -352,7 +350,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/ide_caps_close_btn"
-                        style="@style/Widget.Material3.Button.IconButton"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:icon="@drawable/close"
@@ -402,7 +400,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ide_caps_refresh_btn"
-                    style="@style/Widget.Material3.Button.TonalButton"
+                    style="@style/Widget.Mux.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

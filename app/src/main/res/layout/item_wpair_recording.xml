@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     app:cardBackgroundColor="@color/light_contrast"
-    app:cardCornerRadius="16dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/light_lite_contrast"
     app:strokeWidth="1dp">
@@ -61,7 +60,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_rec_play"
-            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            style="@style/Widget.Mux.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:layout_marginEnd="4dp"
@@ -72,7 +71,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_rec_share"
-            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            style="@style/Widget.Mux.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:layout_marginEnd="4dp"
@@ -83,7 +82,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_rec_delete"
-            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            style="@style/Widget.Mux.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             app:icon="@drawable/delete"

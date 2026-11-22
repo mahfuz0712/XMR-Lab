@@ -63,7 +63,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/tool_delete"
-            style="@style/Widget.Material3.Button.OutlinedButton"
+            style="@style/Widget.Mux.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="0dp"

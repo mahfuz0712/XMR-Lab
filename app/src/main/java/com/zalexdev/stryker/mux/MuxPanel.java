@@ -16,8 +16,8 @@ import java.util.Locale;
 import com.zalexdev.stryker.R;
 
 /**
- * MUX HUD panel: translucent fill, 1dp border, top-left and bottom-right corners cut,
- * bright L-shaped ticks on the other two corners, optional small title with an amber marker.
+ * HUD panel: translucent fill, 1dp border, top-right corner cut with a bright edge,
+ * optional small title with an amber marker.
  *
  * Usage:
  * <pre>
@@ -43,7 +43,6 @@ public class MuxPanel extends FrameLayout {
 
     private final float density;
     private final float strokeW;
-    private final float tickLen;
     private final float tickW;
     private float cut;
 
@@ -63,9 +62,8 @@ public class MuxPanel extends FrameLayout {
         super(context, attrs, defStyleAttr);
         density = getResources().getDisplayMetrics().density;
         strokeW = density;
-        tickLen = 10f * density;
         tickW = 2f * density;
-        cut = 12f * density;
+        cut = 13f * density;
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MuxPanel, defStyleAttr, 0);
         try {
@@ -141,25 +139,20 @@ public class MuxPanel extends FrameLayout {
         float half = strokeW / 2f;
         float c = Math.min(cut, Math.min(w, h) / 2f);
 
+        // Only the top-right corner is cut.
         shape.reset();
-        shape.moveTo(half + c, half);
-        shape.lineTo(w - half, half);
-        shape.lineTo(w - half, h - half - c);
-        shape.lineTo(w - half - c, h - half);
+        shape.moveTo(half, half);
+        shape.lineTo(w - half - c, half);
+        shape.lineTo(w - half, half + c);
+        shape.lineTo(w - half, h - half);
         shape.lineTo(half, h - half);
-        shape.lineTo(half, half + c);
         shape.close();
 
+        // Bright 2dp edge along the cut.
         float tw = tickW / 2f;
         ticks.reset();
-        // top-right
-        ticks.moveTo(w - tickLen, tw);
-        ticks.lineTo(w - tw, tw);
-        ticks.lineTo(w - tw, tickLen);
-        // bottom-left
-        ticks.moveTo(tw, h - tickLen);
-        ticks.lineTo(tw, h - tw);
-        ticks.lineTo(tickLen, h - tw);
+        ticks.moveTo(w - c - tw, tw);
+        ticks.lineTo(w - tw, c + tw);
     }
 
     @Override

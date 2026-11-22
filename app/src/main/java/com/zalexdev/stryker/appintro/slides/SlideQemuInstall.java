@@ -257,7 +257,8 @@ public class SlideQemuInstall extends Fragment implements IntroPage {
             progress.setVisibility(View.VISIBLE);
             progress.setIndeterminate(true);
         });
-        setStatus(StatusKind.RUNNING, engine.displayName(), "Installing…");
+        setEngineEyebrow(engine.displayName());
+        setStatus(StatusKind.RUNNING, context.getString(R.string.install_state_running), engine.displayName());
         log(LogLevel.STEP, "Installing " + engine.displayName());
         log(LogLevel.INFO, QemuInstaller.assetsPresent(context)
                 ? "Artifacts bundled in the APK — installing offline"
@@ -280,7 +281,7 @@ public class SlideQemuInstall extends Fragment implements IntroPage {
                 + core.getInt("rootless_ram", VmSpecs.DEFAULT_RAM_MB) + " MB)");
 
         runOnUi(() -> downloadText.setText(""));
-        setStatus(StatusKind.RUNNING, engine.displayName(), "Booting — the first boot is slow");
+        setStatus(StatusKind.RUNNING, context.getString(R.string.install_state_running), "Booting — the first boot is slow");
         log(LogLevel.STEP, "Booting " + engine.displayName()
                 + " for the first time · waiting for the guest's SSH");
         if (candidate == EngineType.UML) logUmlProbeNotes();
@@ -444,7 +445,7 @@ public class SlideQemuInstall extends Fragment implements IntroPage {
         core.putBoolean(EngineType.PREF_FORCED, false);
         com.zalexdev.stryker.engine.EnginePayload.mark(core);
 
-        setStatus(StatusKind.SUCCESS, engine.displayName(), "Done — moving on");
+        setStatus(StatusKind.SUCCESS, context.getString(R.string.install_state_done), "Done — moving on");
         runOnUi(() -> {
             closeLog();
             progress.setVisibility(View.INVISIBLE);
@@ -518,6 +519,16 @@ public class SlideQemuInstall extends Fragment implements IntroPage {
     }
 
     private enum StatusKind { RUNNING, SUCCESS, FAILED }
+
+    private void setEngineEyebrow(String engineName) {
+        runOnUi(() -> {
+            View v = getView();
+            TextView eb = v == null ? null : v.findViewById(R.id.install_eyebrow);
+            if (eb != null) {
+                eb.setText(getString(R.string.intro_eyebrow_install) + " // " + engineName);
+            }
+        });
+    }
 
     @SuppressLint("SetTextI18n")
     private void setStatus(StatusKind kind, String title, String subtitle) {

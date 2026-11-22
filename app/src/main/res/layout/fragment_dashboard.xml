@@ -25,7 +25,6 @@
             android:layout_marginBottom="14dp"
             android:visibility="gone"
             app:cardBackgroundColor="@color/dash_surface"
-            app:cardCornerRadius="28dp"
             app:cardElevation="0dp"
             app:strokeWidth="0dp">
 
@@ -72,7 +71,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/magisk_no"
-                        style="@style/Widget.Material3.Button.TextButton"
+                        style="@style/Widget.Mux.Button.Ghost"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="6dp"
@@ -98,7 +97,6 @@
             android:layout_marginBottom="14dp"
             android:visibility="gone"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -192,7 +190,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/vm_btn_start"
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            style="@style/Widget.Mux.Button"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="6dp"
@@ -203,7 +201,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/vm_btn_stop"
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            style="@style/Widget.Mux.Button"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -431,7 +429,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/vm_usb_manage"
-                            style="@style/Widget.Material3.Button.TextButton"
+                            style="@style/Widget.Mux.Button.Ghost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -538,7 +536,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/vm_btn_refresh_log"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                style="@style/Widget.Mux.Button"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="6dp"
@@ -549,7 +547,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/vm_btn_copy_log"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                style="@style/Widget.Mux.Button"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"

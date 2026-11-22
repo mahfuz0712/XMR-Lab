@@ -69,7 +69,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="18dp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/light_lite_contrast"
                 app:strokeWidth="1dp">
@@ -138,7 +137,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/msf_action_restart"
-                            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                            style="@style/Widget.Mux.IconButton"
                             android:layout_width="38dp"
                             android:layout_height="38dp"
                             android:insetTop="0dp"
@@ -153,7 +152,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/msf_action_payload"
-                            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                            style="@style/Widget.Mux.IconButton"
                             android:layout_width="38dp"
                             android:layout_height="38dp"
                             android:layout_marginStart="6dp"
@@ -388,7 +387,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/light_lite_contrast"
                 app:strokeWidth="1dp">
@@ -419,7 +417,6 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/light_lite_contrast"
                 app:strokeWidth="1dp">

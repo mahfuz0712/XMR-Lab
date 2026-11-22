@@ -94,7 +94,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             app:cardBackgroundColor="#0E1117"
-            app:cardCornerRadius="14dp"
             app:cardElevation="0dp"
             app:strokeWidth="0dp">
 
@@ -128,7 +127,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_test"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
@@ -175,7 +174,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_write_key"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
@@ -197,7 +196,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_flood"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="8dp"
@@ -233,7 +232,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_dlg_hfp"
-            style="@style/Widget.Material3.Button.OutlinedButton"
+            style="@style/Widget.Mux.Button"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:insetTop="0dp"
@@ -258,7 +257,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_live"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
@@ -280,7 +279,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_record"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="8dp"
@@ -310,7 +309,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_terminal"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
@@ -332,7 +331,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_dlg_close"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Mux.Button.Ghost"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
                 android:layout_marginStart="8dp"

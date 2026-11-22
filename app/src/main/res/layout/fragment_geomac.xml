@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         app:cardBackgroundColor="@color/light_contrast"
-        app:cardCornerRadius="20dp"
         app:cardElevation="2dp"
         app:layout_anchor="@id/geomap"
         app:layout_anchorGravity="top|center_horizontal"
@@ -189,7 +188,6 @@
         android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="14dp"
         app:cardBackgroundColor="@color/light_contrast"
-        app:cardCornerRadius="24dp"
         app:cardElevation="4dp"
         app:strokeColor="@color/light_lite_contrast"
         app:strokeWidth="1dp">
@@ -203,7 +201,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/geomac_btn_fit"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:insetTop="0dp"
@@ -224,7 +222,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/geomac_btn_import"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:insetTop="0dp"
@@ -238,7 +236,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/geomac_btn_export"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="4dp"
@@ -253,7 +251,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/geomac_btn_clear"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="4dp"
@@ -276,7 +274,6 @@
         android:layout_marginStart="14dp"
         android:layout_marginBottom="22dp"
         app:cardBackgroundColor="#0F0F0F"
-        app:cardCornerRadius="14dp"
         app:cardElevation="4dp">
 
         <com.google.android.material.textview.MaterialTextView

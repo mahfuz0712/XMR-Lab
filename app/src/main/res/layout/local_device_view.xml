@@ -120,7 +120,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/image_dialog_1"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="6dp"
@@ -137,7 +137,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/image_dialog_2"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="6dp"
@@ -154,7 +154,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/image_dialog_3"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="6dp"
@@ -171,7 +171,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/image_dialog_4"
-                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="6dp"
@@ -203,7 +203,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -473,7 +472,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">

@@ -19,7 +19,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/port_icon"
-            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+            style="@style/Widget.Mux.IconButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:insetTop="0dp"

@@ -2,12 +2,9 @@
 <resources>
 
     <string name="setup_caps_title">Engine check</string>
-    <string name="setup_caps_subtitle">Finding the engine that runs on this device.</string>
     <string name="setup_caps_starting">Starting…</string>
     <string name="setup_caps_running">Checking %1$s…</string>
-    <string name="setup_caps_continue">Continue</string>
     <string name="setup_caps_skip">Choose manually</string>
-    <string name="setup_caps_done">Done</string>
 
     <string name="setup_verdict_root">Root engine</string>
     <string name="setup_verdict_uml">UML-ARM64</string>
@@ -17,7 +14,6 @@
     <string name="setup_recommended_badge">Recommended</string>
     <string name="engine_uml_blocked">Unavailable — the kernel will not run here</string>
 
-    <string name="setup_install_trying">Starting %1$s…</string>
     <string name="setup_install_fallback">%1$s did not work here. Trying %2$s.</string>
     <string name="setup_install_fallback_title">Switching engine</string>
     <string name="setup_install_all_failed_title">No engine booted</string>

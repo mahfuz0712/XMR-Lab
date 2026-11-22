@@ -56,7 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -116,7 +115,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nmap_history_btn"
-                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="44dp"
                         android:layout_height="44dp"
                         android:insetTop="0dp"
@@ -338,7 +337,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -498,7 +496,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/nmap_stop_btn"
-                    style="@style/Widget.Material3.Button.TonalButton"
+                    style="@style/Widget.Mux.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -531,7 +529,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_contrast"
-            app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp">
@@ -579,7 +576,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nmap_expand_btn"
-                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_marginStart="8dp"
@@ -630,7 +627,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nmap_copy_btn"
-                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -645,7 +642,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nmap_save_btn"
-                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
@@ -661,7 +658,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nmap_share_btn"
-                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
@@ -677,7 +674,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nmap_clear_btn"
-                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        style="@style/Widget.Mux.IconButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"

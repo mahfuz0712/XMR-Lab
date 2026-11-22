@@ -17,7 +17,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_terminal_back"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Widget.Mux.Button.Ghost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:minWidth="0dp"
@@ -66,7 +66,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_terminal_clear"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Widget.Mux.Button.Ghost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:minWidth="0dp"
@@ -79,7 +79,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_terminal_copy"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Widget.Mux.Button.Ghost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:minWidth="0dp"
@@ -92,7 +92,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_terminal_share"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Widget.Mux.Button.Ghost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:minWidth="0dp"

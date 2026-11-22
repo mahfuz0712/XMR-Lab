@@ -46,7 +46,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardBackgroundColor="@color/light_contrast"
-                app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/light_lite_contrast"
                 app:strokeWidth="1dp">
@@ -210,7 +209,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/wpair_terminal_btn"
-                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    style="@style/Widget.Mux.IconButton"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:layout_marginEnd="4dp"
@@ -222,7 +221,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/wpair_recordings_btn"
-                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    style="@style/Widget.Mux.IconButton"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:layout_marginEnd="4dp"
@@ -234,7 +233,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/wpair_clear_btn"
-                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    style="@style/Widget.Mux.IconButton"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:contentDescription="@string/wpair_clear"

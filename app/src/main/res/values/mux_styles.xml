@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- ===== Shapes: HUD frame = top-left and bottom-right corners cut ===== -->
+    <!-- ===== Shapes: buttons cut top-right + bottom-left, panels cut top-right ===== -->
     <style name="ShapeAppearance.Mux.Small" parent="">
         <item name="cornerFamily">cut</item>
-        <item name="cornerSizeTopLeft">6dp</item>
-        <item name="cornerSizeBottomRight">6dp</item>
-        <item name="cornerSizeTopRight">0dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
     </style>
 
+    <!-- Panels / cards: only the top-right corner is cut -->
     <style name="ShapeAppearance.Mux.Medium" parent="">
         <item name="cornerFamily">cut</item>
-        <item name="cornerSizeTopLeft">12dp</item>
-        <item name="cornerSizeBottomRight">12dp</item>
-        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">13dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
         <item name="cornerSizeBottomLeft">0dp</item>
     </style>
 

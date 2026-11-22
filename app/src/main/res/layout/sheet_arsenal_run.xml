@@ -87,7 +87,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_lite_contrast"
-            app:cardCornerRadius="12dp"
             app:cardElevation="0dp">
 
             <com.google.android.material.textview.MaterialTextView
@@ -136,7 +135,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/run_sheet_copy"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
@@ -162,7 +161,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/run_sheet_delete"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Widget.Mux.Button.Ghost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

@@ -9,7 +9,6 @@
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
     app:cardBackgroundColor="@color/light_contrast"
-    app:cardCornerRadius="18dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/light_lite_contrast"
     app:strokeWidth="1dp">
@@ -164,7 +163,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_btn_test"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Mux.Button"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
@@ -198,7 +197,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/wpair_btn_more"
-                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                style="@style/Widget.Mux.IconButton"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="8dp"
