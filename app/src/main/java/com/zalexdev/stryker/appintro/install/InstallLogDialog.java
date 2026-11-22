@@ -61,7 +61,17 @@ public final class InstallLogDialog {
             Toast.makeText(context, R.string.hc_copied, Toast.LENGTH_SHORT).show();
         });
 
+        // Fit the list and the window to the screen so the dialog never clips on small phones.
+        android.util.DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        android.view.ViewGroup.LayoutParams lp = list.getLayoutParams();
+        lp.height = Math.min(lp.height, Math.round(dm.heightPixels * 0.42f));
+        list.setLayoutParams(lp);
+
         d.show();
+        if (d.getWindow() != null) {
+            int width = Math.min(Math.round(680f * dm.density), Math.round(dm.widthPixels * 0.94f));
+            d.getWindow().setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
 
         InstallLogDialog handle = new InstallLogDialog(d, list, state, adapter);
         handle.scrollToEnd();

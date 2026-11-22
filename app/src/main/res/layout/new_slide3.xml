@@ -65,10 +65,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:indeterminate="true"
-        app:indicatorColor="@color/intro_dot_active"
-        app:trackColor="@color/intro_dot"
-        app:trackCornerRadius="3dp"
-        app:trackThickness="3dp" />
+        app:indicatorColor="?attr/muxPrimary"
+        app:trackColor="@color/mux_track"
+        app:trackCornerRadius="0dp"
+        app:indicatorTrackGapSize="0dp"
+        app:trackStopIndicatorSize="0dp"
+        app:trackThickness="7dp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/download_text"
@@ -78,10 +80,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/install_details_toggle"
-        style="@style/IntroGhostButton"
+        style="@style/Widget.Mux.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:text="@string/intro_show_details" />
+        android:layout_gravity="end"
+        android:layout_marginTop="22dp"
+        android:minHeight="44dp"
+        android:text="@string/intro_view_logs" />
 </LinearLayout>
 </ScrollView>

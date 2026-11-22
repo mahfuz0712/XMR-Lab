@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Quiet button: transparent fill, dim border and text (Close, Back, Skip) -->
+    <style name="Widget.Mux.Button.Ghost" parent="Widget.Mux.Button">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">?attr/muxDim</item>
+        <item name="iconTint">?attr/muxDim</item>
+        <item name="android:textColor">?attr/muxDim</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+</resources>
