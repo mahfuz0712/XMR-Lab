@@ -122,7 +122,7 @@ public class MuxIntroGraphic extends View {
         paint.setColor(CYAN);
         canvas.drawCircle(cx, cy, radius * 0.48f, paint);
 
-        // MUX label
+        // centre label
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(TEXT);
         paint.setTextAlign(Paint.Align.CENTER);
@@ -131,7 +131,7 @@ public class MuxIntroGraphic extends View {
                 android.graphics.Typeface.BOLD
         ));
         paint.setTextSize(radius * 0.43f);
-        canvas.drawText("MUX", cx, cy + radius * 0.15f, paint);
+        canvas.drawText("XMR", cx, cy + radius * 0.15f, paint);
 
         // Small status marker
         paint.setColor(ORANGE);

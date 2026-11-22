@@ -27,7 +27,7 @@
             android:id="@+id/consent_eyebrow"
             style="@style/IntroEyebrow"
             android:layout_gravity="center_horizontal"
-            android:text="MUX // SECURITY PROTOCOL" />
+            android:text="XMR LAB // SECURITY PROTOCOL" />
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/IntroTitle"

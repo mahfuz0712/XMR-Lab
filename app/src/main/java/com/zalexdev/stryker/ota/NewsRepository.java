@@ -24,7 +24,7 @@ public final class NewsRepository {
     public static List<News> defaults() {
         News oss = new News();
         oss.title = "XMR Lab is ready to build";
-        oss.description = "A tablet-first, MUX-inspired community derivative of StrykerOSS. "
+        oss.description = "A tablet-first, community derivative of StrykerOSS. "
                 + "Visit the XMR Lab GitHub repository for source, issues and contributions.";
         oss.newsDate = "2026";
         oss.id = 1;

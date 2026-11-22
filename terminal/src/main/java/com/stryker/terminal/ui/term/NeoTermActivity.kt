@@ -168,7 +168,7 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
         true
       }
       R.id.menu_item_new_session -> {
-        addNewStrykerSession("Stryker")
+        addNewStrykerSession("XMR Lab")
         true
       }
       R.id.menu_item_new_root_session -> {
@@ -461,11 +461,11 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
   }
 
   private fun addNewSession() {
-    addNewStrykerSession("Stryker")
+    addNewStrykerSession("XMR Lab")
   }
 
   private fun addNewSession(sessionName: String?, systemShell: Boolean, animation: Animation) {
-    addNewStrykerSession("Stryker")
+    addNewStrykerSession("XMR Lab")
   }
 
   private fun addNewSessionWithProfile(profile: ShellProfile) {
@@ -491,7 +491,7 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
       .profile(profile)
     val session = termService!!.createTermSession(parameter)
 
-    session.mSessionName = sessionName ?: generateSessionName("Stryker")
+    session.mSessionName = sessionName ?: generateSessionName("XMR Lab")
 
     val tab = createTab(session.mSessionName) as TermTab
     tab.termData.initializeSessionWith(session, sessionCallback, viewClient)
@@ -539,7 +539,7 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
     }
     val session = termService!!.createTermSession(parameter)
 
-    session.mSessionName = sessionName ?: generateSessionName("Stryker")
+    session.mSessionName = sessionName ?: generateSessionName("XMR Lab")
 
     val tab = createTab(session.mSessionName) as TermTab
     tab.termData.initializeSessionWith(session, sessionCallback, viewClient)
@@ -662,7 +662,7 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
   }
 
   private fun createXTab(tabTitle: String?): Tab {
-    return postTabCreated(XSessionTab(tabTitle ?: "Stryker"))
+    return postTabCreated(XSessionTab(tabTitle ?: "XMR Lab"))
   }
 
   private fun <T : NeoTab> postTabCreated(tab: T): T {
