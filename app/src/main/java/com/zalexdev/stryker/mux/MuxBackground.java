@@ -83,7 +83,7 @@ public class MuxBackground extends FrameLayout {
     }
 
     @Override
-    protected void onVisibilityAggregated(boolean isVisible) {
+    public void onVisibilityAggregated(boolean isVisible) {
         super.onVisibilityAggregated(isVisible);
         if (isVisible) {
             startAnimation();
