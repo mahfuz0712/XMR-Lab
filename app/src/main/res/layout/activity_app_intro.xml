@@ -24,7 +24,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="22dp"
         android:letterSpacing="0.01"
-        android:text="MUX  /  XMR LAB"
+        android:text="XMR LAB"
         android:textColor="@color/intro_text"
         android:textSize="15sp"
         android:textStyle="bold" />

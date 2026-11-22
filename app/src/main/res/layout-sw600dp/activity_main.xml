@@ -80,7 +80,7 @@
                     android:paddingTop="6dp"
                     android:paddingEnd="10dp"
                     android:paddingBottom="6dp"
-                    android:text="MUX  /  TABLET"
+                    android:text="XMR LAB  /  TABLET"
                     android:textColor="#18C7E8"
                     android:textSize="10sp"
                     android:textStyle="bold" />

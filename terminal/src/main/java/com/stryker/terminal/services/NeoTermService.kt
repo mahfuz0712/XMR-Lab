@@ -225,8 +225,8 @@ class NeoTermService : Service() {
   private fun createNotificationChannel() {
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
 
-    val channel = NotificationChannel(DEFAULT_CHANNEL_ID, "Stryker", NotificationManager.IMPORTANCE_LOW)
-    channel.description = "Stryker Notifications"
+    val channel = NotificationChannel(DEFAULT_CHANNEL_ID, "XMR Lab", NotificationManager.IMPORTANCE_LOW)
+    channel.description = "XMR Lab notifications"
     val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     manager.createNotificationChannel(channel)
   }
