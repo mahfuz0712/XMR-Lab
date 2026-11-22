@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== Shapes: HUD frame = top-left and bottom-right corners cut ===== -->
+    <style name="ShapeAppearance.Mux.Small" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">6dp</item>
+        <item name="cornerSizeBottomRight">6dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Mux.Medium" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <!-- ===== Buttons: flat, 1dp border, faint fill that brightens when pressed ===== -->
+    <style name="Widget.Mux.Button" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Mux.Small</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+        <item name="strokeColor">@color/mux_button_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@color/mux_button_fill</item>
+        <item name="rippleColor">@color/mux_button_ripple</item>
+        <item name="iconTint">@color/mux_button_text</item>
+        <item name="android:textColor">@color/mux_button_text</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Same button, amber instead of cyan -->
+    <style name="Widget.Mux.Button.Accent" parent="Widget.Mux.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Mux.ButtonAccent</item>
+    </style>
+
+    <!-- Same button, red (destructive actions) -->
+    <style name="Widget.Mux.Button.Danger" parent="Widget.Mux.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Mux.ButtonDanger</item>
+    </style>
+
+    <style name="ThemeOverlay.Mux.ButtonAccent" parent="">
+        <item name="muxPrimary">?attr/muxAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.Mux.ButtonDanger" parent="">
+        <item name="muxPrimary">?attr/muxDanger</item>
+    </style>
+
+    <!-- ===== Cards ===== -->
+    <style name="Widget.Mux.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">?attr/muxPanel</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">?attr/muxBorder</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Mux.Medium</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <!-- ===== Text ===== -->
+    <style name="TextAppearance.Mux.Title" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">?attr/muxPrimary</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.Mux.Label" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">?attr/muxPrimary</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.Mux.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">?attr/muxText</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Mux.Dim" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">?attr/muxDim</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- ===== Palettes. Theme.Stryker uses cyan; apply Amber on top with
+         ContextThemeWrapper / activity.getTheme().applyStyle(..., true) ===== -->
+    <style name="ThemeOverlay.Mux.Cyan" parent="">
+        <item name="muxBg">@color/mux_cyan_bg</item>
+        <item name="muxPanel">@color/mux_cyan_panel</item>
+        <item name="muxPrimary">@color/mux_cyan_primary</item>
+        <item name="muxDim">@color/mux_cyan_dim</item>
+        <item name="muxAccent">@color/mux_cyan_accent</item>
+        <item name="muxDanger">@color/mux_danger</item>
+        <item name="muxText">@color/mux_cyan_text</item>
+        <item name="muxBorder">@color/mux_cyan_border</item>
+    </style>
+
+    <style name="ThemeOverlay.Mux.Amber" parent="">
+        <item name="muxBg">@color/mux_amber_bg</item>
+        <item name="muxPanel">@color/mux_amber_panel</item>
+        <item name="muxPrimary">@color/mux_amber_primary</item>
+        <item name="muxDim">@color/mux_amber_dim</item>
+        <item name="muxAccent">@color/mux_amber_accent</item>
+        <item name="muxDanger">@color/mux_danger</item>
+        <item name="muxText">@color/mux_amber_text</item>
+        <item name="muxBorder">@color/mux_amber_border</item>
+    </style>
+
+</resources>

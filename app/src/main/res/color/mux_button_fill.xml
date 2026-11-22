@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="0.28" android:color="?attr/muxPrimary" android:state_pressed="true" />
+    <item android:alpha="0.28" android:color="?attr/muxPrimary" android:state_checked="true" />
+    <item android:alpha="0.03" android:color="?attr/muxPrimary" android:state_enabled="false" />
+    <item android:alpha="0.06" android:color="?attr/muxPrimary" />
+</selector>

@@ -1,22 +1,49 @@
 <resources>
     <style name="Theme.Stryker" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/stryker_accent</item>
+        <!-- MUX palette slots (cyan). Amber: ThemeOverlay.Mux.Amber -->
+        <item name="muxBg">@color/mux_cyan_bg</item>
+        <item name="muxPanel">@color/mux_cyan_panel</item>
+        <item name="muxPrimary">@color/mux_cyan_primary</item>
+        <item name="muxDim">@color/mux_cyan_dim</item>
+        <item name="muxAccent">@color/mux_cyan_accent</item>
+        <item name="muxDanger">@color/mux_danger</item>
+        <item name="muxText">@color/mux_cyan_text</item>
+        <item name="muxBorder">@color/mux_cyan_border</item>
+
+        <!-- Material colour roles driven by the MUX palette -->
+        <item name="colorPrimary">?attr/muxPrimary</item>
         <item name="colorPrimaryDark">?attr/colorSurface</item>
-        <item name="colorPrimaryVariant">@color/stryker_accent</item>
-        <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorSecondary">@color/stryker_accent</item>
-        <item name="colorSecondaryVariant">@color/stryker_accent_contrast</item>
-        <item name="colorOnSecondary">@color/stryker_accent_contrast</item>
-        <item name="android:navigationBarColor">@color/toolbar_color</item>
-        <item name="android:statusBarColor">@color/toolbar_color</item>
+        <item name="colorPrimaryVariant">?attr/muxPrimary</item>
+        <item name="colorOnPrimary">?attr/muxBg</item>
+        <item name="colorSecondary">?attr/muxAccent</item>
+        <item name="colorSecondaryVariant">?attr/muxAccent</item>
+        <item name="colorOnSecondary">?attr/muxBg</item>
+        <item name="colorSurface">?attr/muxPanel</item>
+        <item name="colorOnSurface">?attr/muxText</item>
+        <item name="colorSurfaceVariant">?attr/muxPanel</item>
+        <item name="colorOnSurfaceVariant">?attr/muxDim</item>
+        <item name="colorSurfaceContainerLowest">?attr/muxBg</item>
+        <item name="colorSurfaceContainerLow">?attr/muxPanel</item>
+        <item name="colorSurfaceContainer">?attr/muxPanel</item>
+        <item name="colorSurfaceContainerHigh">?attr/muxPanel</item>
+        <item name="colorSurfaceContainerHighest">?attr/muxPanel</item>
+        <item name="colorOutline">?attr/muxBorder</item>
+        <item name="colorError">?attr/muxDanger</item>
+        <item name="android:colorBackground">?attr/muxBg</item>
+        <item name="android:windowBackground">?attr/muxBg</item>
+        <item name="android:navigationBarColor">?attr/muxBg</item>
+        <item name="android:statusBarColor">?attr/muxBg</item>
         <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Component styles -->
         <item name="switchStyle">@style/Widget.Stryker.Switch</item>
         <item name="android:textViewStyle">@style/Widget.Stryker.TextView</item>
         <item name="android:buttonStyle">@style/Widget.Stryker.Button</item>
-        <item name="materialCardViewStyle">@style/Widget.Stryker.CardView</item>
+        <item name="materialButtonStyle">@style/Widget.Mux.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.Mux.CardView</item>
         <item name="floatingActionButtonStyle">@style/Widget.Stryker.FAB</item>
         <item name="materialAlertDialogTheme">@style/Widget.Stryker.AlertDialog</item>
-        <item name="backgroundColor">#0A1118</item>
+        <item name="backgroundColor">?attr/muxBg</item>
     </style>
     <style name="Theme.StrykerFloatingDialog" parent="Theme.Stryker">
         <item name="android:background">@android:color/transparent</item>

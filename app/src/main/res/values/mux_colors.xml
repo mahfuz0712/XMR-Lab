@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CYAN palette (default) -->
+    <color name="mux_cyan_bg">#FF040A12</color>
+    <color name="mux_cyan_panel">#FF08141F</color>
+    <color name="mux_cyan_primary">#FF19E3FF</color>
+    <color name="mux_cyan_dim">#FF3C8A99</color>
+    <color name="mux_cyan_accent">#FFFFB000</color>
+    <color name="mux_cyan_text">#FFD6F8FF</color>
+    <color name="mux_cyan_border">#8019E3FF</color>
+
+    <!-- AMBER palette -->
+    <color name="mux_amber_bg">#FF0D0804</color>
+    <color name="mux_amber_panel">#FF1A1008</color>
+    <color name="mux_amber_primary">#FFFFA726</color>
+    <color name="mux_amber_dim">#FFA6732A</color>
+    <color name="mux_amber_accent">#FF19E3FF</color>
+    <color name="mux_amber_text">#FFFFEBD0</color>
+    <color name="mux_amber_border">#80FFA726</color>
+
+    <!-- shared by both palettes -->
+    <color name="mux_danger">#FFFF5252</color>
+
+</resources>

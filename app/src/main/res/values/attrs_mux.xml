@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MUX palette slots. Theme.Stryker fills them with the cyan palette;
+         ThemeOverlay.Mux.Amber swaps in the amber palette. -->
+    <attr name="muxBg" format="color" />
+    <attr name="muxPanel" format="color" />
+    <attr name="muxPrimary" format="color" />
+    <attr name="muxDim" format="color" />
+    <attr name="muxAccent" format="color" />
+    <attr name="muxDanger" format="color" />
+    <attr name="muxText" format="color" />
+    <attr name="muxBorder" format="color" />
+
+    <declare-styleable name="MuxPanel">
+        <attr name="muxTitle" format="string" />
+        <attr name="muxCut" format="dimension" />
+    </declare-styleable>
+
+</resources>
