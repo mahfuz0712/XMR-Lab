@@ -33,6 +33,7 @@ public class MuxBackground extends FrameLayout {
 
     private MuxColors colors;
     private float angle;
+    private float pageShift;
     private float lastDrawnAngle = -1f;
     private ValueAnimator animator;
 
@@ -92,6 +93,12 @@ public class MuxBackground extends FrameLayout {
         }
     }
 
+    /** Extra turn of the arcs (in pages), e.g. driven by a ViewPager. */
+    public void setPageShift(float pages) {
+        pageShift = pages;
+        invalidate();
+    }
+
     private void startAnimation() {
         if (animator != null || !isAttachedToWindow()) {
             return;
@@ -138,7 +145,7 @@ public class MuxBackground extends FrameLayout {
 
         arcRect.set(cx - r, cy - r, cx + r, cy + r);
         canvas.save();
-        canvas.rotate(angle, cx, cy);
+        canvas.rotate(angle + pageShift * 45f, cx, cy);
         arcPaint.setColor(MuxColors.withAlpha(colors.primary, 0.14f));
         canvas.drawArc(arcRect, 0f, 80f, false, arcPaint);
         arcPaint.setColor(MuxColors.withAlpha(colors.accent, 0.12f));

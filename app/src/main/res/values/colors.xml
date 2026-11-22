@@ -65,13 +65,13 @@
     <color name="thanks_chip_fill">#14000000</color>
     <color name="thanks_chip_stroke">#22105A8C</color>
 
-    <color name="intro_text">#EAF7FF</color>
-    <color name="intro_text_dim">#91A7B5</color>
-    <color name="intro_chip_bg">#140A2540</color>
-    <color name="intro_dot">#33002E5C</color>
-    <color name="intro_dot_active">#18C7E8</color>
-    <color name="intro_button_bg">#18C7E8</color>
-    <color name="intro_button_text">#07121B</color>
+    <color name="intro_text">#FFD6F8FF</color>
+    <color name="intro_text_dim">#FF8FB5C0</color>
+    <color name="intro_chip_bg">#1A19E3FF</color>
+    <color name="intro_dot">#3319E3FF</color>
+    <color name="intro_dot_active">#FF19E3FF</color>
+    <color name="intro_button_bg">#FF19E3FF</color>
+    <color name="intro_button_text">#FF040A12</color>
     <color name="intro_surface">#E6FFFFFF</color>
     <color name="intro_outline">#2A0A2540</color>
 
