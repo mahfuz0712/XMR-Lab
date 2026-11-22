@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_contrast">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/nav_view"
+            layout="@layout/drawer_content"
+            android:layout_width="264dp"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#263B49" />
+
+        <LinearLayout
+            android:id="@+id/all_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/toolbar_color"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/menu_img"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/stryker_main_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.12"
+                        android:text="XMR LAB"
+                        android:textColor="#EAF7FF"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:letterSpacing="0.08"
+                        android:text="MOBILE SECURITY WORKSPACE  /  ARM64"
+                        android:textColor="#7F9BAA"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/settings_value_chip_bg"
+                    android:fontFamily="monospace"
+                    android:paddingStart="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:text="MUX  /  TABLET"
+                    android:textColor="#18C7E8"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/settings_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="@drawable/settings"
+                    app:tint="#B9D1DD" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#263B49" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/flContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/light_contrast"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

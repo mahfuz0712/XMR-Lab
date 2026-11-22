@@ -1,0 +1,54 @@
+{
+  "manifest_version": 1,
+  "core": {
+    "debian_v2": {
+      "min_version_code": 650,
+      "version": "xmr-lab-debian-trixie",
+      "note": "Debian arm64 chroot payload hosted by XMR Lab.",
+      "chroot64": {
+        "url": "https://github.com/mahfuz0712/XMR-Lab/releases/download/xmr-assets-651/chroot64-debian.tar.gz",
+        "sha256": "c67549857b7741e5f2c809e701c6f5cfcacb971fe4a76ad166fecb7b2d4a9d74",
+        "size": 296674820
+      }
+    }
+  },
+  "rootless_v2": {
+    "min_version_code": 650,
+    "version": "xmr-lab-rootless-650",
+    "note": "One Debian rootfs for QEMU and UML. QEMU kernel and initrd are downloaded; UML kernel and support libraries ship in the APK.",
+    "kernel_release": "7.2.0-rc4-g8897487c5223",
+    "kernel": {
+      "url": "https://github.com/mahfuz0712/XMR-Lab/releases/download/xmr-assets-651/Image",
+      "sha256": "80b5fd85c1280e11fcaee721bbad1781ebc91b0370ea49da6729fcecc8649d24",
+      "size": 28676104
+    },
+    "initrd": {
+      "url": "https://github.com/mahfuz0712/XMR-Lab/releases/download/xmr-assets-651/initrd.img",
+      "sha256": "30cc3d91d673de371946764678d534eab2e80669e393009915a3785e6e4f4017",
+      "size": 16308339
+    },
+    "rootfs": {
+      "url": "https://github.com/mahfuz0712/XMR-Lab/releases/download/xmr-assets-651/rootfs.imgz",
+      "sha256": "dfa844f8b9cebe121b60ecdb4da9c41ffd701430b2c9d0f6bdc90c66d2c26c82",
+      "size": 321664844
+    }
+  },
+  "news": [
+    {
+      "id": 1,
+      "title": "XMR Lab \u00b7 Community build",
+      "description": "A tablet-first, MUX-inspired community derivative of StrykerOSS. Original upstream project: zalexdev/strykerapp. Licensed under GNU GPL v3.0.",
+      "newsDate": "2026-11-22",
+      "newsUrl": "https://github.com/mahfuz0712/XMR-Lab",
+      "imageUrl": "",
+      "pinned": true,
+      "actionbutton1": true,
+      "actionbutton1text": "Open source",
+      "actionbutton1url": "https://github.com/mahfuz0712/XMR-Lab",
+      "actionbutton2": false,
+      "actionbutton2text": "",
+      "actionbutton2url": ""
+    }
+  ],
+  "notifications": []
+}
