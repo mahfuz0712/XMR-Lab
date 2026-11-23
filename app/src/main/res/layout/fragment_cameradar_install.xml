@@ -204,7 +204,6 @@
             android:text="@string/cameradar_btn_install"
             android:textColor="@color/light_contrast"
             android:visibility="gone"
-            app:cornerRadius="14dp"
             app:icon="@drawable/download"
             app:iconGravity="textStart"
             app:iconSize="18dp"
@@ -216,7 +215,7 @@
             android:layout_marginTop="16dp"
             app:cardBackgroundColor="@color/light_contrast"
             app:cardElevation="0dp"
-            app:strokeColor="#F9A825"
+            app:strokeColor="#E6A91E"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -232,7 +231,7 @@
                     android:background="@drawable/settings_icon_bg"
                     android:padding="7dp"
                     android:src="@drawable/warning"
-                    app:tint="#F57C00" />
+                    app:tint="#E6A91E" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="0dp"

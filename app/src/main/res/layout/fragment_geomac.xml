@@ -48,7 +48,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/point"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -84,7 +84,7 @@
                     android:layout_height="22dp"
                     android:indeterminate="true"
                     android:visibility="gone"
-                    app:indicatorColor="#E53935"
+                    app:indicatorColor="#E34C59"
                     app:indicatorSize="22dp"
                     app:trackThickness="2dp" />
             </LinearLayout>
@@ -110,7 +110,7 @@
                     app:boxCornerRadiusTopStart="14dp"
                     app:endIconDrawable="@drawable/search"
                     app:endIconMode="custom"
-                    app:endIconTint="#E53935">
+                    app:endIconTint="#E34C59">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/geomac_search"
@@ -207,11 +207,10 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:padding="8dp"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/expand_icon"
                 app:iconPadding="0dp"
                 app:iconSize="20dp"
-                app:iconTint="#E53935" />
+                app:iconTint="#E34C59" />
 
             <View
                 android:layout_width="1dp"
@@ -228,7 +227,6 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:padding="8dp"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/download"
                 app:iconPadding="0dp"
                 app:iconSize="20dp"
@@ -243,7 +241,6 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:padding="8dp"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/copy"
                 app:iconPadding="0dp"
                 app:iconSize="20dp"
@@ -258,7 +255,6 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:padding="8dp"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/delete"
                 app:iconPadding="0dp"
                 app:iconSize="20dp"

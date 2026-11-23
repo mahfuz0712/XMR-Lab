@@ -267,8 +267,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/stryker_accent_contrast"
-                android:visibility="gone"
-                app:cornerRadius="14dp" />
+                android:visibility="gone" />
 
             <View
                 android:layout_width="0dp"
@@ -283,7 +282,6 @@
                 android:backgroundTint="@color/green"
                 android:textColor="@color/light_contrast"
                 android:visibility="gone"
-                app:cornerRadius="14dp"
                 app:iconGravity="textStart"
                 app:iconSize="18dp"
                 app:iconTint="@color/light_contrast" />
@@ -295,7 +293,6 @@
                 android:backgroundTint="@color/red"
                 android:text="@string/stop"
                 android:textColor="@color/light_contrast"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/stop"
                 app:iconGravity="textStart"
                 app:iconSize="18dp"

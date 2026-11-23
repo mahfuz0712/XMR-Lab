@@ -621,7 +621,9 @@ public final class AttackMonitor {
         View body = dialog.findViewById(R.id.attack_body);
         if (body == null) return;
         int screen = activity.getResources().getDisplayMetrics().heightPixels;
-        int height = Math.max(dp(300), Math.min(Math.round(screen * 0.60f), dp(620)));
+        // Leave room for the header, tab bar and Stop button so they stay on screen
+        // on small landscape phones; the body itself scrolls.
+        int height = Math.max(dp(96), Math.min(screen - dp(250), dp(620)));
         ViewGroup.LayoutParams lp = body.getLayoutParams();
         if (lp == null) return;
         lp.height = height;
@@ -630,7 +632,7 @@ public final class AttackMonitor {
 
     private void buildTabs() {
         GradientDrawable track = new GradientDrawable();
-        track.setCornerRadius(dp(13));
+        track.setCornerRadius(0);
         track.setColor((accent & 0x00FFFFFF) | 0x16000000);
         tabBar.setBackground(track);
         tabProgress.setOnClickListener(v -> showConsole(false));
@@ -641,7 +643,7 @@ public final class AttackMonitor {
     private void paintTab(TextView tab, boolean selected) {
         if (selected) {
             GradientDrawable pill = new GradientDrawable();
-            pill.setCornerRadius(dp(10));
+            pill.setCornerRadius(0);
             pill.setColor(ContextCompat.getColor(activity, R.color.light_contrast));
             pill.setStroke(dp(1), (accent & 0x00FFFFFF) | 0x33000000);
             tab.setBackground(pill);

@@ -22,7 +22,7 @@
         android:layout_marginStart="6dp"
         android:fontFamily="monospace"
         android:text="OUT"
-        android:textColor="#7EE787"
+        android:textColor="#42D58B"
         android:textSize="11sp"
         android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
         android:layout_marginStart="6dp"
         android:fontFamily="monospace"
         android:text="0.0.0.0"
-        android:textColor="#79C0FF"
+        android:textColor="#28D8EF"
         android:textSize="11sp" />
 
     <TextView

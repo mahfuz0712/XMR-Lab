@@ -49,7 +49,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="7dp"
                         android:src="@drawable/magisk"
-                        app:tint="#F57C00" />
+                        app:tint="#E6A91E" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="0dp"
@@ -82,10 +82,9 @@
                         android:id="@+id/magisk_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#F57C00"
+                        android:backgroundTint="#E6A91E"
                         android:text="@string/dashboard_magisk_silence"
-                        android:textColor="@color/light_contrast"
-                        app:cornerRadius="14dp" />
+                        android:textColor="@color/light_contrast" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -196,8 +195,7 @@
                             android:layout_marginEnd="6dp"
                             android:layout_weight="1"
                             android:text="Start"
-                            android:textSize="12sp"
-                            app:cornerRadius="12dp" />
+                            android:textSize="12sp" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/vm_btn_stop"
@@ -206,8 +204,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Stop"
-                            android:textSize="12sp"
-                            app:cornerRadius="12dp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </net.cachapa.expandablelayout.ExpandableLayout>
 
@@ -542,8 +539,7 @@
                                 android:layout_marginEnd="6dp"
                                 android:layout_weight="1"
                                 android:text="Refresh"
-                                android:textSize="12sp"
-                                app:cornerRadius="12dp" />
+                                android:textSize="12sp" />
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/vm_btn_copy_log"
@@ -552,8 +548,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/vm_log_copy"
-                                android:textSize="12sp"
-                                app:cornerRadius="12dp" />
+                                android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </net.cachapa.expandablelayout.ExpandableLayout>
@@ -639,7 +634,7 @@
                 <ImageView
                     style="@style/DashboardRowIcon"
                     android:src="@drawable/latest_local"
-                    app:tint="#AB47BC" />
+                    app:tint="#28D8EF" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/DashboardRowTitle"
@@ -671,7 +666,7 @@
                 <ImageView
                     style="@style/DashboardRowIcon"
                     android:src="@drawable/terminal"
-                    app:tint="#5E35B1" />
+                    app:tint="#28D8EF" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/DashboardRowTitle"
@@ -689,7 +684,7 @@
                 <ImageView
                     style="@style/DashboardRowIcon"
                     android:src="@drawable/tune"
-                    app:tint="#00897B" />
+                    app:tint="#28D8EF" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/DashboardRowTitle"
@@ -707,7 +702,7 @@
                 <ImageView
                     style="@style/DashboardRowIcon"
                     android:src="@drawable/notification"
-                    app:tint="#EF6C00" />
+                    app:tint="#E6A91E" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/DashboardRowTitle"
@@ -725,7 +720,7 @@
                 <ImageView
                     style="@style/DashboardRowIcon"
                     android:src="@drawable/bug_report"
-                    app:tint="#C62828" />
+                    app:tint="#E34C59" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/DashboardRowTitle"

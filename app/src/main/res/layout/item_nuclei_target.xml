@@ -40,7 +40,7 @@
                     android:layout_height="22dp"
                     android:layout_gravity="center"
                     android:src="@drawable/webscan"
-                    app:tint="#3949AB" />
+                    app:tint="#28D8EF" />
             </FrameLayout>
 
             <LinearLayout
@@ -95,7 +95,7 @@
             android:layout_marginTop="10dp"
             android:max="100"
             android:visibility="gone"
-            app:indicatorColor="#3949AB"
+            app:indicatorColor="#28D8EF"
             app:trackColor="@color/light_lite_contrast"
             app:trackCornerRadius="2dp" />
 

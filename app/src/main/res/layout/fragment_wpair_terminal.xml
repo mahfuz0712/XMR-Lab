@@ -61,7 +61,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginEnd="10dp"
-            android:indeterminateTint="#3FB950"
+            android:indeterminateTint="#42D58B"
             android:visibility="gone" />
 
         <com.google.android.material.button.MaterialButton
@@ -75,7 +75,7 @@
             app:iconGravity="textStart"
             app:iconPadding="0dp"
             app:iconSize="18dp"
-            app:iconTint="#FF7B72" />
+            app:iconTint="#E34C59" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/wpair_terminal_copy"

@@ -45,7 +45,7 @@
                             android:layout_height="20dp"
                             android:layout_gravity="center"
                             android:src="@drawable/key"
-                            app:tint="#C62828" />
+                            app:tint="#E34C59" />
                     </com.facebook.shimmer.ShimmerFrameLayout>
                 </FrameLayout>
 
@@ -248,7 +248,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="monospace"
-                        android:textColor="#7CFC9B"
+                        android:textColor="#42D58B"
                         android:textIsSelectable="true"
                         android:textSize="11sp" />
 

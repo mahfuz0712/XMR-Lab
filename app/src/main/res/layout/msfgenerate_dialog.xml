@@ -39,7 +39,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/rocket_launch"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
                 </com.facebook.shimmer.ShimmerFrameLayout>
             </FrameLayout>
 
@@ -284,7 +284,7 @@
             android:layout_marginEnd="16dp"
             android:indeterminate="true"
             android:visibility="gone"
-            app:indicatorColor="#E53935"
+            app:indicatorColor="#E34C59"
             app:trackColor="@color/light_lite_contrast"
             app:trackCornerRadius="2dp" />
 
@@ -322,11 +322,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="#E53935"
+            android:backgroundTint="#E34C59"
             android:maxLines="1"
             android:text="@string/payload_btn_generate"
             android:textColor="@color/light_contrast"
-            app:cornerRadius="14dp"
             app:icon="@drawable/rocket_launch"
             app:iconGravity="textStart"
             app:iconSize="18dp"

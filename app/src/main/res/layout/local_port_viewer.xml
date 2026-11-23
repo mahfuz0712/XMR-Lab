@@ -72,7 +72,6 @@
             android:layout_marginTop="14dp"
             android:layout_marginEnd="20dp"
             android:text="@string/local_ports_show_raw"
-            app:cornerRadius="14dp"
             app:icon="@drawable/search"
             app:iconGravity="textEnd"
             app:iconSize="18dp" />

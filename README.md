@@ -1,6 +1,6 @@
 # XMR Lab
 
-**XMR Lab** is a tablet-first, landscape-oriented, community derivative of
+**XMR Lab** is a tablet-first, community derivative of
 [StrykerOSS](https://github.com/zalexdev/strykerapp).
 
 It keeps the upstream application and engine architecture (Root/CHROOT, User Mode Linux,
@@ -10,7 +10,7 @@ and a permanent tablet navigation rail.
 ## Project status
 
 This is an early rebrand/integration branch. The first pass covers application identity,
-landscape orientation, tablet navigation shell, HUD palette, asset endpoints, OTA manifest,
+adaptive (portrait and landscape) layouts, tablet navigation shell, HUD palette, asset endpoints, OTA manifest,
 and CI/local build configuration. Full visual QA and on-device engine validation are still
 required before a release is considered stable.
 

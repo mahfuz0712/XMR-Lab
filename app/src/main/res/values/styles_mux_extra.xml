@@ -19,4 +19,44 @@
         <item name="rippleColor">@color/mux_button_ripple</item>
         <item name="iconTint">@color/mux_button_text</item>
     </style>
+
+    <!-- Small square status tag (WPS, PIXIE, 5G ...) -->
+    <style name="Widget.Mux.Tag" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Mux.Tag.Cyan" parent="Widget.Mux.Tag">
+        <item name="android:background">@drawable/mux_tag_cyan</item>
+        <item name="android:textColor">#28D8EF</item>
+    </style>
+
+    <style name="Widget.Mux.Tag.Gold" parent="Widget.Mux.Tag">
+        <item name="android:background">@drawable/mux_tag_gold</item>
+        <item name="android:textColor">#E6A91E</item>
+    </style>
+
+    <style name="Widget.Mux.Tag.Green" parent="Widget.Mux.Tag">
+        <item name="android:background">@drawable/mux_tag_green</item>
+        <item name="android:textColor">#42D58B</item>
+    </style>
+
+    <style name="Widget.Mux.Tag.Red" parent="Widget.Mux.Tag">
+        <item name="android:background">@drawable/mux_tag_red</item>
+        <item name="android:textColor">#E34C59</item>
+    </style>
+
+    <style name="Widget.Mux.Tag.Dim" parent="Widget.Mux.Tag">
+        <item name="android:background">@drawable/mux_tag_dim</item>
+        <item name="android:textColor">#6A94A1</item>
+    </style>
 </resources>

@@ -31,7 +31,7 @@
                 android:layout_height="22dp"
                 android:layout_gravity="center"
                 android:src="@drawable/rocket_launch"
-                app:tint="#E53935" />
+                app:tint="#E34C59" />
         </FrameLayout>
 
         <LinearLayout
@@ -71,7 +71,7 @@
                     android:paddingEnd="6dp"
                     android:paddingBottom="2dp"
                     android:text="@string/msf_chip_exploit"
-                    android:textColor="#E53935"
+                    android:textColor="#E34C59"
                     android:textSize="9sp"
                     android:textStyle="bold" />
 
@@ -87,7 +87,7 @@
                     android:paddingEnd="6dp"
                     android:paddingBottom="2dp"
                     android:text="@string/msf_rank_normal"
-                    android:textColor="#18C7E8"
+                    android:textColor="#28D8EF"
                     android:textSize="9sp"
                     android:textStyle="bold"
                     android:visibility="gone" />

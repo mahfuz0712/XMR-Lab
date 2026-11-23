@@ -78,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A2E7D32"
+            app:cardBackgroundColor="#1A42D58B"
             app:cardElevation="0dp"
             app:strokeWidth="0dp">
 
@@ -161,7 +161,7 @@
             android:letterSpacing="0.08"
             android:text="WIRELESS"
             android:textAllCaps="true"
-            android:textColor="#3949AB"
+            android:textColor="#28D8EF"
             android:textSize="11sp"
             android:textStyle="bold" />
 
@@ -186,7 +186,7 @@
             android:letterSpacing="0.08"
             android:text="NETWORK"
             android:textAllCaps="true"
-            android:textColor="#AB47BC"
+            android:textColor="#28D8EF"
             android:textSize="11sp"
             android:textStyle="bold" />
 
@@ -207,7 +207,7 @@
             android:letterSpacing="0.08"
             android:text="OFFENSIVE"
             android:textAllCaps="true"
-            android:textColor="#C62828"
+            android:textColor="#E34C59"
             android:textSize="11sp"
             android:textStyle="bold" />
 
@@ -232,7 +232,7 @@
             android:letterSpacing="0.08"
             android:text="TOOLS"
             android:textAllCaps="true"
-            android:textColor="#5E35B1"
+            android:textColor="#28D8EF"
             android:textSize="11sp"
             android:textStyle="bold" />
 

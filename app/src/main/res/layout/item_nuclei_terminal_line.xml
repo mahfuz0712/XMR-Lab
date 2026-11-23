@@ -22,7 +22,7 @@
         android:layout_marginStart="6dp"
         android:fontFamily="monospace"
         android:text="OUT"
-        android:textColor="#7EE787"
+        android:textColor="#42D58B"
         android:textSize="11sp"
         android:textStyle="bold" />
 

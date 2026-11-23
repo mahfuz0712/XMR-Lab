@@ -64,7 +64,7 @@
                             android:layout_height="24dp"
                             android:layout_gravity="center"
                             android:src="@drawable/usb"
-                            app:tint="#18C7E8" />
+                            app:tint="#28D8EF" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -106,7 +106,7 @@
                         android:paddingEnd="10dp"
                         android:paddingBottom="4dp"
                         android:text="IDLE"
-                        android:textColor="#EF6C00"
+                        android:textColor="#E6A91E"
                         android:textSize="9sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -132,8 +132,7 @@
                         style="@style/Widget.Mux.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/arsenal_restore"
-                        app:cornerRadius="14dp" />
+                        android:text="@string/arsenal_restore" />
 
                     <View
                         android:layout_width="0dp"

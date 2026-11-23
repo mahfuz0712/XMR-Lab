@@ -297,7 +297,7 @@
                     android:letterSpacing="0.08"
                     android:text="@string/wifi_section_networks"
                     android:textAllCaps="true"
-                    android:textColor="#AB47BC"
+                    android:textColor="#28D8EF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -358,7 +358,6 @@
                             android:text="@string/wifi_retry"
                             android:textColor="@color/stryker_accent"
                             android:visibility="gone"
-                            app:cornerRadius="14dp"
                             app:icon="@drawable/update"
                             app:iconGravity="textStart"
                             app:iconSize="18dp"
@@ -371,10 +370,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
-                    app:cardBackgroundColor="@color/light_contrast"
+                    app:cardBackgroundColor="@android:color/transparent"
                     app:cardElevation="0dp"
-                    app:strokeColor="@color/light_lite_contrast"
-                    app:strokeWidth="1dp">
+                    app:strokeWidth="0dp">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/wifilist"

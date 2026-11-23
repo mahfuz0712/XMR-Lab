@@ -75,7 +75,6 @@
         android:text="@string/cmd_add_device"
         android:textColor="@color/light_contrast"
         android:textSize="14sp"
-        app:cornerRadius="18dp"
         app:icon="@drawable/usb"
         app:iconGravity="textStart"
         app:iconSize="22dp"

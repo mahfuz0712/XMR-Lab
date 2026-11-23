@@ -44,7 +44,7 @@
             android:letterSpacing="0.08"
             android:text="@string/hydra_section_status"
             android:textAllCaps="true"
-            android:textColor="#E53935"
+            android:textColor="#E34C59"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -82,14 +82,14 @@
                             android:layout_height="24dp"
                             android:layout_gravity="center"
                             android:src="@drawable/key"
-                            app:tint="#E53935" />
+                            app:tint="#E34C59" />
 
                         <ProgressBar
                             android:id="@+id/hydra_status_spinner"
                             android:layout_width="22dp"
                             android:layout_height="22dp"
                             android:layout_gravity="center"
-                            android:indeterminateTint="#E53935"
+                            android:indeterminateTint="#E34C59"
                             android:visibility="gone" />
                     </FrameLayout>
 
@@ -129,7 +129,7 @@
                     android:layout_marginBottom="14dp"
                     android:indeterminate="true"
                     android:visibility="gone"
-                    app:indicatorColor="#E53935"
+                    app:indicatorColor="#E34C59"
                     app:trackColor="@color/light_lite_contrast"
                     app:trackCornerRadius="2dp" />
             </LinearLayout>
@@ -145,7 +145,7 @@
             android:letterSpacing="0.08"
             android:text="@string/hydra_section_stages"
             android:textAllCaps="true"
-            android:textColor="#AB47BC"
+            android:textColor="#28D8EF"
             android:textSize="12sp"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -181,7 +181,7 @@
             android:letterSpacing="0.08"
             android:text="@string/hydra_section_log"
             android:textAllCaps="true"
-            android:textColor="#E53935"
+            android:textColor="#E34C59"
             android:textSize="12sp"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -199,12 +199,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#E53935"
+            android:backgroundTint="#E34C59"
             android:maxLines="1"
             android:text="@string/hydra_btn_install"
             android:textColor="@color/light_contrast"
             android:visibility="gone"
-            app:cornerRadius="14dp"
             app:icon="@drawable/download"
             app:iconGravity="textStart"
             app:iconSize="18dp"
@@ -216,7 +215,7 @@
             android:layout_marginTop="16dp"
             app:cardBackgroundColor="@color/light_contrast"
             app:cardElevation="0dp"
-            app:strokeColor="#F9A825"
+            app:strokeColor="#E6A91E"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -232,7 +231,7 @@
                     android:background="@drawable/settings_icon_bg"
                     android:padding="7dp"
                     android:src="@drawable/warning"
-                    app:tint="#F57C00" />
+                    app:tint="#E6A91E" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="0dp"

@@ -161,7 +161,7 @@
                                 android:paddingEnd="10dp"
                                 android:paddingBottom="4dp"
                                 android:text="@string/arsenal_db_status_ready"
-                                android:textColor="#1B5E20"
+                                android:textColor="#42D58B"
                                 android:textSize="11sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -254,7 +254,7 @@
                         android:visibility="gone"
                         app:cardBackgroundColor="@color/light_contrast"
                         app:cardElevation="0dp"
-                        app:strokeColor="#FFB300"
+                        app:strokeColor="#E6A91E"
                         app:strokeWidth="1dp">
 
                         <LinearLayout
@@ -268,7 +268,7 @@
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/error"
-                                app:tint="#F57C00" />
+                                app:tint="#E6A91E" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/db_empty_text"
@@ -426,7 +426,6 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="16dp"
                         android:text="@string/arsenal_db_install_button"
-                        app:cornerRadius="14dp"
                         app:icon="@drawable/download" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

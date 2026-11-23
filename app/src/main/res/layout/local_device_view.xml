@@ -42,7 +42,7 @@
                         android:layout_height="34dp"
                         android:layout_gravity="center"
                         android:src="@drawable/devices"
-                        app:tint="#AB47BC" />
+                        app:tint="#28D8EF" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/port_count"
@@ -128,7 +128,6 @@
                 android:insetBottom="0dp"
                 android:padding="0dp"
                 android:visibility="gone"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/web"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
@@ -145,7 +144,6 @@
                 android:insetBottom="0dp"
                 android:padding="0dp"
                 android:visibility="gone"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/folder"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
@@ -162,7 +160,6 @@
                 android:insetBottom="0dp"
                 android:padding="0dp"
                 android:visibility="gone"
-                app:cornerRadius="22dp"
                 app:icon="@drawable/terminal"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
@@ -179,7 +176,6 @@
                 android:insetBottom="0dp"
                 android:padding="0dp"
                 android:visibility="gone"
-                app:cornerRadius="22dp"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
                 app:iconSize="20dp"
@@ -293,7 +289,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="9dp"
                         android:src="@drawable/cut"
-                        app:tint="#F57C00" />
+                        app:tint="#E6A91E" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -353,7 +349,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="9dp"
                         android:src="@drawable/key"
-                        app:tint="#D81B60" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -413,7 +409,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="9dp"
                         android:src="@drawable/nest_cam_indoor"
-                        app:tint="#00897B" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -562,7 +558,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="9dp"
                         android:src="@drawable/attachment"
-                        app:tint="#EF6C00" />
+                        app:tint="#E6A91E" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -682,7 +678,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="9dp"
                         android:src="@drawable/send"
-                        app:tint="#5E35B1" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"

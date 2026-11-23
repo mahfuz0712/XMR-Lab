@@ -45,7 +45,7 @@
                             android:layout_height="20dp"
                             android:layout_gravity="center"
                             android:src="@drawable/key"
-                            app:tint="#E53935" />
+                            app:tint="#E34C59" />
                     </com.facebook.shimmer.ShimmerFrameLayout>
                 </FrameLayout>
 
@@ -463,7 +463,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="monospace"
                     android:text="16"
-                    android:textColor="#E53935"
+                    android:textColor="#E34C59"
                     android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -478,9 +478,9 @@
                 android:value="16"
                 android:valueFrom="1"
                 android:valueTo="64"
-                app:thumbColor="#E53935"
+                app:thumbColor="#E34C59"
                 app:tickColor="@color/light_lite_contrast"
-                app:trackColorActive="#E53935"
+                app:trackColorActive="#E34C59"
                 app:trackColorInactive="@color/light_lite_contrast" />
 
             <com.google.android.material.chip.ChipGroup
@@ -517,7 +517,7 @@
                 android:layout_marginEnd="16dp"
                 android:indeterminate="true"
                 android:visibility="gone"
-                app:indicatorColor="#E53935"
+                app:indicatorColor="#E34C59"
                 app:trackColor="@color/light_lite_contrast"
                 app:trackCornerRadius="2dp" />
 
@@ -531,7 +531,7 @@
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/light_contrast"
                 app:cardElevation="0dp"
-                app:strokeColor="#43A047"
+                app:strokeColor="#42D58B"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -547,7 +547,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="6dp"
                         android:src="@drawable/unlock"
-                        app:tint="#43A047" />
+                        app:tint="#42D58B" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/hydra_found_text"
@@ -613,11 +613,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#E53935"
+                    android:backgroundTint="#E34C59"
                     android:maxLines="1"
                     android:text="@string/hydra_btn_launch"
                     android:textColor="@color/light_contrast"
-                    app:cornerRadius="14dp"
                     app:icon="@drawable/rocket_launch"
                     app:iconGravity="textStart"
                     app:iconSize="18dp"
@@ -632,7 +631,6 @@
                     android:maxLines="1"
                     android:text="@string/hydra_btn_stop"
                     android:visibility="gone"
-                    app:cornerRadius="14dp"
                     app:icon="@drawable/stop"
                     app:iconGravity="textStart"
                     app:iconSize="18dp" />

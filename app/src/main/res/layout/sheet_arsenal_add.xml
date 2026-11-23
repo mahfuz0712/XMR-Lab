@@ -236,7 +236,6 @@
                 android:backgroundTint="@color/stryker_accent"
                 android:text="@string/save"
                 android:textColor="@android:color/white"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/save"
                 app:iconTint="@android:color/white" />
         </LinearLayout>

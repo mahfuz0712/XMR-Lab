@@ -157,7 +157,6 @@
                 android:backgroundTint="@color/stryker_accent"
                 android:text="@string/cmd_add"
                 android:textColor="@color/light_contrast"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/add"
                 app:iconGravity="textStart"
                 app:iconSize="18dp"

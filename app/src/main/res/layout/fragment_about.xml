@@ -70,7 +70,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/webscan"
-                        app:tint="#18C7E8" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -134,7 +134,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/github"
-                        app:tint="#3949AB" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -198,7 +198,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/telegram"
-                        app:tint="#0288D1" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -262,7 +262,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/chat"
-                        app:tint="#00897B" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -341,7 +341,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/shield"
-                        app:tint="#00897B" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <com.google.android.material.textview.MaterialTextView
@@ -391,7 +391,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/bolt"
-                        app:tint="#5E35B1" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <LinearLayout

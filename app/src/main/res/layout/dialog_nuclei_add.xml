@@ -32,7 +32,7 @@
                     android:layout_height="22dp"
                     android:layout_gravity="center"
                     android:src="@drawable/webscan"
-                    app:tint="#3949AB" />
+                    app:tint="#28D8EF" />
             </FrameLayout>
 
             <com.google.android.material.textview.MaterialTextView
@@ -137,10 +137,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:backgroundTint="#3949AB"
+                android:backgroundTint="#28D8EF"
                 android:text="@string/nuclei_dialog_start"
                 android:textColor="@color/light_contrast"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/scanner"
                 app:iconTint="@color/light_contrast" />
         </LinearLayout>
