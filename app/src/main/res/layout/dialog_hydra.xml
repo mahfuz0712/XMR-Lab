@@ -9,7 +9,7 @@
     app:strokeColor="@color/light_lite_contrast"
     app:strokeWidth="1dp">
 
-    <com.zalexdev.stryker.utils.NoNestedScrollView
+    <com.xmrlab.android.utils.NoNestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:overScrollMode="ifContentScrolls"
@@ -583,7 +583,7 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <com.zalexdev.stryker.utils.NoNestedScrollView
+                <com.xmrlab.android.utils.NoNestedScrollView
                     android:id="@+id/hydra_terminal_scroll"
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
@@ -597,7 +597,7 @@
                         android:textColor="#D4D4D4"
                         android:textIsSelectable="true"
                         android:textSize="10sp" />
-                </com.zalexdev.stryker.utils.NoNestedScrollView>
+                </com.xmrlab.android.utils.NoNestedScrollView>
             </LinearLayout>
 
             <LinearLayout
@@ -648,5 +648,5 @@
                 android:text="@string/hydra_btn_close"
                 android:textColor="@color/grey" />
         </LinearLayout>
-    </com.zalexdev.stryker.utils.NoNestedScrollView>
+    </com.xmrlab.android.utils.NoNestedScrollView>
 </com.google.android.material.card.MaterialCardView>

@@ -19,7 +19,7 @@
         android:paddingEnd="16dp"
         android:paddingBottom="32dp">
 
-        <com.zalexdev.stryker.about.FeatureCardStack
+        <com.xmrlab.android.about.FeatureCardStack
             android:id="@+id/about_feature_stack"
             android:layout_width="match_parent"
             android:layout_height="366dp"

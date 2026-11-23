@@ -1,6 +1,6 @@
--keep class com.zalexdev.stryker.BuildConfig { *; }
+-keep class com.xmrlab.android.BuildConfig { *; }
 
--keep class com.zalexdev.stryker.custom.** { *; }
+-keep class com.xmrlab.android.custom.** { *; }
 
 -keep public class * extends androidx.fragment.app.Fragment
 -keep public class * extends androidx.appcompat.app.AppCompatActivity
@@ -51,7 +51,7 @@
     public static ** valueOf(java.lang.String);
 }
 
--keep class com.zalexdev.stryker.wpair.** { *; }
+-keep class com.xmrlab.android.wpair.** { *; }
 
 -keepclassmembers class * implements android.os.Parcelable {
     public static final ** CREATOR;
@@ -77,11 +77,11 @@
     public static *** v(...);
 }
 
--keep class com.stryker.terminal.** { *; }
+-keep class com.xmrlab.android.terminal.** { *; }
 -keep class com.stryker.neolang.** { *; }
 -keep class com.github.wrdlbrnft.sortedlistadapter.** { *; }
 -keep class de.mrapp.android.** { *; }
--dontwarn com.stryker.terminal.**
+-dontwarn com.xmrlab.android.terminal.**
 -dontwarn com.stryker.neolang.**
 
 -keepclassmembers class * {

@@ -16,7 +16,7 @@
         android:paddingBottom="116dp"
         android:gravity="center_vertical">
 
-        <com.zalexdev.stryker.appintro.MuxIntroGraphic
+        <com.xmrlab.android.appintro.MuxIntroGraphic
             android:id="@+id/consent_mark"
             android:layout_width="86dp"
             android:layout_height="86dp"

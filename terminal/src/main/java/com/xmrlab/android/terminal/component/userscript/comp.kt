@@ -1,0 +1,65 @@
+package com.xmrlab.android.terminal.component.userscript
+
+import android.content.Context
+import android.system.Os
+import com.xmrlab.android.terminal.App
+import com.xmrlab.android.terminal.component.NeoComponent
+import com.xmrlab.android.terminal.component.config.NeoTermPath
+import com.xmrlab.android.terminal.ui.other.SuUtils
+import com.xmrlab.android.terminal.utils.NLog
+import com.xmrlab.android.terminal.utils.extractAssetsDir
+import java.io.File
+
+class UserScript(val scriptFile: File)
+
+class UserScriptComponent : NeoComponent {
+  var binFiles = listOf<UserScript>()
+  var userScripts = listOf<UserScript>()
+  private val binDir = File(NeoTermPath.BIN_PATH)
+  private val scriptDir = File(NeoTermPath.USER_SCRIPT_PATH)
+
+  override fun onServiceInit() = checkForFiles()
+
+  override fun onServiceDestroy() {
+  }
+
+  override fun onServiceObtained() = checkForFiles()
+
+  fun extractDefaultScript(context: Context) = kotlin.runCatching {
+    File(NeoTermPath.USR_PATH).mkdirs()
+    binDir.listFiles()?.forEach { it.deleteRecursively() }
+    binDir.mkdirs()
+
+    context.extractAssetsDir("scripts", NeoTermPath.USER_SCRIPT_PATH)
+    scriptDir.listFiles()?.forEach {
+      Os.chmod(it.absolutePath, 448)
+    }
+
+    context.extractAssetsDir("bin", NeoTermPath.BIN_PATH)
+    binDir.listFiles()?.forEach {
+      Os.chmod(it.absolutePath, 448)
+    }
+
+  }.onFailure {
+    NLog.e("UserScript", "Failed to extract default user scripts: ${it.localizedMessage}")
+  }
+
+
+  private fun checkForFiles() {
+    extractDefaultScript(App.get())
+    reloadScripts()
+  }
+
+  private fun reloadScripts() {
+    userScripts = (scriptDir.listFiles() ?: emptyArray())
+      .takeWhile { it.canExecute() }
+      .map { UserScript(it) }
+      .toList()
+
+    binFiles = (binDir.listFiles() ?: emptyArray())
+      .takeWhile { it.canExecute() }
+      .map { UserScript(it) }
+      .toList()
+  }
+
+}

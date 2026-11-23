@@ -299,7 +299,7 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <com.zalexdev.stryker.utils.NoNestedScrollView
+            <com.xmrlab.android.utils.NoNestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:padding="10dp">
@@ -312,7 +312,7 @@
                     android:textColor="#D4D4D4"
                     android:textIsSelectable="true"
                     android:textSize="10sp" />
-            </com.zalexdev.stryker.utils.NoNestedScrollView>
+            </com.xmrlab.android.utils.NoNestedScrollView>
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

@@ -32,7 +32,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:launchMode="singleTask"
-            android:taskAffinity="com.stryker.terminal"
+            android:taskAffinity="com.xmrlab.android.terminal"
             android:resizeableActivity="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateHidden" />

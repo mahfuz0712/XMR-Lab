@@ -9,6 +9,6 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.xmrlab.android"
-            android:targetClass="com.stryker.terminal.ui.term.NeoTermActivity" />
+            android:targetClass="com.xmrlab.android.terminal.ui.term.NeoTermActivity" />
     </shortcut>
 </shortcuts>

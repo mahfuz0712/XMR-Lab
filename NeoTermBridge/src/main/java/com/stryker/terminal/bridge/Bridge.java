@@ -13,8 +13,8 @@ public class Bridge {
   public static final String EXTRA_EXECUTABLE = "neoterm.extra.remote.execute.executable";
   public static final String EXTRA_SESSION_ID = "neoterm.extra.remote.execute.session";
   public static final String EXTRA_FOREGROUND = "neoterm.extra.remote.execute.foreground";
-  private static final String NEOTERM_PACKAGE = "com.stryker.terminal";
-  private static final String NEOTERM_REMOTE_INTERFACE = "com.stryker.terminal.ui.term.NeoTermRemoteInterface";
+  private static final String NEOTERM_PACKAGE = "com.xmrlab.android.terminal";
+  private static final String NEOTERM_REMOTE_INTERFACE = "com.xmrlab.android.terminal.ui.term.NeoTermRemoteInterface";
   private static final ComponentName NEOTERM_COMPONENT = new ComponentName(NEOTERM_PACKAGE, NEOTERM_REMOTE_INTERFACE);
 
   private Bridge() throws IllegalAccessException {
