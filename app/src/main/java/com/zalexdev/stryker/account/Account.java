@@ -38,6 +38,9 @@ public class Account extends Fragment {
         TextView user = root.findViewById(R.id.username);
         user.setText(core.getString("username"));
 
+        ((TextView) root.findViewById(R.id.app_version))
+                .setText("Version: " + com.zalexdev.stryker.BuildConfig.VERSION_NAME);
+
         TextView info = root.findViewById(R.id.device_info);
         MaterialCardView github = root.findViewById(R.id.github);
         TextView lic = root.findViewById(R.id.lic);
