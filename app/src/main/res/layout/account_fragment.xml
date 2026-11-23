@@ -117,15 +117,6 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:id="@+id/account_thanks"
-            android:textColor="@color/grey" />
-
-        <TextView
             android:id="@+id/lic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,7 +133,7 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:gravity="center"
-            android:text="XMR Lab — community derivative of StrykerOSS"
+            android:text="XMR Lab"
             android:textStyle="bold" />
 
     </LinearLayout>

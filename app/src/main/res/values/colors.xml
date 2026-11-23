@@ -42,10 +42,6 @@
     <color name="tile_red">#3328D8EF</color>
     <color name="tile_teal">#3328D8EF</color>
 
-    <color name="thanks_text">#EAF7FF</color>
-    <color name="thanks_text_dim">#91A7B5</color>
-    <color name="thanks_chip_fill">#14000000</color>
-    <color name="thanks_chip_stroke">#22105A8C</color>
 
     <color name="intro_text">#FFD6F8FF</color>
     <color name="intro_text_dim">#FF8FB5C0</color>

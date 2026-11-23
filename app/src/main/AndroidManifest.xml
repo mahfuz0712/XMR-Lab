@@ -124,12 +124,6 @@
             android:exported="false" />
 
         <activity
-            android:name=".about.ThanksActivity"
-            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
-            android:exported="false"
-            android:theme="@style/Theme.Stryker.Immersive" />
-
-        <activity
             android:name=".hid.ui.HidIdeActivity"
             android:exported="false"
             android:configChanges="orientation|screenSize|keyboardHidden"

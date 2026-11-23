@@ -66,10 +66,6 @@ public class AboutFragment extends Fragment {
             if (getContext() == null) return;
             startActivity(new Intent(getContext(), LicenseActivity.class));
         });
-        view.findViewById(R.id.about_thanks).setOnClickListener(v -> {
-            if (getContext() == null) return;
-            startActivity(new Intent(getContext(), ThanksActivity.class));
-        });
 
         playEntranceAnimation(view);
         startLogoAmbientAnimation(view);
@@ -116,7 +112,6 @@ public class AboutFragment extends Fragment {
                 R.id.about_link_chat,
                 R.id.about_label_legal,
                 R.id.about_oss_licenses,
-                R.id.about_thanks,
                 R.id.about_footer
         };
 
