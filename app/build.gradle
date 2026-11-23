@@ -11,7 +11,7 @@ android {
         applicationId "com.xmrlab.android"
         minSdk 24
         targetSdk 36
-        versionCode 651
+        versionCode 1
         versionName "1.0.0"
 
         ndk {
