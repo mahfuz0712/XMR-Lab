@@ -34,7 +34,7 @@
                     android:layout_height="22dp"
                     android:layout_gravity="center"
                     android:src="@drawable/password"
-                    app:tint="#18C7E8" />
+                    app:tint="#28D8EF" />
             </FrameLayout>
 
             <LinearLayout

@@ -68,7 +68,7 @@
                                 android:layout_height="24dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/keyboard"
-                                app:tint="#C62828" />
+                                app:tint="#E34C59" />
                         </FrameLayout>
 
                         <LinearLayout
@@ -110,7 +110,7 @@
                             android:paddingEnd="10dp"
                             android:paddingBottom="4dp"
                             android:text="PROBING"
-                            android:textColor="#EF6C00"
+                            android:textColor="#E6A91E"
                             android:textSize="9sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -133,7 +133,6 @@
                         android:layout_marginTop="14dp"
                         android:text="@string/hid_files_open_arsenal"
                         android:visibility="gone"
-                        app:cornerRadius="14dp"
                         app:icon="@drawable/usb"
                         app:iconGravity="textStart" />
                 </LinearLayout>
@@ -188,7 +187,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
-        android:backgroundTint="#C62828"
+        android:backgroundTint="#E34C59"
         android:text="@string/hid_files_new"
         android:textColor="@android:color/white"
         app:icon="@android:drawable/ic_input_add"

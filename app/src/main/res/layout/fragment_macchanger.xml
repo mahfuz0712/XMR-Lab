@@ -65,7 +65,7 @@
                             android:layout_height="24dp"
                             android:layout_gravity="center"
                             android:src="@drawable/wifi"
-                            app:tint="#18C7E8" />
+                            app:tint="#28D8EF" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -174,14 +174,13 @@
                         android:minHeight="0dp"
                         android:minWidth="0dp"
                         android:stateListAnimator="@null"
-                        app:cornerRadius="10dp"
                         app:elevation="0dp"
                         app:icon="@drawable/copy"
                         app:iconGravity="textStart"
                         app:iconPadding="0dp"
                         app:iconSize="18dp"
                         app:iconTint="@color/grey"
-                        app:rippleColor="#1A3949AB"
+                        app:rippleColor="#1A28D8EF"
                         app:strokeColor="@color/light_lite_contrast"
                         app:strokeWidth="1dp" />
                 </LinearLayout>
@@ -234,14 +233,13 @@
                         android:minHeight="0dp"
                         android:minWidth="0dp"
                         android:stateListAnimator="@null"
-                        app:cornerRadius="10dp"
                         app:elevation="0dp"
                         app:icon="@drawable/copy"
                         app:iconGravity="textStart"
                         app:iconPadding="0dp"
                         app:iconSize="18dp"
                         app:iconTint="@color/grey"
-                        app:rippleColor="#1A3949AB"
+                        app:rippleColor="#1A28D8EF"
                         app:strokeColor="@color/light_lite_contrast"
                         app:strokeWidth="1dp" />
                 </LinearLayout>
@@ -399,7 +397,6 @@
             android:text="@string/mac_btn_change"
             android:textColor="@color/light_contrast"
             android:textSize="14sp"
-            app:cornerRadius="14dp"
             app:icon="@drawable/done"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
@@ -419,14 +416,13 @@
             android:text="@string/mac_btn_reset"
             android:textColor="@color/stryker_accent"
             android:textSize="14sp"
-            app:cornerRadius="14dp"
             app:elevation="0dp"
             app:icon="@drawable/ic_renew"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconSize="18dp"
             app:iconTint="@color/stryker_accent"
-            app:rippleColor="#1A3949AB"
+            app:rippleColor="#1A28D8EF"
             app:strokeColor="@color/light_lite_contrast"
             app:strokeWidth="1dp" />
 
@@ -434,9 +430,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#1A18C7E8"
+            app:cardBackgroundColor="#1A28D8EF"
             app:cardElevation="0dp"
-            app:strokeColor="#331565C0"
+            app:strokeColor="#3328D8EF"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -450,7 +446,7 @@
                     android:layout_height="20dp"
                     android:layout_marginTop="1dp"
                     android:src="@drawable/info_outlined"
-                    app:tint="#18C7E8" />
+                    app:tint="#28D8EF" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
@@ -468,9 +464,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:visibility="gone"
-            app:cardBackgroundColor="#1AEF6C00"
+            app:cardBackgroundColor="#1AE6A91E"
             app:cardElevation="0dp"
-            app:strokeColor="#33EF6C00"
+            app:strokeColor="#33E6A91E"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -484,7 +480,7 @@
                     android:layout_height="20dp"
                     android:layout_marginTop="1dp"
                     android:src="@drawable/warning"
-                    app:tint="#EF6C00" />
+                    app:tint="#E6A91E" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"

@@ -173,19 +173,20 @@
 
         <activity
             android:name=".appintro.AppIntroActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
             android:exported="false"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.Stryker.Immersive" />
         <activity
             android:name=".searchsploit.ExploitWebview"
             android:exported="false"
-            android:screenOrientation="sensorLandscape" />
+            android:screenOrientation="fullSensor" />
 
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
             android:exported="true"
-            android:screenOrientation="sensorLandscape">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

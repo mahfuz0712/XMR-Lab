@@ -21,7 +21,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#263B49" />
+            android:background="#28D8EF" />
 
         <LinearLayout
             android:id="@+id/all_view"
@@ -66,7 +66,7 @@
                         android:fontFamily="monospace"
                         android:letterSpacing="0.08"
                         android:text="MOBILE SECURITY WORKSPACE  /  ARM64"
-                        android:textColor="#7F9BAA"
+                        android:textColor="#28D8EF"
                         android:textSize="9sp" />
                 </LinearLayout>
 
@@ -81,7 +81,7 @@
                     android:paddingEnd="10dp"
                     android:paddingBottom="6dp"
                     android:text="XMR LAB  /  TABLET"
-                    android:textColor="#18C7E8"
+                    android:textColor="#28D8EF"
                     android:textSize="10sp"
                     android:textStyle="bold" />
 
@@ -92,13 +92,13 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:padding="8dp"
                     android:src="@drawable/settings"
-                    app:tint="#B9D1DD" />
+                    app:tint="#2228D8EF" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#263B49" />
+                android:background="#28D8EF" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/flContent"

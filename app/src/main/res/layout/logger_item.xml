@@ -13,7 +13,7 @@
         android:layout_width="3dp"
         android:layout_height="match_parent"
         android:minHeight="22dp"
-        android:background="#558B2F" />
+        android:background="#42D58B" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
                 android:text="00:00:00"
-                android:textColor="#607D8B"
+                android:textColor="#28D8EF"
                 android:textSize="10sp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -49,7 +49,7 @@
                 android:paddingEnd="6dp"
                 android:paddingBottom="1dp"
                 android:text="tool"
-                android:textColor="#B39DDB"
+                android:textColor="#28D8EF"
                 android:textSize="9sp"
                 android:textStyle="bold" />
         </LinearLayout>

@@ -60,7 +60,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="10dp"
                         android:src="@drawable/wifi"
-                        app:tint="#18C7E8" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -130,7 +130,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="10dp"
                         android:src="@drawable/handshake_interface"
-                        app:tint="#283593" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -200,7 +200,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="10dp"
                         android:src="@drawable/deauth"
-                        app:tint="#AD1457" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -270,7 +270,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="10dp"
                         android:src="@drawable/autopixie"
-                        app:tint="#18C7E8" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"

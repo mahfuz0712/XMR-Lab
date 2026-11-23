@@ -27,7 +27,7 @@
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:src="@drawable/save_outlined"
-                app:tint="#3949AB" />
+                app:tint="#28D8EF" />
         </FrameLayout>
 
         <LinearLayout
@@ -87,7 +87,7 @@
             android:layout_height="36dp"
             app:icon="@drawable/delete"
             app:iconSize="16dp"
-            app:iconTint="#C62828"
+            app:iconTint="#E34C59"
             app:strokeColor="@color/light_lite_contrast" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

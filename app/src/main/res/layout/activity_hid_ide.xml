@@ -87,7 +87,7 @@
                     android:paddingEnd="10dp"
                     android:paddingBottom="5dp"
                     android:text="EMPTY"
-                    android:textColor="#EF6C00"
+                    android:textColor="#E6A91E"
                     android:textSize="10sp"
                     android:textStyle="bold" />
 
@@ -206,7 +206,7 @@
                 android:enabled="false"
                 android:minWidth="0dp"
                 android:text="@string/hid_stop"
-                android:textColor="#C62828"
+                android:textColor="#E34C59"
                 android:textSize="12sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -214,13 +214,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:backgroundTint="#C62828"
+                android:backgroundTint="#E34C59"
                 android:minWidth="0dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:text="@string/hid_run"
                 android:textColor="@android:color/white"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/play"
                 app:iconGravity="textStart"
                 app:iconTint="@android:color/white" />
@@ -288,7 +287,7 @@
                     android:layout_marginTop="6dp"
                     android:max="100"
                     android:progress="0"
-                    app:indicatorColor="#C62828"
+                    app:indicatorColor="#E34C59"
                     app:trackColor="@color/light_lite_contrast"
                     app:trackCornerRadius="2dp" />
 
@@ -369,7 +368,7 @@
                     android:paddingEnd="12dp"
                     android:paddingBottom="6dp"
                     android:text="PROBING…"
-                    android:textColor="#EF6C00"
+                    android:textColor="#E6A91E"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 
@@ -389,11 +388,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="#18C7E8"
+                    android:backgroundTint="#28D8EF"
                     android:text="@string/ide_caps_open_arsenal"
                     android:textColor="@android:color/white"
                     android:visibility="gone"
-                    app:cornerRadius="14dp"
                     app:icon="@drawable/usb"
                     app:iconGravity="textStart"
                     app:iconTint="@android:color/white" />
@@ -404,8 +402,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/ide_caps_recheck"
-                    app:cornerRadius="14dp" />
+                    android:text="@string/ide_caps_recheck" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </com.google.android.material.card.MaterialCardView>

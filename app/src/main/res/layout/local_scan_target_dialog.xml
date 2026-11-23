@@ -34,7 +34,7 @@
                     android:layout_height="22dp"
                     android:layout_gravity="center"
                     android:src="@drawable/lan"
-                    app:tint="#AB47BC" />
+                    app:tint="#28D8EF" />
             </FrameLayout>
 
             <LinearLayout
@@ -110,11 +110,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#AB47BC"
+            android:backgroundTint="#28D8EF"
             android:maxLines="1"
             android:text="@string/local_scan_target_apply"
             android:textColor="@color/light_contrast"
-            app:cornerRadius="14dp"
             app:icon="@drawable/ic_renew"
             app:iconGravity="textStart"
             app:iconSize="16dp"

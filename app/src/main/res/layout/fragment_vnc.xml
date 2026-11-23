@@ -72,14 +72,14 @@
                             android:layout_height="24dp"
                             android:layout_gravity="center"
                             android:src="@drawable/vnc"
-                            app:tint="#5E35B1" />
+                            app:tint="#28D8EF" />
 
                         <ProgressBar
                             android:id="@+id/vnc_status_spinner"
                             android:layout_width="22dp"
                             android:layout_height="22dp"
                             android:layout_gravity="center"
-                            android:indeterminateTint="#5E35B1"
+                            android:indeterminateTint="#28D8EF"
                             android:visibility="gone" />
                     </FrameLayout>
 
@@ -135,7 +135,7 @@
                     android:layout_marginBottom="14dp"
                     android:indeterminate="true"
                     android:visibility="gone"
-                    app:indicatorColor="#5E35B1"
+                    app:indicatorColor="#28D8EF"
                     app:trackColor="@color/light_lite_contrast"
                     app:trackCornerRadius="2dp" />
 
@@ -165,7 +165,7 @@
             android:letterSpacing="0.08"
             android:text="@string/vnc_section_stages"
             android:textAllCaps="true"
-            android:textColor="#AB47BC"
+            android:textColor="#28D8EF"
             android:textSize="12sp"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -201,7 +201,7 @@
             android:letterSpacing="0.08"
             android:text="@string/vnc_section_log"
             android:textAllCaps="true"
-            android:textColor="#E53935"
+            android:textColor="#E34C59"
             android:textSize="12sp"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -224,7 +224,7 @@
             android:letterSpacing="0.08"
             android:text="CONNECTION"
             android:textAllCaps="true"
-            android:textColor="#5E35B1"
+            android:textColor="#28D8EF"
             android:textSize="12sp"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -327,7 +327,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="10dp"
                         android:src="@drawable/number"
-                        app:tint="#00897B" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -389,7 +389,7 @@
                         android:background="@drawable/settings_icon_bg"
                         android:padding="10dp"
                         android:src="@drawable/key"
-                        app:tint="#EF6C00" />
+                        app:tint="#E6A91E" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -514,12 +514,11 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#5E35B1"
+            android:backgroundTint="#28D8EF"
             android:text="Start VNC server"
             android:textColor="@color/light_contrast"
             android:textSize="15sp"
             android:visibility="gone"
-            app:cornerRadius="16dp"
             app:icon="@drawable/run"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
@@ -534,7 +533,6 @@
             android:text="Change password"
             android:textSize="14sp"
             android:visibility="gone"
-            app:cornerRadius="14dp"
             app:icon="@drawable/key"
             app:iconGravity="textStart"
             app:iconPadding="8dp" />
@@ -559,12 +557,11 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#5E35B1"
+            android:backgroundTint="#28D8EF"
             android:text="Install VNC server"
             android:textColor="@color/light_contrast"
             android:textSize="15sp"
             android:visibility="gone"
-            app:cornerRadius="16dp"
             app:icon="@drawable/download"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
@@ -574,7 +571,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="#1A18C7E8"
+            app:cardBackgroundColor="#1A28D8EF"
             app:cardElevation="0dp"
             app:strokeWidth="0dp">
 

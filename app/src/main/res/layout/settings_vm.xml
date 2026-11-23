@@ -208,7 +208,7 @@
             android:letterSpacing="0.08"
             android:text="@string/vm_section_autotune"
             android:textAllCaps="true"
-            android:textColor="#00897B"
+            android:textColor="#28D8EF"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -233,7 +233,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/bolt"
-                        app:tint="#00897B" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -263,7 +263,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/rocket_launch"
-                        app:tint="#00897B" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -294,7 +294,7 @@
             android:letterSpacing="0.08"
             android:text="@string/vm_section_experiments"
             android:textAllCaps="true"
-            android:textColor="#E53935"
+            android:textColor="#E34C59"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -328,7 +328,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/bolt"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -356,7 +356,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/tune"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -384,7 +384,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/ic_cpu"
-                        app:tint="#5E35B1" />
+                        app:tint="#28D8EF" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -415,7 +415,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/ic_cpu"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -445,7 +445,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/tune"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -475,7 +475,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/storage"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -505,7 +505,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/ic_cpu"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -533,7 +533,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/storage"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -563,7 +563,7 @@
                     <ImageView
                         style="@style/VmRowIcon"
                         android:src="@drawable/bolt"
-                        app:tint="#E53935" />
+                        app:tint="#E34C59" />
 
                     <LinearLayout style="@style/VmRowText">
 
@@ -594,7 +594,6 @@
             android:paddingTop="14dp"
             android:paddingBottom="14dp"
             android:text="@string/vm_apply_restart"
-            app:cornerRadius="16dp"
             app:icon="@drawable/restart_alt"
             app:iconGravity="textStart" />
 

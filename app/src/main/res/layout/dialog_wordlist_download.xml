@@ -34,7 +34,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:src="@drawable/download"
-                    app:tint="#00897B" />
+                    app:tint="#28D8EF" />
             </FrameLayout>
 
             <LinearLayout

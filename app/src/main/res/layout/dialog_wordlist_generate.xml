@@ -40,7 +40,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_generate"
-                        app:tint="#18C7E8" />
+                        app:tint="#28D8EF" />
                 </FrameLayout>
 
                 <LinearLayout

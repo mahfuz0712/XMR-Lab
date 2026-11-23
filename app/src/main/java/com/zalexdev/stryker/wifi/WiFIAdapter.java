@@ -273,13 +273,13 @@ public class WiFIAdapter extends RecyclerView.Adapter<WiFIAdapter.ViewHolder> {
             adapter.wifi_model.setText(context.getString(R.string.wifi_card_model, wifi.getModel()));
             if (wifi.isVulnVerified()) {
                 adapter.pixie_mark.setText(R.string.wifi_chip_pixie_verified);
-                adapter.pixie_mark.setBackgroundTintList(ColorStateList.valueOf(0xFFE65100));
-                adapter.pixie_mark.setTextColor(0xFFFFFFFF);
+                adapter.pixie_mark.setBackgroundResource(R.drawable.mux_tag_gold_fill);
+                adapter.pixie_mark.setTextColor(0xFF030B11);
                 adapter.pixie_mark.setVisibility(View.VISIBLE);
             } else if (wifi.isVulnerable()) {
                 adapter.pixie_mark.setText(R.string.wifi_chip_pixie);
-                adapter.pixie_mark.setBackgroundTintList(ColorStateList.valueOf(0xFFFFE0B2));
-                adapter.pixie_mark.setTextColor(0xFFE65100);
+                adapter.pixie_mark.setBackgroundResource(R.drawable.mux_tag_gold);
+                adapter.pixie_mark.setTextColor(0xFFE6A91E);
                 adapter.pixie_mark.setVisibility(View.VISIBLE);
             }
         }
@@ -292,9 +292,9 @@ public class WiFIAdapter extends RecyclerView.Adapter<WiFIAdapter.ViewHolder> {
     }
 
     private int signalColor(int percent) {
-        if (percent >= 65) return android.graphics.Color.parseColor("#2E7D32");
-        if (percent >= 40) return android.graphics.Color.parseColor("#F57C00");
-        return android.graphics.Color.parseColor("#C62828");
+        if (percent >= 65) return android.graphics.Color.parseColor("#42D58B");
+        if (percent >= 40) return android.graphics.Color.parseColor("#E6A91E");
+        return android.graphics.Color.parseColor("#E34C59");
     }
     public void resizeImage(ImageView imageView, ProgressBar circle, boolean s) {
         if (s) {

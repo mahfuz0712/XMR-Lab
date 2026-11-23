@@ -172,7 +172,6 @@
             android:text="@string/usb_rescan"
             android:textAllCaps="false"
             android:textSize="15sp"
-            app:cornerRadius="16dp"
             app:icon="@drawable/repeat"
             app:iconGravity="textStart" />
     </LinearLayout>

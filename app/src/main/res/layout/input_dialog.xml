@@ -71,8 +71,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/stryker_accent"
                 android:text="@android:string/ok"
-                android:textColor="@color/light_contrast"
-                app:cornerRadius="14dp" />
+                android:textColor="@color/light_contrast" />
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -141,7 +141,6 @@
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
                 android:text="@string/arsenal_run_copy"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/copy"
                 app:iconTint="@color/stryker_accent" />
 
@@ -154,7 +153,6 @@
                 android:backgroundTint="@color/stryker_accent"
                 android:text="@string/arsenal_run_launch"
                 android:textColor="@android:color/white"
-                app:cornerRadius="14dp"
                 app:icon="@drawable/rocket_launch"
                 app:iconTint="@android:color/white" />
         </LinearLayout>
