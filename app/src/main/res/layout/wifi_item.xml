@@ -164,4 +164,11 @@
                 android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
+
+    <!-- Kept only because WiFIAdapter still looks this id up; the card needs no divider. -->
+    <View
+        android:id="@+id/wifi_item_divider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
 </com.google.android.material.card.MaterialCardView>
