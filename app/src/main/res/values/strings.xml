@@ -882,7 +882,7 @@ manager</string>
     <string name="about_link_chat_url" translatable="false">github.com/mahfuz0712/XMR-Lab/discussions</string>
     <string name="about_oss_licenses_label">Open-source licenses</string>
     <string name="license_subtitle">Built on these open-source projects. Tap any entry for its source.</string>
-    <string name="about_footer">XMR Lab is a community derivative of StrykerOSS, licensed under GNU GPL v3.0. Original project by zalexdev. Authorized testing only.</string>
+    <string name="about_footer">XMR Lab is licensed under GNU GPL v3.0. Authorized testing only.</string>
 
     <string name="shortcut_terminal_short">Terminal</string>
     <string name="shortcut_terminal_long">Open XMR Lab terminal</string>

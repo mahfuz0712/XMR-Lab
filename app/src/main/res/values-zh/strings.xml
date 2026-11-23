@@ -775,7 +775,7 @@
     <string name="about_link_github_url" translatable="false">github.com/mahfuz0712/XMR-Lab</string>
     <string name="about_oss_licenses_label">开源许可证</string>
     <string name="license_subtitle">基于这些开源项目构建。点按任一条目查看其源码。</string>
-    <string name="about_footer">XMR Lab 是基于 StrykerOSS 的社区衍生版本，遵循 GNU GPL v3.0。仅限授权测试。</string>
+    <string name="about_footer">XMR Lab 遵循 GNU GPL v3.0。仅限授权测试。</string>
     <string name="shortcut_terminal_short">终端</string>
     <string name="shortcut_terminal_long">打开 XMR Lab 终端</string>
     <string name="terminal_launcher_label" translatable="false">XMR Lab 终端</string>
