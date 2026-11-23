@@ -27,7 +27,7 @@ import com.xmrlab.android.terminal.frontend.completion.CandidatePopupWindow
 import com.xmrlab.android.terminal.frontend.session.view.TerminalView
 import com.xmrlab.android.terminal.frontend.session.view.TerminalViewClient
 import java.util.*
-import com.xmrlab.android.terminal.bridge.StrykerLog
+import com.stryker.terminal.bridge.StrykerLog
 
 class TermViewClient(val context: Context) :
     TerminalViewClient {

@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public final class LegacyDeviceDb {
 

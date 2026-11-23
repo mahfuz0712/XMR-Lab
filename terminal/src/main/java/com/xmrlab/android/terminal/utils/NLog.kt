@@ -11,7 +11,7 @@ import java.util.concurrent.Executors
 import java.util.zip.DataFormatException
 import java.util.zip.Deflater
 import java.util.zip.Inflater
-import com.xmrlab.android.terminal.bridge.StrykerLog
+import com.stryker.terminal.bridge.StrykerLog
 
 object NLog {
 

@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public final class VmProbe {
 

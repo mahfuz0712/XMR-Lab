@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public final class UsbWatcher {
 

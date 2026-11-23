@@ -12,7 +12,7 @@ import javax.microedition.khronos.opengles.GL10;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 @SuppressWarnings("ALL")
 public class GLSurfaceView_SDL extends SurfaceView implements SurfaceHolder.Callback {

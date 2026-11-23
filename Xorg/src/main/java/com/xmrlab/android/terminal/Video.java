@@ -13,7 +13,7 @@ import com.xmrlab.android.terminal.xorg.NeoXorgViewClient;
 import javax.microedition.khronos.egl.*;
 import javax.microedition.khronos.opengles.GL10;
 import java.lang.reflect.Method;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 
 class Mouse {

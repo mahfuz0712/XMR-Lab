@@ -8,7 +8,7 @@ import android.hardware.SensorManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 
 @SuppressWarnings("JniMissingFunction")

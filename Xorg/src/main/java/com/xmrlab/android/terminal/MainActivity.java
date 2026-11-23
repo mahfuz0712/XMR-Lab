@@ -31,7 +31,7 @@ import com.xmrlab.android.terminal.xorg.R;
 import java.util.LinkedList;
 import java.util.TreeSet;
 import java.util.concurrent.Semaphore;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 
 public class MainActivity extends AppCompatActivity implements NeoXorgViewClient {

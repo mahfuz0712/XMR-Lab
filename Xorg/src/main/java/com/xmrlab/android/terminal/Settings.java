@@ -12,7 +12,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.zip.GZIPInputStream;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 
 @SuppressWarnings("JniMissingFunction")

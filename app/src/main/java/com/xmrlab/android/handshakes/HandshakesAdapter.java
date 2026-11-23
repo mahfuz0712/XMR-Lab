@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public class HandshakesAdapter extends RecyclerView.Adapter<HandshakesAdapter.ViewHolder> {
 

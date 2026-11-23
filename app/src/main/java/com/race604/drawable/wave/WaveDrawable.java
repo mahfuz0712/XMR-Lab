@@ -18,7 +18,7 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.view.Choreographer;
 import android.view.animation.DecelerateInterpolator;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public class WaveDrawable extends Drawable implements Animatable, ValueAnimator.AnimatorUpdateListener {
 

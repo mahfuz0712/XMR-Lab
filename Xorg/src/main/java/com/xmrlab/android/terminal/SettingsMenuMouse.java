@@ -14,7 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 import com.xmrlab.android.terminal.xorg.R;
 
 import java.util.ArrayList;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 
 class SettingsMenuMouse extends SettingsMenu {

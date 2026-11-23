@@ -26,7 +26,7 @@ public class XmrLabApp extends com.xmrlab.android.terminal.App {
         store.add(LogEntry.INFO, "session", "Device: " + Build.MANUFACTURER + " " + Build.MODEL
                 + " · Android " + Build.VERSION.RELEASE
                 + " (" + abi + ")");
-        com.xmrlab.android.terminal.bridge.StrykerLog.install((level, tag, message, error) -> {
+        com.stryker.terminal.bridge.StrykerLog.install((level, tag, message, error) -> {
             LogStore s = LogStore.peek();
             if (s == null) return;
             String text = message;
