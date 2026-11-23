@@ -3,7 +3,7 @@ package com.xmrlab.android.engine;
 import android.content.Context;
 
 import com.xmrlab.android.utils.Core;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 import java.io.File;
 

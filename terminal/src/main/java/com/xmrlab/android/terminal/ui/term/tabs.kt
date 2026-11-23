@@ -27,7 +27,7 @@ import de.mrapp.android.tabswitcher.Tab
 import de.mrapp.android.tabswitcher.TabSwitcher
 import de.mrapp.android.tabswitcher.TabSwitcherDecorator
 import org.greenrobot.eventbus.EventBus
-import com.xmrlab.android.terminal.bridge.StrykerLog
+import com.stryker.terminal.bridge.StrykerLog
 
 open class NeoTab(title: CharSequence) : Tab(title) {
   open fun onPause() {}

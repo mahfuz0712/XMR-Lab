@@ -32,7 +32,7 @@ import com.xmrlab.android.terminal.component.completion.OnAutoCompleteListener;
 import com.xmrlab.android.terminal.frontend.session.terminal.OnTextSize;
 
 import com.xmrlab.android.terminal.R;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public final class TerminalView extends View {
 

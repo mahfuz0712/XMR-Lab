@@ -12,7 +12,7 @@ import androidx.core.content.FileProvider;
 import com.xmrlab.android.BuildConfig;
 import com.xmrlab.android.logger.LogFilter;
 import com.xmrlab.android.logger.LogStore;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 import java.io.File;
 import java.io.FileInputStream;

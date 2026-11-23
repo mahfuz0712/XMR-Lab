@@ -9,7 +9,7 @@ import android.media.MediaRecorder.AudioSource;
 import com.xmrlab.android.terminal.xorg.NeoXorgViewClient;
 
 import java.util.concurrent.Semaphore;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 @SuppressWarnings("JniMissingFunction")
 class AudioThread {

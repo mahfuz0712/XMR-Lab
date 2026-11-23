@@ -11,7 +11,7 @@ import android.content.Context;
 import android.os.ParcelUuid;
 
 import java.util.Collections;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public class WpairScanner {
 

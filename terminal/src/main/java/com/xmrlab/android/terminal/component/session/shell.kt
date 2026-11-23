@@ -5,7 +5,7 @@ import io.neolang.frontend.ConfigVisitor
 import com.xmrlab.android.terminal.App
 import com.xmrlab.android.terminal.R
 import com.xmrlab.android.terminal.backend.TerminalSession
-import com.xmrlab.android.terminal.bridge.SessionId
+import com.stryker.terminal.bridge.SessionId
 import com.xmrlab.android.terminal.component.ComponentManager
 import com.xmrlab.android.terminal.component.colorscheme.ColorSchemeComponent
 import com.xmrlab.android.terminal.component.config.DefaultValues

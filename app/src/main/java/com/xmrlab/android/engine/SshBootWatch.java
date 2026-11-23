@@ -1,6 +1,6 @@
 package com.xmrlab.android.engine;
 
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 final class SshBootWatch {
 

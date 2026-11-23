@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.xmrlab.android.terminal.App
 import com.xmrlab.android.terminal.R
-import com.xmrlab.android.terminal.bridge.Bridge.*
-import com.xmrlab.android.terminal.bridge.SessionId
+import com.stryker.terminal.bridge.Bridge.*
+import com.stryker.terminal.bridge.SessionId
 import com.xmrlab.android.terminal.component.ComponentManager
 import com.xmrlab.android.terminal.component.config.NeoPreference
 import com.xmrlab.android.terminal.component.session.ShellParameter

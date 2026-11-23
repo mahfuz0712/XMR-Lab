@@ -24,7 +24,7 @@ import com.xmrlab.android.R;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import com.xmrlab.android.terminal.bridge.StrykerLog;
+import com.stryker.terminal.bridge.StrykerLog;
 
 public class LightfallView extends TextureView
         implements TextureView.SurfaceTextureListener, EffectBackdrop {
