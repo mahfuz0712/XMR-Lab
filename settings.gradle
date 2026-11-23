@@ -16,7 +16,7 @@ dependencyResolutionManagement {
         maven { url 'https://jcenter.bintray.com/' }
     }
 }
-rootProject.name = "Stryker"
+rootProject.name = "XMR-Lab"
 include ':app'
 
 include ':terminal'

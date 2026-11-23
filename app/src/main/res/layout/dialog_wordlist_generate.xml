@@ -9,7 +9,7 @@
     app:strokeColor="@color/light_lite_contrast"
     app:strokeWidth="1dp">
 
-    <com.zalexdev.stryker.utils.NoNestedScrollView
+    <com.xmrlab.android.utils.NoNestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:overScrollMode="ifContentScrolls"
@@ -407,5 +407,5 @@
                     app:iconSize="16dp" />
             </LinearLayout>
         </LinearLayout>
-    </com.zalexdev.stryker.utils.NoNestedScrollView>
+    </com.xmrlab.android.utils.NoNestedScrollView>
 </com.google.android.material.card.MaterialCardView>

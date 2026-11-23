@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-  namespace 'com.stryker.terminal.xorg'
+  namespace 'com.xmrlab.android.terminal.xorg'
   compileSdk 37
 
   defaultConfig {

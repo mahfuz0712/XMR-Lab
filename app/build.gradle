@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.zalexdev.stryker'
+    namespace 'com.xmrlab.android'
     compileSdk 37
     ndkVersion '25.1.8937393'
 
