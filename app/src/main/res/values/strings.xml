@@ -116,7 +116,7 @@
     <string name="settings_delete_confirm_message">Removes the chroot and every tool in it, all app data, saved networks and settings, then uninstalls XMR Lab. This cannot be undone.</string>
     <string name="settings_delete_progress_title">Deleting XMR Lab</string>
     <string name="settings_delete_step_unmount">Unmounting the chroot</string>
-    <string name="settings_delete_step_wipe">Wiping /data/local/stryker</string>
+    <string name="settings_delete_step_wipe">Wiping /data/local/xmrlab</string>
     <string name="settings_delete_step_uninstall">Uninstalling the app</string>
     <string name="settings_delete_unmount_failed">Could not unmount the chroot — delete cancelled to protect your data</string>
     <string name="settings_delete_wipe_failed">Could not wipe the chroot — the app was not uninstalled</string>

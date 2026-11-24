@@ -96,7 +96,7 @@ public class Core {
     public final static String EXECUTE = "/data/data/com.xmrlab.android/files/chroot_exec ";
     public final static String BUSYBOX = "/data/data/com.xmrlab.android/files/busybox ";
     public final static String SHELL = "bash";
-    public final static String CHROOT_ROOT = "/data/local/stryker/release";
+    public final static String CHROOT_ROOT = "/data/local/xmrlab/release";
 
     public final static String CHROOT_MARKER_VERSION = "6.5";
     public final static String CHROOT_MARKER = CHROOT_ROOT + "/" + CHROOT_MARKER_VERSION;
@@ -834,7 +834,7 @@ public class Core {
         return proc && sys && dev && sdcard;
     }
     public boolean isOldMounted(){
-        return checkFolder("/data/local/stryker/beta/sdcard/Stryker");
+        return checkFolder("/data/local/xmrlab/beta/sdcard/Stryker");
     }
     public boolean ping(String ip, int port,int timeout) {
         try {
