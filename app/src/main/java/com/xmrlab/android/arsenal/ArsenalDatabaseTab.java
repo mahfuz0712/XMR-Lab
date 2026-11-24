@@ -574,7 +574,7 @@ public class ArsenalDatabaseTab extends Fragment {
         int color;
         switch (state) {
             case ACTIVE:
-                color = ContextCompat.getColor(context, R.color.stryker_accent);
+                color = ContextCompat.getColor(context, R.color.xmr_accent);
                 row.spinner.setVisibility(View.VISIBLE);
                 row.icon.setVisibility(View.GONE);
                 row.title.setTypeface(null, Typeface.BOLD);

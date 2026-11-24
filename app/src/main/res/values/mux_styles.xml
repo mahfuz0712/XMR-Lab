@@ -91,7 +91,7 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <!-- ===== Palettes. Theme.Stryker uses cyan; apply Amber on top with
+    <!-- ===== Palettes. Theme.XmrLab uses cyan; apply Amber on top with
          ContextThemeWrapper / activity.getTheme().applyStyle(..., true) ===== -->
     <style name="ThemeOverlay.Mux.Cyan" parent="">
         <item name="muxBg">@color/mux_cyan_bg</item>

@@ -25,7 +25,7 @@ public final class UmlEngine implements GuestEngine {
     private static final long GUEST_FRESH_MS = 15_000;
     private final java.util.concurrent.ExecutorService executor =
             java.util.concurrent.Executors.newSingleThreadExecutor(r -> {
-                Thread t = new Thread(r, "stryker-uml");
+                Thread t = new Thread(r, "xmr-uml");
                 t.setDaemon(true);
                 return t;
             });
@@ -79,7 +79,7 @@ public final class UmlEngine implements GuestEngine {
             if (!"tmpfs".equals(m[1])) continue;
             File d = new File(m[0]);
             if (!d.isDirectory() || !d.canWrite()) continue;
-            File probe = new File(d, "stryker-uml");
+            File probe = new File(d, "xmr-uml");
             if (probe.isDirectory() || probe.mkdirs()) return probe.getAbsolutePath();
         }
         return null;

@@ -9,15 +9,15 @@ public final class BackChannelMarker {
     public static final String PID = "0x6018";
     public static final String VID_BARE = "1D50";
     public static final String PID_BARE = "6018";
-    public static final String MANUFACTURER = "Stryker";
-    public static final String PRODUCT = "Stryker Back-Channel";
-    public static final String SERIAL = "STRYKERBC1";
+    public static final String MANUFACTURER = "XMR Lab";
+    public static final String PRODUCT = "XMR Lab Back-Channel";
+    public static final String SERIAL = "XMRLABBC1";
 
     public static final String HIDTOGO_PROFILE_NAME = "HID-to-Go (KBD + Mouse + Channel)";
     public static final String HIDTOGO_VID = "0x1d50";
     public static final String HIDTOGO_PID = "0x6019";
     public static final String HIDTOGO_VID_BARE = "1D50";
     public static final String HIDTOGO_PID_BARE = "6019";
-    public static final String HIDTOGO_PRODUCT = "Stryker HID-to-Go";
-    public static final String HIDTOGO_SERIAL = "STRYKERHTG1";
+    public static final String HIDTOGO_PRODUCT = "XMR Lab HID-to-Go";
+    public static final String HIDTOGO_SERIAL = "XMRLABHTG1";
 }

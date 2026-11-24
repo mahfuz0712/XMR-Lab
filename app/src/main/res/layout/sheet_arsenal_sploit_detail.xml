@@ -241,7 +241,7 @@
                 android:layout_weight="1"
                 android:text="@string/arsenal_db_view_source"
                 app:icon="@drawable/search"
-                app:iconTint="@color/stryker_accent" />
+                app:iconTint="@color/xmr_accent" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sd_save"
@@ -249,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/stryker_accent"
+                android:backgroundTint="@color/xmr_accent"
                 android:text="@string/arsenal_db_save_file"
                 android:textColor="@android:color/white"
                 app:icon="@drawable/save"

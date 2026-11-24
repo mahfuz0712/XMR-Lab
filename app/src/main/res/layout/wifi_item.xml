@@ -40,7 +40,7 @@
                 android:layout_gravity="center"
                 android:importantForAccessibility="no"
                 android:src="@drawable/wifi"
-                app:tint="@color/stryker_accent" />
+                app:tint="@color/xmr_accent" />
         </FrameLayout>
 
         <LinearLayout

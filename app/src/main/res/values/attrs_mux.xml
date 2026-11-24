@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- MUX palette slots. Theme.Stryker fills them with the cyan palette;
+    <!-- MUX palette slots. Theme.XmrLab fills them with the cyan palette;
          ThemeOverlay.Mux.Amber swaps in the amber palette. -->
     <attr name="muxBg" format="color" />
     <attr name="muxPanel" format="color" />

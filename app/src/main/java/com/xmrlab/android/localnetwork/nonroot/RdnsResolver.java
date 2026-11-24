@@ -68,7 +68,7 @@ public final class RdnsResolver extends DiscoveryResolver {
                 public void run() {
                     loop();
                 }
-            }, "stryker-rdns");
+            }, "xmr-rdns");
             t.setDaemon(true);
             worker = t;
             t.start();

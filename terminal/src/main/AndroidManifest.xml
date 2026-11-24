@@ -48,7 +48,7 @@
             android:name=".ui.other.SettingsActivity"
             android:exported="false"
             android:label="@string/settings"
-            android:theme="@style/Theme.Stryker.Settings" />
+            android:theme="@style/Theme.XmrLab.Settings" />
         <activity
             android:name=".ui.other.CrashActivity"
             android:exported="false"

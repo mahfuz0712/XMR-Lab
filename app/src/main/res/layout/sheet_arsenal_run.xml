@@ -38,7 +38,7 @@
                     android:layout_height="22dp"
                     android:layout_gravity="center"
                     android:src="@drawable/rocket_launch"
-                    app:tint="@color/stryker_accent" />
+                    app:tint="@color/xmr_accent" />
             </FrameLayout>
 
             <LinearLayout
@@ -79,7 +79,7 @@
             android:letterSpacing="0.08"
             android:text="@string/arsenal_run_command"
             android:textAllCaps="true"
-            android:textColor="@color/stryker_accent"
+            android:textColor="@color/xmr_accent"
             android:textSize="11sp"
             android:textStyle="bold" />
 
@@ -116,7 +116,7 @@
                 android:letterSpacing="0.08"
                 android:text="@string/arsenal_run_variables"
                 android:textAllCaps="true"
-                android:textColor="@color/stryker_accent"
+                android:textColor="@color/xmr_accent"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
@@ -142,7 +142,7 @@
                 android:layout_weight="1"
                 android:text="@string/arsenal_run_copy"
                 app:icon="@drawable/copy"
-                app:iconTint="@color/stryker_accent" />
+                app:iconTint="@color/xmr_accent" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/run_sheet_launch"
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/stryker_accent"
+                android:backgroundTint="@color/xmr_accent"
                 android:text="@string/arsenal_run_launch"
                 android:textColor="@android:color/white"
                 app:icon="@drawable/rocket_launch"

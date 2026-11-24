@@ -53,7 +53,7 @@ public final class GadgetProfileEditorSheet {
         this.editing = editing;
         this.listener = listener;
         Context ctx = host.requireContext();
-        dialog = new BottomSheetDialog(ctx, R.style.ThemeOverlay_Stryker_BottomSheetDialog);
+        dialog = new BottomSheetDialog(ctx, R.style.ThemeOverlay_XmrLab_BottomSheetDialog);
         dialog.setContentView(R.layout.bs_gadget_profile_editor);
         wire();
     }

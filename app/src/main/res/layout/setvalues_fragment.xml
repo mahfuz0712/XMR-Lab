@@ -112,7 +112,7 @@
                             android:maxLines="1"
                             android:text=""
                             android:textColor="@color/grey"
-                            android:textColorLink="@color/stryker_accent"
+                            android:textColorLink="@color/xmr_accent"
                             android:textSize="11sp"
                             android:visibility="gone" />
                     </LinearLayout>
@@ -125,7 +125,7 @@
                 android:layout_height="4dp"
                 android:layout_marginTop="12dp"
                 android:indeterminate="true"
-                app:indicatorColor="@color/stryker_accent"
+                app:indicatorColor="@color/xmr_accent"
                 app:trackCornerRadius="2dp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -137,7 +137,7 @@
                 android:letterSpacing="0.08"
                 android:text="@string/msf_values_section_required"
                 android:textAllCaps="true"
-                android:textColor="@color/stryker_accent"
+                android:textColor="@color/xmr_accent"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 

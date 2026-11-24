@@ -615,7 +615,7 @@
                 <ImageView
                     style="@style/DashboardRowIcon"
                     android:src="@drawable/latest_wifi"
-                    app:tint="@color/stryker_accent" />
+                    app:tint="@color/xmr_accent" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/DashboardRowTitle"

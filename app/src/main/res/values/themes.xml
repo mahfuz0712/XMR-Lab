@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.Stryker" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.XmrLab" parent="Theme.Material3.Dark.NoActionBar">
         <!-- MUX palette slots (cyan). Amber: ThemeOverlay.Mux.Amber -->
         <item name="muxBg">@color/mux_cyan_bg</item>
         <item name="muxPanel">@color/mux_cyan_panel</item>
@@ -36,16 +36,16 @@
         <item name="android:windowLightStatusBar">false</item>
 
         <!-- Component styles -->
-        <item name="switchStyle">@style/Widget.Stryker.Switch</item>
-        <item name="android:textViewStyle">@style/Widget.Stryker.TextView</item>
-        <item name="android:buttonStyle">@style/Widget.Stryker.Button</item>
+        <item name="switchStyle">@style/Widget.XmrLab.Switch</item>
+        <item name="android:textViewStyle">@style/Widget.XmrLab.TextView</item>
+        <item name="android:buttonStyle">@style/Widget.XmrLab.Button</item>
         <item name="materialButtonStyle">@style/Widget.Mux.Button</item>
         <item name="materialCardViewStyle">@style/Widget.Mux.CardView</item>
-        <item name="floatingActionButtonStyle">@style/Widget.Stryker.FAB</item>
-        <item name="materialAlertDialogTheme">@style/Widget.Stryker.AlertDialog</item>
+        <item name="floatingActionButtonStyle">@style/Widget.XmrLab.FAB</item>
+        <item name="materialAlertDialogTheme">@style/Widget.XmrLab.AlertDialog</item>
         <item name="backgroundColor">?attr/muxBg</item>
     </style>
-    <style name="Theme.StrykerFloatingDialog" parent="Theme.Stryker">
+    <style name="Theme.XmrLabFloatingDialog" parent="Theme.XmrLab">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -55,5 +55,5 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
-    <style name="Theme.Stryker.Immersive" parent="Theme.Stryker" />
+    <style name="Theme.XmrLab.Immersive" parent="Theme.XmrLab" />
 </resources>
