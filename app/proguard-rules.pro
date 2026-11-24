@@ -78,11 +78,11 @@
 }
 
 -keep class com.xmrlab.android.terminal.** { *; }
--keep class com.stryker.neolang.** { *; }
+-keep class io.neolang.** { *; }
 -keep class com.github.wrdlbrnft.sortedlistadapter.** { *; }
 -keep class de.mrapp.android.** { *; }
 -dontwarn com.xmrlab.android.terminal.**
--dontwarn com.stryker.neolang.**
+-dontwarn io.neolang.**
 
 -keepclassmembers class * {
     @org.greenrobot.eventbus.Subscribe <methods>;
