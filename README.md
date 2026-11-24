@@ -18,7 +18,7 @@ required before a release is considered stable.
 
 Large Linux payloads are downloaded on first use from the XMR Lab GitHub Release tagged
 `xmr-assets-651` and verified against SHA-256 and expected size values in
-[`stryker_manifest.json`](stryker_manifest.json).
+[`xmr_manifest.json`](xmr_manifest.json).
 
 Expected release assets:
 
