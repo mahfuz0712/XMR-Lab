@@ -147,7 +147,7 @@
                             app:iconGravity="textStart"
                             app:iconPadding="0dp"
                             app:iconSize="18dp"
-                            app:iconTint="@color/stryker_accent" />
+                            app:iconTint="@color/xmr_accent" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/msf_action_payload"
@@ -326,7 +326,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/grey"
                 app:startIconDrawable="@drawable/search"
-                app:startIconTint="@color/stryker_accent">
+                app:startIconTint="@color/xmr_accent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/getsearch"

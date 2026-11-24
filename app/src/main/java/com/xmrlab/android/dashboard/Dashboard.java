@@ -679,7 +679,7 @@ public class Dashboard extends Fragment {
                 break;
             }
             case BOOTING:
-                badge = "Booting…"; color = R.color.stryker_accent;
+                badge = "Booting…"; color = R.color.xmr_accent;
                 ring = VmRingView.STATE_BOOTING; break;
             case STOPPED:
             default:
@@ -887,7 +887,7 @@ public class Dashboard extends Fragment {
     }
 
     private List<Tool> tools() {
-        int accent = androidx.core.content.ContextCompat.getColor(context, R.color.stryker_accent);
+        int accent = androidx.core.content.ContextCompat.getColor(context, R.color.xmr_accent);
         List<Tool> t = new ArrayList<>();
         t.add(new Tool("wifi", R.string.wifi_networks, R.drawable.wifi,
                 R.drawable.dashboard_tile_bg_blue, accent, true,
@@ -1148,7 +1148,7 @@ public class Dashboard extends Fragment {
             TapTargetView.showFor(activity,
                     TapTarget.forView(target, "Tip: Networks with ⭐",
                                     "Networks with ⭐ are likely vulnerable to Pixie Dust")
-                            .outerCircleColor(R.color.stryker_accent)
+                            .outerCircleColor(R.color.xmr_accent)
                             .outerCircleAlpha(0.96f)
                             .targetCircleColor(android.R.color.white)
                             .titleTextSize(20)

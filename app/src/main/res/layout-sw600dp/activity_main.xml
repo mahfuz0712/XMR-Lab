@@ -51,7 +51,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/stryker_main_logo"
+                        android:id="@+id/xmr_main_logo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-black"

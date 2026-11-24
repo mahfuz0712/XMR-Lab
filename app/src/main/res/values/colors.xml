@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="dialog_background_color">#07151D</color>
-    <color name="stryker_accent_contrast">#E6A91E</color>
-    <color name="stryker_accent">#28D8EF</color>
-    <color name="stryker_logo_accent">#28D8EF</color>
+    <color name="xmr_accent_contrast">#E6A91E</color>
+    <color name="xmr_accent">#28D8EF</color>
+    <color name="xmr_logo_accent">#28D8EF</color>
     <color name="yellow">#E6A91E</color>
     <color name="red">#E34C59</color>
     <color name="green">#42D58B</color>

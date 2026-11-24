@@ -41,7 +41,7 @@
                     android:layout_gravity="center"
                     android:importantForAccessibility="no"
                     android:src="@drawable/wifi"
-                    app:tint="@color/stryker_accent" />
+                    app:tint="@color/xmr_accent" />
             </FrameLayout>
 
             <LinearLayout
@@ -113,7 +113,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_outline_help"
-                    app:tint="@color/stryker_accent" />
+                    app:tint="@color/xmr_accent" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/additional_text"
@@ -236,7 +236,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/magic_button"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -273,7 +273,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/restart_alt"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -316,7 +316,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/password"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -353,7 +353,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/fiber_pin"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -390,7 +390,7 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/fiber_pin"
-                            app:tint="@color/stryker_accent" />
+                            app:tint="@color/xmr_accent" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
@@ -469,7 +469,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/latest_wifi"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -506,7 +506,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/unlock"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -550,7 +550,7 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/key"
-                                app:tint="@color/stryker_accent" />
+                                app:tint="@color/xmr_accent" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"

@@ -17,7 +17,7 @@ import com.xmrlab.android.R;
 
 public class RootlessService extends Service {
 
-    private static final String CHANNEL_ID = "stryker_rootless";
+    private static final String CHANNEL_ID = "xmr_rootless";
     private static final int NOTIF_ID = 71;
 
     public static void start(Context context) {
@@ -91,7 +91,7 @@ public class RootlessService extends Service {
         if (engine != null) {
             new Thread(() -> {
                 try { engine.stop(); } catch (Throwable ignored) {}
-            }, "stryker-vm-service-stop").start();
+            }, "xmr-vm-service-stop").start();
         }
         super.onDestroy();
     }

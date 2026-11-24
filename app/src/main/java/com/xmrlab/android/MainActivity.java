@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawerLayout);
 
-        logo = findViewById(R.id.stryker_main_logo);
+        logo = findViewById(R.id.xmr_main_logo);
         menu = findViewById(R.id.menu_img);
         menu.setOnClickListener(view -> {
             if (core != null) {
@@ -325,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
             startUsbFlow();
             return;
         }
-        usbDialog = new BottomSheetDialog(this, R.style.ThemeOverlay_Stryker_BottomSheetDialog);
+        usbDialog = new BottomSheetDialog(this, R.style.ThemeOverlay_XmrLab_BottomSheetDialog);
         usbDialog.setDismissWithAnimation(true);
         usbDialog.setContentView(R.layout.usb_dialog);
 
@@ -784,7 +784,7 @@ public class MainActivity extends AppCompatActivity {
             DrawerSpec spec = DRAWER_SPECS.get(itemId);
             if (active) {
                 if (title != null) {
-                    title.setTextColor(ContextCompat.getColor(ctx, R.color.stryker_accent));
+                    title.setTextColor(ContextCompat.getColor(ctx, R.color.xmr_accent));
                     title.setTypeface(null, android.graphics.Typeface.BOLD);
                 }
                 if (icon != null && spec != null) {

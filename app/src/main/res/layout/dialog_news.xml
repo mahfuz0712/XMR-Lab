@@ -32,7 +32,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="centerCrop"
-                    android:src="@color/stryker_accent"
+                    android:src="@color/xmr_accent"
                     app:shapeAppearanceOverlay="@style/ShapeAppearance.News.Image" />
 
                 <LinearLayout
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:backgroundTint="@color/stryker_accent"
+                        android:backgroundTint="@color/xmr_accent"
                         android:gravity="center"
                         android:text="Button 1"
                         android:textColor="@color/light_contrast"

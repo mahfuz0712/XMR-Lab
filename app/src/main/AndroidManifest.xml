@@ -67,7 +67,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/appicon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Stryker"
+        android:theme="@style/Theme.XmrLab"
         android:usesCleartextTraffic="true">
 
         <property
@@ -78,7 +78,7 @@
             android:name=".geomac.GeoMacInline"
             android:exported="true"
             android:label="Find MAC cords"
-            android:theme="@style/Theme.StrykerFloatingDialog">
+            android:theme="@style/Theme.XmrLabFloatingDialog">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -95,7 +95,7 @@
             android:name=".macchanger.MACChangerInline"
             android:exported="true"
             android:label="Change device MAC"
-            android:theme="@style/Theme.StrykerFloatingDialog">
+            android:theme="@style/Theme.XmrLabFloatingDialog">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -134,7 +134,7 @@
             android:exported="false"
             android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/Theme.Stryker" />
+            android:theme="@style/Theme.XmrLab" />
 
         <service
             android:name=".nuclei.NucleiScanService"
@@ -170,7 +170,7 @@
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
             android:exported="false"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.Stryker.Immersive" />
+            android:theme="@style/Theme.XmrLab.Immersive" />
         <activity
             android:name=".searchsploit.ExploitWebview"
             android:exported="false"
