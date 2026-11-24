@@ -1,7 +1,6 @@
 # XMR Lab
 
-**XMR Lab** is a tablet-first, community derivative of
-[StrykerOSS](https://github.com/zalexdev/strykerapp).
+**XMR Lab** is a tablet-first, cyber security and privacy research application for Android.
 
 It keeps the upstream application and engine architecture (Root/CHROOT, User Mode Linux,
 and rootless QEMU) while applying XMR Lab branding, a dark cyan/orange visual system,
@@ -9,7 +8,7 @@ and a permanent tablet navigation rail.
 
 ## Project status
 
-This is an early rebrand/integration branch. The first pass covers application identity,
+The first pass covers application identity,
 adaptive (portrait and landscape) layouts, tablet navigation shell, HUD palette, asset endpoints, OTA manifest,
 and CI/local build configuration. Full visual QA and on-device engine validation are still
 required before a release is considered stable.
@@ -86,12 +85,6 @@ and uses repository secrets:
 
 Without these secrets, the release build is unsigned.
 
-## Upstream and licensing
-
-XMR Lab is a derivative work of StrykerOSS. Preserve the upstream copyright notices,
-`LICENSE`, and `THIRD-PARTY-NOTICES.md`. This project is distributed under the applicable
-GNU GPL v3.0 terms. The corresponding source for this derivative must remain available.
-Upstream: https://github.com/zalexdev/strykerapp
 
 ## Device scope
 
