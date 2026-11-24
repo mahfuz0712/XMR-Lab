@@ -100,6 +100,6 @@ fi
 printf '\n'
 find "$PUB" -type f -printf '%-52p %10s\n' | sort | sed 's/^/   /'
 printf '\n%s\n' "manifest block: $MF"
-printf '%s\n' "Merge it into stryker_manifest.json, upload out/publish/<tag>/* to the"
+printf '%s\n' "Merge it into xmr_manifest.json, upload out/publish/<tag>/* to the"
 printf '%s\n' "matching release tag, and keep the legacy core.chroot64/chroot32 keys as"
 printf '%s\n' "they are -- builds below version 6 read those directly and cannot be changed."

@@ -5,7 +5,7 @@ public final class ApiEndpoints {
     public static final String GITHUB_REPO = "https://github.com/mahfuz0712/XMR-Lab";
 
     public static final String MANIFEST_URL =
-            "https://raw.githubusercontent.com/mahfuz0712/XMR-Lab/main/stryker_manifest.json";
+            "https://raw.githubusercontent.com/mahfuz0712/XMR-Lab/main/xmr_manifest.json";
 
     private static final String ASSET_BASE =
             "https://github.com/mahfuz0712/XMR-Lab/releases/download/xmr-assets-651/";

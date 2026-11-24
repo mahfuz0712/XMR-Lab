@@ -126,7 +126,7 @@ this kind have actually turned up, and it is written to be read and added to.
 ```
 images/
   build-all.sh          everything, in dependency order
-  publish.sh            checksums + the stryker_manifest.json block
+  publish.sh            checksums + the xmr_manifest.json block
   lib/common.sh         identity pinning, deterministic tar/gzip
   kernel/
     build-vm.sh         arm64 Image for qemu -M virt
