@@ -101,7 +101,7 @@
     <string name="settings_delete_confirm_message">将删除 chroot 和其中的所有工具、全部应用数据、已保存的网络和设置，然后卸载 XMR Lab。此操作无法撤销。</string>
     <string name="settings_delete_progress_title">正在删除 XMR Lab</string>
     <string name="settings_delete_step_unmount">正在卸载 chroot</string>
-    <string name="settings_delete_step_wipe">正在擦除 /data/local/stryker</string>
+    <string name="settings_delete_step_wipe">正在擦除 /data/local/xmrlab</string>
     <string name="settings_delete_step_uninstall">正在卸载应用</string>
     <string name="settings_delete_unmount_failed">无法卸载 chroot — 已取消删除以保护您的数据</string>
     <string name="settings_delete_wipe_failed">无法擦除 chroot — 应用未被卸载</string>
