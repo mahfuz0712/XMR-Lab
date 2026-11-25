@@ -10,7 +10,7 @@ on:
       release_tag:
         description: 'Release tag to create and upload assets to (must not already exist)'
         required: true
-        default: 'xmr-assets-652'
+        default: 'xmr-assets'
       skip_uml:
         description: 'Skip the UML kernel (needs the Android NDK; not used by the rootless engine)'
         required: true
