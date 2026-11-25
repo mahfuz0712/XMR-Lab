@@ -1,0 +1,94 @@
+name: Build guest images
+
+# Builds the guest Debian rootfs + VM kernel (images/build-all.sh) and
+# publishes the result as a new GitHub Release, so this doesn't have to be
+# done on a local machine (WSL, etc). Manual trigger only -- this is a long,
+# heavy, root-requiring build, not something to run on every push.
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Release tag to create and upload assets to (must not already exist)'
+        required: true
+        default: 'xmr-assets-652'
+      skip_uml:
+        description: 'Skip the UML kernel (needs the Android NDK; not used by the rootless engine)'
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build rootfs + kernel images
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Free up disk space
+        run: |
+          # debootstrap + kernel build + both tarball/image outputs need real
+          # room; the hosted runner's default free space is too tight once
+          # preinstalled toolchains we don't need are counted.
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache \
+                      /usr/local/.ghcup "$AGENT_TOOLSDIRECTORY" 2>/dev/null || true
+          df -h /
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            debootstrap qemu-user-binfmt binfmt-support \
+            libssl-dev libelf-dev bc flex bison pigz
+
+      - name: Build images
+        run: |
+          if [ "${{ inputs.skip_uml }}" = "true" ]; then
+            export SKIP_UML=1
+          fi
+          sudo -E images/build-all.sh
+
+      - name: Show build output
+        if: always()
+        run: |
+          find images/out -type f -exec ls -lh {} \; 2>/dev/null || true
+          echo
+          column -t -s"$(printf '\t')" images/out/artifacts.tsv 2>/dev/null || cat images/out/artifacts.tsv 2>/dev/null || true
+
+      - name: Upload artifacts.tsv (for the manifest step, even on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts-tsv
+          path: images/out/artifacts.tsv
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Create release and upload assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd images/out
+          files=()
+          for f in chroot64-debian.tar.gz vm/Image vm/initrd.img vm/rootfs.imgz vm/rootfs.img; do
+            [ -f "$f" ] && files+=("$f")
+          done
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No build artifacts found -- not creating a release." >&2
+            exit 1
+          fi
+          gh release create "${{ inputs.release_tag }}" \
+            --repo "${{ github.repository }}" \
+            --title "XMR Lab guest images (${{ inputs.release_tag }})" \
+            --notes "Built by GitHub Actions from commit ${{ github.sha }} on branch ${{ github.ref_name }}." \
+            "${files[@]}"
+
+      - name: Print next step
+        run: |
+          echo "Release ${{ inputs.release_tag }} published."
+          echo "Next: run images/publish.sh https://github.com/${{ github.repository }}/releases/download/${{ inputs.release_tag }}"
+          echo "(or hand the artifacts-tsv workflow artifact + the tag name to Claude to merge xmr_manifest.json)"
