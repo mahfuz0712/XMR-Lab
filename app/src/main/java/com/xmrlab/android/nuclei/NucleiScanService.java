@@ -98,7 +98,7 @@ public class NucleiScanService extends Service {
         });
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "stryker:nuclei");
+        wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "xmrlab:nuclei");
         wakeLock.setReferenceCounted(false);
     }
 

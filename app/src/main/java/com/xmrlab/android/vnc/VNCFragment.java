@@ -281,11 +281,11 @@ public class VNCFragment extends Fragment {
         com.xmrlab.android.engine.GuestEngine guest = core.guest();
         java.io.File share = guest.shareDir();
         if (share == null) share = new java.io.File(core.getShareRoot());
-        java.io.File staging = new java.io.File(share, ".stryker-vnc");
+        java.io.File staging = new java.io.File(share, ".xmrlab-vnc");
         staging.mkdirs();
         if (!stageAsset("install_xfce.sh", new java.io.File(staging, "install.sh"))) return false;
         if (!stageAsset("uninstall_xfce.sh", new java.io.File(staging, "uninstall.sh"))) return false;
-        String from = guest.guestSharePath() + "/.stryker-vnc";
+        String from = guest.guestSharePath() + "/.xmrlab-vnc";
         core.customChrootCommand("mkdir -p " + VNC_DIR + "; "
                 + "cp -f " + from + "/install.sh " + VNC_DIR + "/install.sh; "
                 + "cp -f " + from + "/uninstall.sh " + VNC_DIR + "/uninstall.sh; "
@@ -295,7 +295,7 @@ public class VNCFragment extends Fragment {
     }
 
     private boolean stageForChroot() {
-        java.io.File staging = new java.io.File(context.getFilesDir(), ".stryker-vnc");
+        java.io.File staging = new java.io.File(context.getFilesDir(), ".xmrlab-vnc");
         staging.mkdirs();
         if (!stageAsset("install_xfce.sh", new java.io.File(staging, "install.sh"))) return false;
         if (!stageAsset("uninstall_xfce.sh", new java.io.File(staging, "uninstall.sh"))) return false;
@@ -512,7 +512,7 @@ public class VNCFragment extends Fragment {
                     markCurrentStageFailed();
                     showDialog("Install failed", line);
                 } else if (line.contains("No previous VNC")) {
-                    core.toaster("Default password set to \"stryker\"");
+                    core.toaster("Default password set to \"xmrlab\"");
                 } else if (line.contains("Use the helper scripts")) {
                     showDialog("Install complete", "VNC server installed.");
                 }

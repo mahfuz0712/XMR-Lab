@@ -130,7 +130,7 @@ public final class LogAdapter extends RecyclerView.Adapter<LogAdapter.VH> {
 
     private static String stripPrefix(String text) {
         if (text == null) return "";
-        return text.replace("[STRYKER]", "").replace("[STRYKER:warn]", "").trim();
+        return text.replace("[XMRLAB]", "").replace("[XMRLAB:warn]", "").trim();
     }
 
     static final class VH extends RecyclerView.ViewHolder {

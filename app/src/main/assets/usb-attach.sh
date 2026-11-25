@@ -40,7 +40,7 @@ fw_diagnose() {
 	*)				pkg=firmware-misc-nonfree ;;
 	esac
 	say "  'apt install $pkg' in the guest installs it"
-	say "  or drop the file into the Stryker share under firmware/ -- the guest"
+	say "  or drop the file into the XMR Lab share under firmware/ -- the guest"
 	say "  searches it as firmware_class.path"
 }
 

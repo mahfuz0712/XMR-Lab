@@ -14,7 +14,7 @@ VMOUT=$OUT_DIR/vm
 need_root
 need debootstrap mkfs.ext4 resize2fs e2fsck gzip tar chroot
 QEMU=$(command -v qemu-aarch64-static || true)
-[ -n "$QEMU" ] || die "missing qemu-aarch64-static (apt install qemu-user-static)"
+[ -n "$QEMU" ] || die "missing qemu-aarch64-static (apt install qemu-user-binfmt, or qemu-user-static if your distro still ships it as a real package)"
 grep -q enabled /proc/sys/fs/binfmt_misc/qemu-aarch64 2>/dev/null || die \
 "qemu-aarch64 binfmt is not registered, so the arm64 chroot cannot run.
   systemctl restart binfmt-support

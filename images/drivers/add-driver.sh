@@ -76,14 +76,14 @@ build_one() {
 	fi
 
 	cat > "$pkgdir/DEBIAN/control" <<EOF
-Package: stryker-driver-$name
+Package: xmrlab-driver-$name
 Version: $ver
 Architecture: arm64
-Maintainer: Stryker images <images@localhost>
+Maintainer: XMR Lab images <images@localhost>
 Section: kernel
 Priority: optional
 Depends: kmod
-Description: $name wireless driver for the Stryker guest kernel $KREL
+Description: $name wireless driver for the XMR Lab guest kernel $KREL
  Out-of-tree build of $name, compiled against the guest kernel $KREL.
  .
  The in-tree driver for this chip, where there is one, is already built into
@@ -109,7 +109,7 @@ exit 0
 EOF
 	chmod 755 "$pkgdir/DEBIAN/postinst" "$pkgdir/DEBIAN/postrm"
 
-	local deb=$DEST/stryker-driver-${name}_${ver}_arm64.deb
+	local deb=$DEST/xmrlab-driver-${name}_${ver}_arm64.deb
 	rm -f "$deb"
 	dpkg-deb --root-owner-group --build "$pkgdir" "$deb" >/dev/null
 	rm -rf "$pkgdir"

@@ -90,7 +90,7 @@ fi
 mkdir -p "$O"
 
 stamp="$SRC@$(git -C "$SRC" rev-parse HEAD 2>/dev/null || echo "$KVER")"
-had=$(cat "$O/.stryker-source" 2>/dev/null || true)
+had=$(cat "$O/.xmrlab-source" 2>/dev/null || true)
 if [ -e "$O/.config" ] || [ -n "$(ls -A "$O" 2>/dev/null)" ]; then
 	if [ "$had" != "$stamp" ]; then
 		say "output directory holds objects from another source -- starting clean"
@@ -100,7 +100,7 @@ if [ -e "$O/.config" ] || [ -n "$(ls -A "$O" 2>/dev/null)" ]; then
 		mkdir -p "$O"
 	fi
 fi
-printf '%s\n' "$stamp" > "$O/.stryker-source"
+printf '%s\n' "$stamp" > "$O/.xmrlab-source"
 
 say "configuring ($(make -C "$SRC" -s kernelversion))"
 make -C "$SRC" O="$O" -j"$JOBS" defconfig >/dev/null

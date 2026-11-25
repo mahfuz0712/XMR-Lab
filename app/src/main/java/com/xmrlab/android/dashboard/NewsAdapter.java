@@ -34,7 +34,7 @@ import java.util.Set;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
-    private static final String PREFS = "stryker_news";
+    private static final String PREFS = "xmrlab_news";
     private static final String KEY_READ = "read";
 
     private final Activity activity;

@@ -33,7 +33,7 @@ public final class RootlessEngine implements GuestEngine {
 
     private final Context app;
     private final ExecutorService qemuExecutor = Executors.newSingleThreadExecutor(r -> {
-        Thread t = new Thread(r, "stryker-qemu");
+        Thread t = new Thread(r, "xmrlab-qemu");
         t.setDaemon(true);
         return t;
     });
@@ -260,7 +260,7 @@ public final class RootlessEngine implements GuestEngine {
             qemuProcess = proc;
             booted = false;
 
-            new Thread(() -> pumpBootLog(proc, listener), "stryker-qemu-log").start();
+            new Thread(() -> pumpBootLog(proc, listener), "xmrlab-qemu-log").start();
 
             SshBootWatch watch = new SshBootWatch(hostSshPort, BOOT_TIMEOUT_MS, BOOT_HARD_LIMIT_MS);
             boolean consoleTried = false;
@@ -569,7 +569,7 @@ public final class RootlessEngine implements GuestEngine {
             if (isAlive(p)) p.destroy();
             sleep(1500);
             if (isAlive(p)) destroyForcibly(p);
-        }, "stryker-qemu-stop").start();
+        }, "xmrlab-qemu-stop").start();
     }
 
     public boolean stopAndWait(long timeoutMs) {
@@ -709,7 +709,7 @@ public final class RootlessEngine implements GuestEngine {
         ensureWifiFirmware();
         try {
             GuestExec.run("mkdir -p /etc/modules-load.d; "
-                    + "{ echo loop; echo squashfs; echo overlay; } > /etc/modules-load.d/stryker.conf 2>/dev/null; true");
+                    + "{ echo loop; echo squashfs; echo overlay; } > /etc/modules-load.d/xmrlab.conf 2>/dev/null; true");
             if (guestHasModules()) {
                 GuestExec.run("modprobe loop >/dev/null 2>&1; modprobe squashfs >/dev/null 2>&1; "
                         + "modprobe overlay >/dev/null 2>&1; true");
@@ -729,11 +729,11 @@ public final class RootlessEngine implements GuestEngine {
             }
             GuestExec.run("command -v cpio >/dev/null 2>&1 || "
                     + "(export DEBIAN_FRONTEND=noninteractive; apt-get install -y --no-install-recommends cpio >/dev/null 2>&1); "
-                    + "rm -rf /tmp/stryker-ird; mkdir -p /tmp/stryker-ird; cd /tmp/stryker-ird; "
+                    + "rm -rf /tmp/xmrlab-ird; mkdir -p /tmp/xmrlab-ird; cd /tmp/xmrlab-ird; "
                     + "(cpio -idm < /sdcard/XMRLab/.initrd.img || busybox cpio -idm < /sdcard/XMRLab/.initrd.img) >/dev/null 2>&1; "
-                    + "if [ -d /tmp/stryker-ird/lib/modules ]; then mkdir -p /lib/modules; "
-                    + "cp -a /tmp/stryker-ird/lib/modules/. /lib/modules/; depmod -a >/dev/null 2>&1; "
-                    + "echo __MODULES_DEPLOYED__; fi; rm -rf /tmp/stryker-ird");
+                    + "if [ -d /tmp/xmrlab-ird/lib/modules ]; then mkdir -p /lib/modules; "
+                    + "cp -a /tmp/xmrlab-ird/lib/modules/. /lib/modules/; depmod -a >/dev/null 2>&1; "
+                    + "echo __MODULES_DEPLOYED__; fi; rm -rf /tmp/xmrlab-ird");
             staged.delete();
             ArrayList<String> res = GuestExec.run(
                     "modprobe loop >/dev/null 2>&1; modprobe squashfs >/dev/null 2>&1; "
@@ -793,7 +793,7 @@ public final class RootlessEngine implements GuestEngine {
 
 
     private static final String CORE_MARKER = "/CORE/PixieWps/pixie.py";
-    private static final String STAGED_CORE = ".stryker-guest-core.tar";
+    private static final String STAGED_CORE = ".xmrlab-guest-core.tar";
 
     private GuestEngine guestInUse() {
         GuestEngine up = Engines.running(app);
@@ -1226,7 +1226,7 @@ public final class RootlessEngine implements GuestEngine {
         a.add("-device"); a.add("virtio-serial-pci");
         a.add("-chardev"); a.add("socket,id=term0,path=" + RootlessPaths.termSock(app).getAbsolutePath()
                 + ",server=on,wait=off");
-        a.add("-device"); a.add("virtconsole,chardev=term0,name=org.stryker.term");
+        a.add("-device"); a.add("virtconsole,chardev=term0,name=org.xmrlab.term");
 
         a.add("-display"); a.add("none");
         a.add("-qmp"); a.add("unix:" + RootlessPaths.qmpSock(app).getAbsolutePath() + ",server,nowait");
@@ -1265,14 +1265,14 @@ public final class RootlessEngine implements GuestEngine {
 
     private File pickShareDir() {
         if (hasStorageAccess()) {
-            File pub = new File(android.os.Environment.getExternalStorageDirectory(), "Stryker");
+            File pub = new File(android.os.Environment.getExternalStorageDirectory(), "XMRLab");
             if ((pub.isDirectory() || pub.mkdirs()) && pub.canWrite()) {
                 return withSubdirs(pub);
             }
         }
         File ext = app.getExternalFilesDir(null);
         if (ext != null) {
-            File s = new File(ext, "Stryker");
+            File s = new File(ext, "XMRLab");
             if (s.isDirectory() || s.mkdirs()) return withSubdirs(s);
         }
         return null;

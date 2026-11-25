@@ -19,7 +19,7 @@ need_root() {
 	[ "$(id -u)" = 0 ] || die "run as root: this mounts loop devices and makes device nodes"
 }
 
-export KBUILD_BUILD_USER=${KBUILD_BUILD_USER:-stryker}
+export KBUILD_BUILD_USER=${KBUILD_BUILD_USER:-xmrlab}
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-images}
 export KBUILD_BUILD_TIMESTAMP=${KBUILD_BUILD_TIMESTAMP:-"Thu Jan  1 00:00:00 UTC 1970"}
 export SOURCE_DATE_EPOCH=${SOURCE_DATE_EPOCH:-0}

@@ -704,10 +704,10 @@ public class WiFIAdapter extends RecyclerView.Adapter<WiFIAdapter.ViewHolder> {
                 @Override
                 public void onFinished() {
                     if (hsStatus[0]){
-                        monitor.finish(true, "Handshake captured\nCheck Stryker/captured/");
+                        monitor.finish(true, "Handshake captured\nCheck XMRLab/captured/");
                     }
                     else if (pmkidStatus[0]){
-                        monitor.finish(true, "PMKID captured\nCheck Stryker/captured/");
+                        monitor.finish(true, "PMKID captured\nCheck XMRLab/captured/");
                     }
                     else {
                         monitor.finish(false, "Handshake not captured");

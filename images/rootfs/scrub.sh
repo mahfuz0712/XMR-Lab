@@ -64,7 +64,7 @@ after_share=$(du -sm "$TREE/usr/share" 2>/dev/null | cut -f1)
 note "docs and locales: ${before_share:-?} MB -> ${after_share:-?} MB"
 
 mkdir -p "$TREE/etc/dpkg/dpkg.cfg.d"
-cat > "$TREE/etc/dpkg/dpkg.cfg.d/01-stryker-nodoc" <<'EOF'
+cat > "$TREE/etc/dpkg/dpkg.cfg.d/01-xmrlab-nodoc" <<'EOF'
 path-exclude=/usr/share/man/*
 path-exclude=/usr/share/info/*
 path-exclude=/usr/share/doc/*/README.*
