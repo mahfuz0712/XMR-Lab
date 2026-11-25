@@ -99,7 +99,7 @@ public class Logger {
             editor.flush();
             fOut.flush();
             editor.close();
-            customCommand("su -c 'cp " + path + filename + " /sdcard/Stryker/reports/'");
+            customCommand("su -c 'cp " + path + filename + " /sdcard/XMRLab/reports/'");
         } catch (IOException e) {
             e.printStackTrace();
         }

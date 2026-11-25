@@ -303,7 +303,7 @@ public final class UmlEngine implements GuestEngine {
         return true;
     }
 
-    private static final String SHIM_PATH = "/usr/local/lib/stryker/systemctl";
+    private static final String SHIM_PATH = "/usr/local/lib/xmrlab/systemctl";
 
     private void ensureSystemctlShim() {
         try {
@@ -320,7 +320,7 @@ public final class UmlEngine implements GuestEngine {
                 int n;
                 while ((n = in.read(buf)) > 0) out.write(buf, 0, n);
             }
-            GuestExec.run("mkdir -p /usr/local/lib/stryker && "
+            GuestExec.run("mkdir -p /usr/local/lib/xmrlab && "
                     + "sed 's/\r$//' " + guestSharePath() + "/systemctl-shim > " + SHIM_PATH
                     + " && chmod 0755 " + SHIM_PATH
                     + " && ln -sf " + SHIM_PATH + " /usr/local/sbin/systemctl");
@@ -698,8 +698,8 @@ public final class UmlEngine implements GuestEngine {
         cmd.add("ubd0=" + rootfs().getAbsolutePath());
         cmd.add("root=/dev/ubda");
         cmd.add("rw");
-        cmd.add("init=/stryker-init");
-        cmd.add("stryker.share=" + share.getAbsolutePath());
+        cmd.add("init=/xmrlab-init");
+        cmd.add("xmrlab.share=" + share.getAbsolutePath());
         cmd.add("firmware_class.path=/host/firmware");
         return cmd;
     }
@@ -714,7 +714,7 @@ public final class UmlEngine implements GuestEngine {
                 while ((line = in.readLine()) != null) {
                     out.println(line);
                     out.flush();
-                    if (line.startsWith("STRYKER_BOOT") || line.startsWith("STRYKER_INIT")) {
+                    if (line.startsWith("XMRLAB_BOOT") || line.startsWith("XMRLAB_INIT")) {
                         StrykerLog.i(TAG, line);
                     }
                 }

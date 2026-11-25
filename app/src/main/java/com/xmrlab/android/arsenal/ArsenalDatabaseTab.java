@@ -50,7 +50,7 @@ public class ArsenalDatabaseTab extends Fragment {
 
     public static final String EXPLOITDB_ROOT = "/opt/exploitdb";
 
-    static final String HUB_EXPLOITS_DIR = "/sdcard/Stryker/exploits";
+    static final String HUB_EXPLOITS_DIR = "/sdcard/XMRLab/exploits";
 
     private static final String PREF_LAST_QUERY = "arsenal_db_last_query";
 

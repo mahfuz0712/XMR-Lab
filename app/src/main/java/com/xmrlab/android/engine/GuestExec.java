@@ -14,8 +14,8 @@ import com.stryker.terminal.bridge.StrykerLog;
 public final class GuestExec {
 
     private static final String TAG = "GuestExec";
-    private static final String EXIT_SENTINEL = "__STRYKER_EXIT__";
-    private static final String JOB_EOF = "__STRYKER_JOB_EOF__";
+    private static final String EXIT_SENTINEL = "__XMRLAB_EXIT__";
+    private static final String JOB_EOF = "__XMRLAB_JOB_EOF__";
     private static final String JOB_DIR = "/tmp";
     private static final java.util.concurrent.atomic.AtomicLong JOB_SEQ =
             new java.util.concurrent.atomic.AtomicLong();

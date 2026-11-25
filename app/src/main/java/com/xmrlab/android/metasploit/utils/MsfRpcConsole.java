@@ -185,7 +185,7 @@ public class MsfRpcConsole {
             if (!boot()) return out;
         }
         synchronized (ioLock) {
-            String sentinel = "__STRYKER_END_" + Core.generateString().substring(0, 12) + "__";
+            String sentinel = "__XMRLAB_END_" + Core.generateString().substring(0, 12) + "__";
             try {
                 stdin.write((cmd + "\n").getBytes());
                 stdin.write(("echo " + sentinel + "\n").getBytes());
@@ -299,10 +299,10 @@ public class MsfRpcConsole {
 
     static boolean shouldSuppress(String line) {
         if (line == null || line.isEmpty()) return true;
-        if (line.contains("__STRYKER_END_")) return true;
+        if (line.contains("__XMRLAB_END_")) return true;
         if (line.contains("Starting the Metasploit Framework console")) return true;
         if (line.contains("stty: standard input: Not a tty")) return true;
-        if (line.startsWith("echo __STRYKER_END_")) return true;
+        if (line.startsWith("echo __XMRLAB_END_")) return true;
         return false;
     }
 

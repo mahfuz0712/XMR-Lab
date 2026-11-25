@@ -1,24 +1,24 @@
 #!/bin/sh
 set -u
 
-MARK() { printf 'STRYKER_INIT %s\n' "$*" > /dev/console 2>/dev/null; }
-log()  { printf 'stryker-init: %s\n' "$*"; MARK "$*"; }
+MARK() { printf 'XMRLAB_INIT %s\n' "$*" > /dev/console 2>/dev/null; }
+log()  { printf 'xmrlab-init: %s\n' "$*"; MARK "$*"; }
 
 SHARE=
-for candidate in /sdcard/Stryker /host /sdcard; do
+for candidate in /sdcard/XMRLab /host /sdcard; do
 	if [ -d "$candidate" ] && mountpoint -q "$candidate" 2>/dev/null; then
 		SHARE=$candidate
 		break
 	fi
 done
-if [ -z "$SHARE" ] && [ ! -d /sdcard/Stryker/.ssh ]; then
-	mkdir -p /sdcard/Stryker 2>/dev/null
+if [ -z "$SHARE" ] && [ ! -d /sdcard/XMRLab/.ssh ]; then
+	mkdir -p /sdcard/XMRLab 2>/dev/null
 	if mount -t 9p -o trans=virtio,version=9p2000.L,msize=262144 \
-			strykershare /sdcard/Stryker 2>/dev/null; then
-		SHARE=/sdcard/Stryker
+			xmrlabshare /sdcard/XMRLab 2>/dev/null; then
+		SHARE=/sdcard/XMRLab
 	fi
 fi
-[ -n "$SHARE" ] || SHARE=/sdcard/Stryker
+[ -n "$SHARE" ] || SHARE=/sdcard/XMRLab
 mkdir -p "$SHARE" 2>/dev/null
 
 KEYDIR=$SHARE/.ssh
@@ -60,7 +60,7 @@ case "$root_dev" in
 esac
 
 if command -v iw >/dev/null 2>&1; then
-	iw reg set "${STRYKER_REGDOM:-00}" >/dev/null 2>&1
+	iw reg set "${XMRLAB_REGDOM:-00}" >/dev/null 2>&1
 fi
 
 for m in loop squashfs overlay; do
@@ -73,8 +73,8 @@ else
 	engine=vm
 fi
 
-if [ "$engine" = uml ] && [ -x /usr/local/lib/stryker/systemctl ]; then
-	ln -sf /usr/local/lib/stryker/systemctl /usr/local/sbin/systemctl 2>/dev/null
+if [ "$engine" = uml ] && [ -x /usr/local/lib/xmrlab/systemctl ]; then
+	ln -sf /usr/local/lib/xmrlab/systemctl /usr/local/sbin/systemctl 2>/dev/null
 	log "no systemd here: /usr/local/sbin/systemctl is the shim"
 else
 	[ -L /usr/local/sbin/systemctl ] && rm -f /usr/local/sbin/systemctl

@@ -174,7 +174,7 @@ public class Slide2 extends Fragment implements IntroPage {
                 asking = false;
                 if (rootGranted) {
                     boolean alreadyInstalled =
-                            core.checkFolder("/data/local/xmrlab/release/sdcard/Stryker")
+                            core.checkFolder("/data/local/xmrlab/release/sdcard/XMRLab")
                                     && core.checkFile(Core.CHROOT_MARKER);
                     if (alreadyInstalled) {
                         ((AppIntroActivity) activity).jumpToLast();
@@ -194,7 +194,7 @@ public class Slide2 extends Fragment implements IntroPage {
             core.customCommand("dumpsys deviceidle whitelist +com.xmrlab.android", true);
         }
 
-        core.putString("vnc_passwd", "stryker");
+        core.putString("vnc_passwd", "xmrlab");
         String wlan = "wlan0";
         if (rooted) {
             ArrayList<String> interfaces = core.getInterfacesList();

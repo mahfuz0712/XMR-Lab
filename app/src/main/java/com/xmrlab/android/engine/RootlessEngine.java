@@ -27,7 +27,7 @@ public final class RootlessEngine implements GuestEngine {
     private static final int BOOT_PING_TIMEOUT_MS = 30_000;
     private static final int READY_PING_TIMEOUT_MS = 3_000;
     private static final int RECHECK_PING_TIMEOUT_MS = 5_000;
-    private static final String PROMPT_MARK = "__STRYKER_ID__";
+    private static final String PROMPT_MARK = "__XMRLAB_ID__";
 
     private static volatile RootlessEngine instance;
 
@@ -730,7 +730,7 @@ public final class RootlessEngine implements GuestEngine {
             GuestExec.run("command -v cpio >/dev/null 2>&1 || "
                     + "(export DEBIAN_FRONTEND=noninteractive; apt-get install -y --no-install-recommends cpio >/dev/null 2>&1); "
                     + "rm -rf /tmp/stryker-ird; mkdir -p /tmp/stryker-ird; cd /tmp/stryker-ird; "
-                    + "(cpio -idm < /sdcard/Stryker/.initrd.img || busybox cpio -idm < /sdcard/Stryker/.initrd.img) >/dev/null 2>&1; "
+                    + "(cpio -idm < /sdcard/XMRLab/.initrd.img || busybox cpio -idm < /sdcard/XMRLab/.initrd.img) >/dev/null 2>&1; "
                     + "if [ -d /tmp/stryker-ird/lib/modules ]; then mkdir -p /lib/modules; "
                     + "cp -a /tmp/stryker-ird/lib/modules/. /lib/modules/; depmod -a >/dev/null 2>&1; "
                     + "echo __MODULES_DEPLOYED__; fi; rm -rf /tmp/stryker-ird");
@@ -867,7 +867,7 @@ public final class RootlessEngine implements GuestEngine {
 
         StringBuilder cmd = new StringBuilder();
         if (staged != null) {
-            cmd.append(unpackAndVerify("/sdcard/Stryker/" + STAGED_CORE)).append("; ");
+            cmd.append(unpackAndVerify("/sdcard/XMRLab/" + STAGED_CORE)).append("; ");
         }
         cmd.append("command -v socat >/dev/null 2>&1 || (export DEBIAN_FRONTEND=noninteractive; ")
            .append("apt-get install -y --no-install-recommends socat >/dev/null 2>&1); ")
@@ -1026,7 +1026,7 @@ public final class RootlessEngine implements GuestEngine {
 
     @Override
     public String guestSharePath() {
-        return "/sdcard/Stryker";
+        return "/sdcard/XMRLab";
     }
 
     @Override
@@ -1197,7 +1197,7 @@ public final class RootlessEngine implements GuestEngine {
                 shareInUse = share;
                 shareActive = true;
                 a.add("-fsdev"); a.add("local,id=fsdev0,security_model=none,path=" + share.getAbsolutePath());
-                a.add("-device"); a.add("virtio-9p-pci,fsdev=fsdev0,mount_tag=strykershare");
+                a.add("-device"); a.add("virtio-9p-pci,fsdev=fsdev0,mount_tag=xmrlabshare");
             } else {
                 StrykerLog.w(TAG, "9p share dir unavailable — booting without /sdcard share");
             }
@@ -1235,7 +1235,7 @@ public final class RootlessEngine implements GuestEngine {
 
     private static String kernelCmdline(boolean fastBoot) {
         StringBuilder sb = new StringBuilder("root=/dev/vda rw rootwait rootflags=noatime "
-                + "console=ttyAMA0 loglevel=4 net.ifnames=0 mitigations=off stryker.rootless=1");
+                + "console=ttyAMA0 loglevel=4 net.ifnames=0 mitigations=off xmrlab.rootless=1");
         if (fastBoot) {
             sb.append(" init_on_alloc=0 init_on_free=0 audit=0 nokaslr")
               .append(" rcupdate.rcu_expedited=1 rcupdate.rcu_normal_after_boot=1")

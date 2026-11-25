@@ -102,15 +102,15 @@ info "all present"
 
 say "configuring"
 
-install -m 755 "$HERE/guest/stryker-guest-init" "$TREE/usr/local/sbin/stryker-guest-init"
-install -m 755 "$HERE/guest/stryker-init"       "$TREE/stryker-init"
+install -m 755 "$HERE/guest/xmrlab-guest-init" "$TREE/usr/local/sbin/xmrlab-guest-init"
+install -m 755 "$HERE/guest/xmrlab-init"       "$TREE/xmrlab-init"
 install -d -m 755 "$TREE/etc/ssh/sshd_config.d"
-install -m 644 "$HERE/guest/sshd_stryker.conf"  "$TREE/etc/ssh/sshd_config.d/10-stryker.conf"
-install -m 644 "$HERE/guest/stryker-guest.service" \
-               "$TREE/etc/systemd/system/stryker-guest.service"
+install -m 644 "$HERE/guest/sshd_xmrlab.conf"  "$TREE/etc/ssh/sshd_config.d/10-xmrlab.conf"
+install -m 644 "$HERE/guest/xmrlab-guest.service" \
+               "$TREE/etc/systemd/system/xmrlab-guest.service"
 mkdir -p "$TREE/etc/systemd/system/multi-user.target.wants"
-ln -sf ../stryker-guest.service \
-	"$TREE/etc/systemd/system/multi-user.target.wants/stryker-guest.service"
+ln -sf ../xmrlab-guest.service \
+	"$TREE/etc/systemd/system/multi-user.target.wants/xmrlab-guest.service"
 
 rm -f "$TREE/etc/systemd/system/stryker-agent.service" \
       "$TREE/etc/systemd/system/multi-user.target.wants/stryker-agent.service" \
@@ -118,23 +118,23 @@ rm -f "$TREE/etc/systemd/system/stryker-agent.service" \
       "$TREE/etc/systemd/system/multi-user.target.wants/stryker-sshkeys.service" \
       "$TREE/usr/local/sbin/stryker-agentd"
 
-install -d -m 755 "$TREE/usr/local/lib/stryker"
-install -m 755 "$HERE/guest/systemctl-shim" "$TREE/usr/local/lib/stryker/systemctl"
+install -d -m 755 "$TREE/usr/local/lib/xmrlab"
+install -m 755 "$HERE/guest/systemctl-shim" "$TREE/usr/local/lib/xmrlab/systemctl"
 
-install -m 644 "$HERE/guest/stryker_profile.sh" "$TREE/etc/stryker_profile.sh"
+install -m 644 "$HERE/guest/xmrlab_profile.sh" "$TREE/etc/xmrlab_profile.sh"
 for rc in "$TREE/etc/profile" "$TREE/root/.bashrc"; do
-	grep -q stryker_profile "$rc" 2>/dev/null && continue
-	printf '\n[ -f /etc/stryker_profile.sh ] && . /etc/stryker_profile.sh\n' >> "$rc"
+	grep -q xmrlab_profile "$rc" 2>/dev/null && continue
+	printf '\n[ -f /etc/xmrlab_profile.sh ] && . /etc/xmrlab_profile.sh\n' >> "$rc"
 done
 
-printf 'stryker\n' > "$TREE/etc/hostname"
-printf '127.0.0.1\tlocalhost stryker\n::1\t\tlocalhost\n' > "$TREE/etc/hosts"
+printf 'xmrlab\n' > "$TREE/etc/hostname"
+printf '127.0.0.1\tlocalhost xmrlab\n::1\t\tlocalhost\n' > "$TREE/etc/hosts"
 
 cat > "$TREE/etc/fstab" <<'EOF'
-LABEL=stryker / ext4 defaults,noatime,errors=remount-ro 0 1
-strykershare /sdcard/Stryker 9p trans=virtio,version=9p2000.L,msize=262144,nofail,x-systemd.device-timeout=5 0 0
+LABEL=xmrlab / ext4 defaults,noatime,errors=remount-ro 0 1
+xmrlabshare /sdcard/XMRLab 9p trans=virtio,version=9p2000.L,msize=262144,nofail,x-systemd.device-timeout=5 0 0
 EOF
-mkdir -p "$TREE/sdcard/Stryker" "$TREE/host" "$TREE/root/.ssh"
+mkdir -p "$TREE/sdcard/XMRLab" "$TREE/host" "$TREE/root/.ssh"
 chmod 700 "$TREE/root/.ssh"
 
 mkdir -p "$TREE/etc/systemd/network"
@@ -179,7 +179,7 @@ first=$( { tar tzf "$OUT_DIR/chroot64-debian.tar.gz" || true; } | head -1 )
 case "$first" in
 	release/*|release) info "tarball root: $first" ;;
 	*) die "the tarball starts with '$first', not 'release/'. The app unpacks to
-  /data/local/stryker and then looks for release/usr inside it." ;;
+  /data/local/xmrlab and then looks for release/usr inside it." ;;
 esac
 record_artifact "$OUT_DIR/chroot64-debian.tar.gz"
 
@@ -224,10 +224,10 @@ say "packing the VM image (${SIZE_MB} MB, then shrunk)"
 IMG=$VMOUT/rootfs.img
 rm -f "$IMG" "$IMG.gz"
 truncate -s "${SIZE_MB}M" "$IMG"
-mkfs.ext4 -q -F -L stryker -U "$(cat /proc/sys/kernel/random/uuid)" "$IMG"
+mkfs.ext4 -q -F -L xmrlab -U "$(cat /proc/sys/kernel/random/uuid)" "$IMG"
 mount -o loop "$IMG" "$MNT"
 cp -a "$TREE"/. "$MNT"/
-mkdir -p "$MNT"/{dev,proc,sys,tmp,host,sdcard/Stryker}
+mkdir -p "$MNT"/{dev,proc,sys,tmp,host,sdcard/XMRLab}
 chmod 1777 "$MNT/tmp"
 mknod "$MNT/dev/console" c 5 1 2>/dev/null || true
 mknod "$MNT/dev/null"    c 1 3 2>/dev/null || true

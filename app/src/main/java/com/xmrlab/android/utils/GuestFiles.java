@@ -54,14 +54,14 @@ public final class GuestFiles {
     public static List<String> shareCandidates(Core core, String subdir, String name) {
         LinkedHashSet<String> dirs = new LinkedHashSet<>();
         addDir(dirs, core.guestShare(), subdir);
-        addDir(dirs, "/sdcard/Stryker", subdir);
+        addDir(dirs, "/sdcard/XMRLab", subdir);
         addDir(dirs, "/host", subdir);
         try {
             File ext = core.getContext().getExternalFilesDir(null);
             if (ext != null) {
-                addDir(dirs, ext.getAbsolutePath() + "/Stryker", subdir);
+                addDir(dirs, ext.getAbsolutePath() + "/XMRLab", subdir);
                 addDir(dirs, "/sdcard/Android/data/" + core.getContext().getPackageName()
-                        + "/files/Stryker", subdir);
+                        + "/files/XMRLab", subdir);
             }
         } catch (Throwable ignored) {
         }
@@ -180,7 +180,7 @@ public final class GuestFiles {
     private static String remount(Core core) {
         return core.isRootless()
                 ? " — restart the VM from the dashboard so it mounts the share again"
-                : " — stop and start the chroot so it binds /sdcard/Stryker again";
+                : " — stop and start the chroot so it binds /sdcard/XMRLab again";
     }
 
     private static String join(LinkedHashSet<String> dirs) {

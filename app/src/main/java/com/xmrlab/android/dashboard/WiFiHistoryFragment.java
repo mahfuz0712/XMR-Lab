@@ -118,7 +118,7 @@ public class WiFiHistoryFragment extends Fragment {
         cancel.setOnClickListener(view12 -> valuedialog.dismiss());
         title.setText("Enter path to file");
         valueLayout.setHint("Path");
-        value.setText("/sdcard/Stryker/saved_networks.csv");
+        value.setText("/sdcard/XMRLab/saved_networks.csv");
         ok.setOnClickListener(view1 -> {
             String path = Objects.requireNonNull(value.getText()).toString();
             if (path.isEmpty()) {
