@@ -30,7 +30,7 @@ public class BruteHandshake {
 
     public enum State { RUNNING, FOUND, MISSED, FAILED, CANCELLED }
 
-    private static final String RC_MARK = "__STRYKER_BRUTE_RC__";
+    private static final String RC_MARK = "__XMRLAB_BRUTE_RC__";
     private static final String CHANNEL_ID = "BruteForce";
     private static final long PUBLISH_EVERY_MS = 400L;
 

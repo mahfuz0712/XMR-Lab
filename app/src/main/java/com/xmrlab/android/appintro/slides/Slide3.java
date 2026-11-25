@@ -207,18 +207,18 @@ public class Slide3 extends Fragment implements IntroPage {
                     } else {
                         log(LogLevel.WARN, "XMR Lab payload did not verify — /CORE tools may be missing");
                     }
-                    core.deleteFile("/sdcard/Stryker/exploits/");
+                    core.deleteFile("/sdcard/XMRLab/exploits/");
                     core.copyFile("/data/data/com.xmrlab.android/files/checker.py",
                             "/data/local/xmrlab/release/exploits/checker.py");
-                    core.copyFile("/data/local/xmrlab/release/exploits/", "/sdcard/Stryker/exploits");
+                    core.copyFile("/data/local/xmrlab/release/exploits/", "/sdcard/XMRLab/exploits");
                     core.chmodFolder("/data/data/com.xmrlab.android/files");
                     markStage(InstallStage.DEPLOYING_EXPLOITS, RowState.DONE);
-                    log(LogLevel.SUCCESS, "Exploits deployed to /sdcard/Stryker/exploits");
+                    log(LogLevel.SUCCESS, "Exploits deployed to /sdcard/XMRLab/exploits");
 
                     markStage(InstallStage.FINALIZING, RowState.ACTIVE);
                     log(LogLevel.CMD, "echo update > " + Core.CHROOT_MARKER);
                     core.customCommand("echo update > " + Core.CHROOT_MARKER);
-                    core.deleteFile("/sdcard/Stryker/exploits/checker.py");
+                    core.deleteFile("/sdcard/XMRLab/exploits/checker.py");
                     markStage(InstallStage.FINALIZING, RowState.DONE);
                     log(LogLevel.SUCCESS, "Version marker written");
 
@@ -358,7 +358,7 @@ public class Slide3 extends Fragment implements IntroPage {
     @SuppressLint("SdCardPath")
     private boolean clear() {
         core.chmodFolder("/data/data/com.xmrlab.android/files/");
-        core.createFolder(core.getStorage() + "/Stryker/");
+        core.createFolder(core.getStorage() + "/XMRLab/");
         core.createFolder("/data/local/xmrlab");
         boolean anyMount = !core.mountsUnder(Core.CHROOT_ROOT).isEmpty();
         if (anyMount || core.isMounted() || core.checkFolder(Core.CHROOT_ROOT + "/bin")) {
@@ -369,19 +369,19 @@ public class Slide3 extends Fragment implements IntroPage {
                 return false;
             }
         }
-        core.deleteFile(core.getStorage() + "Stryker/release");
+        core.deleteFile(core.getStorage() + "XMRLab/release");
         core.deleteFile(core.getStorage() + "Download/stryker.apk");
-        core.createFolder(core.getStorage() + "Stryker");
-        core.createFolder(core.getStorage() + "Stryker/hs");
-        core.createFolder(core.getStorage() + "Stryker/captured");
-        core.createFolder(core.getStorage() + "Stryker/exploits");
-        core.createFolder(core.getStorage() + "Stryker/wordlists");
-        core.createFolder(core.getStorage() + "Stryker/reports");
-        core.createFolder(core.getStorage() + "Stryker/rs");
+        core.createFolder(core.getStorage() + "XMRLab");
+        core.createFolder(core.getStorage() + "XMRLab/hs");
+        core.createFolder(core.getStorage() + "XMRLab/captured");
+        core.createFolder(core.getStorage() + "XMRLab/exploits");
+        core.createFolder(core.getStorage() + "XMRLab/wordlists");
+        core.createFolder(core.getStorage() + "XMRLab/reports");
+        core.createFolder(core.getStorage() + "XMRLab/rs");
         return true;
     }
 
-    private static final String TAR_RC = "__STRYKER_TAR_RC__";
+    private static final String TAR_RC = "__XMRLAB_TAR_RC__";
 
     private volatile String extractFailure;
 

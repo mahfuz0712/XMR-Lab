@@ -28,7 +28,7 @@ truncate -s 3G "$T/share/inner.img"
 info "image sha256: $(sha256_of "$VMOUT/rootfs.img")"
 
 cp -f "$UMLOUT/linux-uml" "$UMLOUT/stub_exe" "$T/share/"
-ssh-keygen -t ed25519 -N '' -C stryker-uml-test -f "$T/id" >/dev/null
+ssh-keygen -t ed25519 -N '' -C xmrlab-uml-test -f "$T/id" >/dev/null
 cp "$T/id.pub" "$T/share/.ssh/authorized_keys"
 
 say "booting the outer VM"
@@ -41,7 +41,7 @@ qemu-system-aarch64 \
 	-netdev "user,id=n0,ipv6=off,hostfwd=tcp:127.0.0.1:$PORT-:22" \
 	-device virtio-net-pci,netdev=n0,romfile= \
 	-fsdev "local,id=f0,security_model=none,path=$T/share" \
-	-device virtio-9p-pci,fsdev=f0,mount_tag=strykershare \
+	-device virtio-9p-pci,fsdev=f0,mount_tag=xmrlabshare \
 	-display none -serial "file:$T/outer.log" -monitor none \
 	-pidfile "$T/qemu.pid" -daemonize
 
@@ -65,7 +65,7 @@ info "outer guest up (this is the image booted as /dev/vda)"
 say "running UML inside it, on the same image"
 uml_out=$(ssh "${SSHOPT[@]}" root@127.0.0.1 '
 	set -e
-	S=/sdcard/Stryker
+	S=/sdcard/XMRLab
 	cp -f $S/linux-uml $S/stub_exe /tmp/
 	chmod +x /tmp/linux-uml /tmp/stub_exe
 	mkdir -p /tmp/umlshare
@@ -82,8 +82,8 @@ uml_out=$(ssh "${SSHOPT[@]}" root@127.0.0.1 '
 	( timeout 120 /tmp/linux-uml \
 		ubda=$S/inner.img \
 		root=/dev/ubda rw \
-		init=/stryker-init \
-		stryker.share=/tmp/umlshare \
+		init=/xmrlab-init \
+		xmrlab.share=/tmp/umlshare \
 		mem=1024M con=null con0=fd:0,fd:1 \
 		< /dev/null 2>&1 | cat > /tmp/uml.log ) || true
 	echo "__UML_CONSOLE__"
@@ -102,15 +102,15 @@ case "$uml_out" in
 		;;
 esac
 case "$uml_out" in
-	*"STRYKER_BOOT mounted"*) note ok   "UML mounted the image" ;;
-	*)                        note FAIL "no mount marker from stryker-init" ;;
+	*"XMRLAB_BOOT mounted"*) note ok   "UML mounted the image" ;;
+	*)                        note FAIL "no mount marker from xmrlab-init" ;;
 esac
 case "$uml_out" in
-	*"STRYKER_INIT ready"*|*"STRYKER_BOOT ready"*) note ok "guest init ran to completion" ;;
-	*) note FAIL "stryker-guest-init did not reach its ready marker" ;;
+	*"XMRLAB_INIT ready"*|*"XMRLAB_BOOT ready"*) note ok "guest init ran to completion" ;;
+	*) note FAIL "xmrlab-guest-init did not reach its ready marker" ;;
 esac
 case "$uml_out" in
-	*"STRYKER_BOOT sshd"*) note ok   "sshd started under UML" ;;
+	*"XMRLAB_BOOT sshd"*) note ok   "sshd started under UML" ;;
 	*)                     note FAIL "sshd did not start" ;;
 esac
 if ssh "${SSHOPT[@]}" root@127.0.0.1 'grep -q "engine=uml" /tmp/umlshare/.ssh/ready' 2>/dev/null; then

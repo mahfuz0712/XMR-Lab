@@ -209,14 +209,14 @@ manager</string>
     <string name="arsenal_add_subtitle">Pick a script, name it, add a success pattern.</string>
     <string name="arsenal_add_step_file">Source file</string>
     <string name="arsenal_add_file_placeholder">Choose a file</string>
-    <string name="arsenal_add_file_hint">Lives under /sdcard/Stryker/exploits</string>
+    <string name="arsenal_add_file_hint">Lives under /sdcard/XMRLab/exploits</string>
     <string name="arsenal_add_field_title">Exploit name</string>
     <string name="arsenal_add_field_args">Arguments</string>
     <string name="arsenal_add_field_args_hint">Use {IP}, {PORT}, {MAC}, {GW}, {MASK} or any {VAR} — Arsenal asks for values before launch.</string>
     <string name="arsenal_add_field_success">Success pattern</string>
     <string name="arsenal_add_field_success_hint">Substring printed on success. Empty = always successful.</string>
     <string name="arsenal_add_pick_file_title">Pick a script</string>
-    <string name="arsenal_add_no_files">No files in /sdcard/Stryker/exploits — copy one there first.</string>
+    <string name="arsenal_add_no_files">No files in /sdcard/XMRLab/exploits — copy one there first.</string>
     <string name="arsenal_add_file_required">Choose a script first.</string>
     <string name="arsenal_add_title_required">Give it a name.</string>
     <string name="arsenal_add_no_pattern_title">No success pattern</string>
@@ -232,7 +232,7 @@ manager</string>
     <string name="arsenal_run_fill_vars">Fill all {variables} before launching.</string>
     <string name="arsenal_run_delete">Remove from hub</string>
     <string name="arsenal_run_delete_confirm_title">Remove from hub?</string>
-    <string name="arsenal_run_delete_confirm_body">Remove %1$s from your hub? The file stays in /sdcard/Stryker/exploits.</string>
+    <string name="arsenal_run_delete_confirm_body">Remove %1$s from your hub? The file stays in /sdcard/XMRLab/exploits.</string>
 
     <string name="arsenal_db_search_hint">Search ExploitDB (e.g. eternalblue)</string>
     <string name="arsenal_db_search_required">Type a query.</string>
@@ -265,8 +265,8 @@ manager</string>
     <string name="arsenal_db_add_to_hub">Add to Hub</string>
     <string name="arsenal_db_missing_path">No path on this entry.</string>
     <string name="arsenal_db_missing_id">No EDB-ID on this entry.</string>
-    <string name="arsenal_db_copying">Copying script to /sdcard/Stryker/exploits…</string>
-    <string name="arsenal_db_saved_file">Saved to /sdcard/Stryker/exploits</string>
+    <string name="arsenal_db_copying">Copying script to /sdcard/XMRLab/exploits…</string>
+    <string name="arsenal_db_saved_file">Saved to /sdcard/XMRLab/exploits</string>
     <string name="arsenal_db_added_to_hub">Added to hub</string>
 
     <string name="arsenal_run_batch_title">Exploit Hub</string>
@@ -422,12 +422,12 @@ manager</string>
     <string name="hs_section_files">Captures</string>
     <string name="hs_status_count">%1$d captured</string>
     <string name="hs_status_empty">No captures yet</string>
-    <string name="hs_storage_path">/sdcard/Stryker/captured</string>
+    <string name="hs_storage_path">/sdcard/XMRLab/captured</string>
     <string name="hs_meta_size">Size</string>
     <string name="hs_meta_cracked">Cracked</string>
     <string name="hs_meta_total">Total</string>
     <string name="hs_empty_title">Capture handshakes from the Wi-Fi screen</string>
-    <string name="hs_empty_body">Captures in /sdcard/Stryker/captured appear here.</string>
+    <string name="hs_empty_body">Captures in /sdcard/XMRLab/captured appear here.</string>
     <string name="hs_kind_handshake">HANDSHAKE</string>
     <string name="hs_kind_pmkid">PMKID</string>
     <string name="hs_kind_empty">EMPTY</string>
@@ -597,7 +597,7 @@ manager</string>
     <string name="payload_btn_cancel">Cancel</string>
     <string name="payload_status_idle">Fill in the form and tap Generate</string>
     <string name="payload_status_running">Forging payload — keep dialog open</string>
-    <string name="payload_status_done">Saved to /sdcard/Stryker/payloads</string>
+    <string name="payload_status_done">Saved to /sdcard/XMRLab/payloads</string>
     <string name="payload_status_failed">Build failed — see log</string>
     <string name="payload_invalid">Fill all four fields first</string>
 
@@ -676,7 +676,7 @@ manager</string>
     <string name="hydra_action_copy">Copy credentials</string>
     <string name="hydra_validation_target">Set a service and a host first</string>
     <string name="hydra_validation_creds">Enter a password (or switch to wordlists)</string>
-    <string name="hydra_validation_wordlist">Pick a wordlist — drop files into /sdcard/Stryker/wordlists</string>
+    <string name="hydra_validation_wordlist">Pick a wordlist — drop files into /sdcard/XMRLab/wordlists</string>
     <string name="hydra_toast_copied">Copied to clipboard</string>
 
     <string name="geomac_title">GeoMac</string>

@@ -2,14 +2,14 @@
 
 set -u
 
-VHCI=${STRYKER_VHCI:-/sys/devices/platform/vhci_hcd.0}
-WAIT_DEVICE=${STRYKER_WAIT_DEVICE:-10}
-WAIT_NETDEV=${STRYKER_WAIT_NETDEV:-10}
+VHCI=${XMRLAB_VHCI:-/sys/devices/platform/vhci_hcd.0}
+WAIT_DEVICE=${XMRLAB_WAIT_DEVICE:-10}
+WAIT_NETDEV=${XMRLAB_WAIT_NETDEV:-10}
 ERR=$(mktemp)
 trap 'rm -f "$ERR"' EXIT
 
-WANT_VID=${STRYKER_WANT_VID:-}
-WANT_PID=${STRYKER_WANT_PID:-}
+WANT_VID=${XMRLAB_WANT_VID:-}
+WANT_PID=${XMRLAB_WANT_PID:-}
 NEED_DRIVER=0
 
 prog=${0##*/}
@@ -214,7 +214,7 @@ fi
 
 # Printed before the waits below, because a detach has to be possible even when
 # enumeration then fails: the port is taken from the moment the write returned.
-printf "STRYKER_USB_PORT=%s\n" "$PORT"
+printf "XMRLAB_USB_PORT=%s\n" "$PORT"
 
 # Enumeration is the server's first real test: the guest now sends control
 # transfers for the descriptors and umusb has to turn them into usbfs ioctls.
@@ -265,7 +265,7 @@ for intf in "$DEV":*; do
 	if [ -L "$intf/driver" ]; then
 		drv=$(readlink -f "$intf/driver")
 		say "  ${intf##*/} bound to ${drv##*/}"
-		printf "STRYKER_USB_DRIVER=%s\n" "${drv##*/}"
+		printf "XMRLAB_USB_DRIVER=%s\n" "${drv##*/}"
 		bound=1
 	else
 		say "  ${intf##*/} has no driver"
@@ -285,7 +285,7 @@ DEVNUM=$(cat "$DEV/devnum" 2>/dev/null)
 if [ -n "$BUSNUM" ] && [ -n "$DEVNUM" ]; then
 	NODE=$(printf "/dev/bus/usb/%03d/%03d" "$BUSNUM" "$DEVNUM")
 	say "device node $NODE"
-	printf "STRYKER_USB_NODE=%s\n" "$NODE"
+	printf "XMRLAB_USB_NODE=%s\n" "$NODE"
 fi
 
 # What the guest itself can do with the device, beyond handing the node on.
@@ -326,8 +326,8 @@ fi
 if [ -n "$NETDEV" ]; then
 	phy=$(readlink -f "/sys/class/net/$NETDEV/phy80211")
 	say "wireless interface $NETDEV on ${phy##*/}"
-	printf "STRYKER_USB_NETDEV=%s\n" "$NETDEV"
-	printf "STRYKER_USB_PHY=%s\n" "${phy##*/}"
+	printf "XMRLAB_USB_NETDEV=%s\n" "$NETDEV"
+	printf "XMRLAB_USB_PHY=%s\n" "${phy##*/}"
 
 	# rfkill first: a fresh wiphy can come up soft-blocked, and "Operation not
 	# possible due to RF-kill" is the error people spend longest on.
@@ -344,7 +344,7 @@ fi
 
 if [ -n "$HCI" ]; then
 	say "bluetooth controller $HCI"
-	printf "STRYKER_USB_HCI=%s\n" "$HCI"
+	printf "XMRLAB_USB_HCI=%s\n" "$HCI"
 	# Down is how btusb leaves it; bluetoothd would normally bring it up. Done
 	# here so that a tool that only reads -- an LE scanner -- finds a
 	# controller that works.
@@ -361,4 +361,4 @@ if [ "$NEED_DRIVER" -eq 1 ] && [ -z "$NETDEV" ]; then
   the URB path to the device is wrong even though enumeration worked."
 fi
 
-printf "STRYKER_USB_ATTACHED=%s\n" "$BUSID"
+printf "XMRLAB_USB_ATTACHED=%s\n" "$BUSID"

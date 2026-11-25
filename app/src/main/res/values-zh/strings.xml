@@ -157,14 +157,14 @@
     <string name="arsenal_add_subtitle">选择脚本，为它命名，并添加成功匹配模式。</string>
     <string name="arsenal_add_step_file">源文件</string>
     <string name="arsenal_add_file_placeholder">选择一个文件</string>
-    <string name="arsenal_add_file_hint">存放在 /sdcard/Stryker/exploits 下</string>
+    <string name="arsenal_add_file_hint">存放在 /sdcard/XMRLab/exploits 下</string>
     <string name="arsenal_add_field_title">漏洞利用名称</string>
     <string name="arsenal_add_field_args">参数</string>
     <string name="arsenal_add_field_args_hint">使用 {IP}、{PORT}、{MAC}、{GW}、{MASK} 或任意 {VAR} — Arsenal 会在启动前询问对应的值。</string>
     <string name="arsenal_add_field_success">成功匹配模式</string>
     <string name="arsenal_add_field_success_hint">成功时打印的子字符串。留空 = 始终视为成功。</string>
     <string name="arsenal_add_pick_file_title">选择一个脚本</string>
-    <string name="arsenal_add_no_files">/sdcard/Stryker/exploits 中没有文件 — 请先复制一个到那里。</string>
+    <string name="arsenal_add_no_files">/sdcard/XMRLab/exploits 中没有文件 — 请先复制一个到那里。</string>
     <string name="arsenal_add_file_required">请先选择一个脚本。</string>
     <string name="arsenal_add_title_required">请给它命名。</string>
     <string name="arsenal_add_no_pattern_title">无成功匹配模式</string>
@@ -179,7 +179,7 @@
     <string name="arsenal_run_fill_vars">在启动前填入所有 {variables}。</string>
     <string name="arsenal_run_delete">从中心移除</string>
     <string name="arsenal_run_delete_confirm_title">从中心移除？</string>
-    <string name="arsenal_run_delete_confirm_body">从您的中心移除 %1$s？文件将保留在 /sdcard/Stryker/exploits 中。</string>
+    <string name="arsenal_run_delete_confirm_body">从您的中心移除 %1$s？文件将保留在 /sdcard/XMRLab/exploits 中。</string>
     <string name="arsenal_db_search_hint">搜索 ExploitDB (例如 eternalblue)</string>
     <string name="arsenal_db_search_required">输入查询。</string>
     <string name="arsenal_db_no_results_title">无结果</string>
@@ -209,8 +209,8 @@
     <string name="arsenal_db_add_to_hub">添加到中心</string>
     <string name="arsenal_db_missing_path">此条目没有路径。</string>
     <string name="arsenal_db_missing_id">此条目没有 EDB-ID。</string>
-    <string name="arsenal_db_copying">正在将脚本复制到 /sdcard/Stryker/exploits…</string>
-    <string name="arsenal_db_saved_file">已保存到 /sdcard/Stryker/exploits</string>
+    <string name="arsenal_db_copying">正在将脚本复制到 /sdcard/XMRLab/exploits…</string>
+    <string name="arsenal_db_saved_file">已保存到 /sdcard/XMRLab/exploits</string>
     <string name="arsenal_db_added_to_hub">已添加到中心</string>
     <string name="arsenal_run_batch_title">漏洞利用中心</string>
     <string name="arsenal_run_batch_starting">准备中…</string>
@@ -358,12 +358,12 @@
     <string name="hs_section_files">捕获</string>
     <string name="hs_status_count">已捕获 %1$d 个</string>
     <string name="hs_status_empty">暂无捕获</string>
-    <string name="hs_storage_path">/sdcard/Stryker/captured</string>
+    <string name="hs_storage_path">/sdcard/XMRLab/captured</string>
     <string name="hs_meta_size">大小</string>
     <string name="hs_meta_cracked">已破解</string>
     <string name="hs_meta_total">总计</string>
     <string name="hs_empty_title">从 Wi-Fi 屏幕捕获握手包</string>
-    <string name="hs_empty_body">/sdcard/Stryker/captured 中的捕获文件会显示在这里。</string>
+    <string name="hs_empty_body">/sdcard/XMRLab/captured 中的捕获文件会显示在这里。</string>
     <string name="hs_action_upload">上传至 OnlineHashCrack</string>
     <string name="hs_action_share">分享文件</string>
     <string name="hs_action_rename">重命名</string>
@@ -513,7 +513,7 @@
     <string name="payload_btn_cancel">取消</string>
     <string name="payload_status_idle">填写表单并点击生成</string>
     <string name="payload_status_running">正在伪造 payload — 保持对话框开启</string>
-    <string name="payload_status_done">已保存到 /sdcard/Stryker/payloads</string>
+    <string name="payload_status_done">已保存到 /sdcard/XMRLab/payloads</string>
     <string name="payload_status_failed">构建失败 — 查看日志</string>
     <string name="payload_invalid">请先填写所有四个字段</string>
     <string name="hydra_install_title">THC-Hydra</string>
@@ -587,7 +587,7 @@
     <string name="hydra_action_copy">复制凭据</string>
     <string name="hydra_validation_target">请先设置服务和主机</string>
     <string name="hydra_validation_creds">输入密码（或切换到字典）</string>
-    <string name="hydra_validation_wordlist">选择字典 — 将文件放入 /sdcard/Stryker/wordlists</string>
+    <string name="hydra_validation_wordlist">选择字典 — 将文件放入 /sdcard/XMRLab/wordlists</string>
     <string name="hydra_toast_copied">已复制到剪贴板</string>
     <string name="geomac_title">GeoMac</string>
     <string name="geomac_subtitle_idle">查找、扫描和破解过的 AP 的地图</string>

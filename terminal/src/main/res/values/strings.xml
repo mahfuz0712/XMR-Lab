@@ -146,7 +146,7 @@
   <string name="default_source_url" translatable="false">https://example.com/terminal</string>
 
   <string name="sources_licenses">
-    XMR Lab Terminal is based on StrykerOSS, NeoTerm and Termux, licensed under the GNU GPL v3.0.
+    XMR Lab Terminal is based on NeoTerm and Termux, licensed under the GNU GPL v3.0.
     The complete open-source license list for the whole app — every library, bundled
     binary and chroot tool — is in Settings → About → Open-source licenses.
 

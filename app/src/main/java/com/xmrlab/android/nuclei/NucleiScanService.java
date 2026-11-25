@@ -64,7 +64,7 @@ public class NucleiScanService extends Service {
     private PowerManager.WakeLock wakeLock;
     private ExecutorService executor;
 
-    private static final String TEMPLATES_MARKER = "__STRYKER_NUCLEI_TEMPLATES__";
+    private static final String TEMPLATES_MARKER = "__XMRLAB_NUCLEI_TEMPLATES__";
 
     private static final Set<Integer> ACTIVE = ConcurrentHashMap.newKeySet();
 

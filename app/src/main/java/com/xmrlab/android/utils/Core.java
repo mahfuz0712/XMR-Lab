@@ -326,14 +326,14 @@ public class Core {
 
     public String guestShare() {
         if (isRootless()) return guest().guestSharePath();
-        return "/sdcard/Stryker";
+        return "/sdcard/XMRLab";
     }
 
     public String hostPath(String path) {
         if (path == null || path.isEmpty()) return null;
         String mapped = null;
         String guestRoot = null;
-        for (String candidate : new String[]{"/sdcard/Stryker", "/host"}) {
+        for (String candidate : new String[]{"/sdcard/XMRLab", "/host"}) {
             if (path.equals(candidate) || path.startsWith(candidate + "/")) {
                 guestRoot = candidate;
                 break;
@@ -497,9 +497,9 @@ public class Core {
             File d = guest().shareDir();
             if (d != null) return d.getAbsolutePath();
             File ext = context.getExternalFilesDir(null);
-            if (ext != null) return new File(ext, "Stryker").getAbsolutePath();
+            if (ext != null) return new File(ext, "XMRLab").getAbsolutePath();
         }
-        return getStorage() + "Stryker";
+        return getStorage() + "XMRLab";
     }
 
     public boolean hasAllFilesAccess() {
@@ -829,12 +829,12 @@ public class Core {
             if (s.contains(" " + root + "/proc ")) proc = true;
             if (s.contains(" " + root + "/sys ")) sys = true;
             if (s.contains(" " + root + "/dev ")) dev = true;
-            if (s.contains(" " + root + "/sdcard/Stryker ")) sdcard = true;
+            if (s.contains(" " + root + "/sdcard/XMRLab ")) sdcard = true;
         }
         return proc && sys && dev && sdcard;
     }
     public boolean isOldMounted(){
-        return checkFolder("/data/local/xmrlab/beta/sdcard/Stryker");
+        return checkFolder("/data/local/xmrlab/beta/sdcard/XMRLab");
     }
     public boolean ping(String ip, int port,int timeout) {
         try {
@@ -922,7 +922,7 @@ public class Core {
 
     public enum Presence { YES, NO, UNKNOWN }
 
-    private static final String PROBE_MARK = "__STRYKER_PROBE__";
+    private static final String PROBE_MARK = "__XMRLAB_PROBE__";
     private static final int PROBE_ATTEMPTS = 3;
     private static final long PROBE_RETRY_MS = 1200;
 
@@ -987,7 +987,7 @@ public class Core {
     }
 
 
-    private static final String RC_MARK = "__STRYKER_RC__";
+    private static final String RC_MARK = "__XMRLAB_RC__";
     private static final long IDLE_LIMIT_MS = 10 * 60 * 1000L;
 
     private ArrayList<String> pumpProcess(Process process, String script, boolean log, String tool,
@@ -1010,7 +1010,7 @@ public class Core {
                 }
             } catch (IOException ignored) {
             }
-        }, "stryker-su-stderr");
+        }, "xmrlab-su-stderr");
         errReader.setDaemon(true);
         errReader.start();
         final long[] lastActivity = {android.os.SystemClock.elapsedRealtime()};
@@ -1026,7 +1026,7 @@ public class Core {
                     return;
                 }
             }
-        }, "stryker-su-watchdog");
+        }, "xmrlab-su-watchdog");
         watchdog.setDaemon(true);
         if (idleLimitMs > 0) watchdog.start();
         boolean sawMark = false;

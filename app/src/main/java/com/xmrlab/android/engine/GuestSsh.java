@@ -38,7 +38,7 @@ public final class GuestSsh {
     private static final Object LOCK = new Object();
 
     private static final int CONNECT_TIMEOUT_MS = 20_000;
-    private static final String PONG = "__STRYKER_PONG__";
+    private static final String PONG = "__XMRLAB_PONG__";
 
     private static final Map<Integer, Integer> wantedForwards = new ConcurrentHashMap<>();
 
@@ -125,7 +125,7 @@ public final class GuestSsh {
         try {
             kp = bits > 0 ? KeyPair.genKeyPair(jsch, type, bits) : KeyPair.genKeyPair(jsch, type);
             kp.writePrivateKey(privateKey().getAbsolutePath());
-            kp.writePublicKey(publicKey().getAbsolutePath(), "stryker@" + android.os.Build.MODEL);
+            kp.writePublicKey(publicKey().getAbsolutePath(), "xmrlab@" + android.os.Build.MODEL);
             return privateKey().length() > 0 && publicKey().length() > 0;
         } catch (Throwable t) {
             StrykerLog.i(TAG, "keypair type " + type + " unusable here: " + t);
@@ -208,7 +208,7 @@ public final class GuestSsh {
         if (hosts == null) {
             throw new JSchException("the guest has not published its host key yet"
                     + " -- it writes " + SHARE_SSH_DIR + "/" + SHARE_HOST_KEYS
-                    + " into the share once stryker-guest-init has run");
+                    + " into the share once xmrlab-guest-init has run");
         }
 
         JSch jsch = new JSch();

@@ -245,10 +245,10 @@ public final class UsbGadgetController {
         for (String c : commands) {
             sb.append(c).append('\n');
         }
-        sb.append("echo __STRYKER_OK__\n");
+        sb.append("echo __XMRLAB_OK__\n");
         List<String> out = core.customCommand(sb.toString(), true);
         for (String line : out) {
-            if (line != null && line.contains("__STRYKER_OK__")) return true;
+            if (line != null && line.contains("__XMRLAB_OK__")) return true;
         }
         return false;
     }

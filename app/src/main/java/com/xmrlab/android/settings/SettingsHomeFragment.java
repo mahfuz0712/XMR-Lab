@@ -306,7 +306,7 @@ public class SettingsHomeFragment extends Fragment {
             ui(() -> progress.setMessage(getString(R.string.settings_delete_step_uninstall)));
 
             core.customCommand("pm uninstall com.xmrlab.android");
-        }, "stryker-delete").start();
+        }, "xmrlab-delete").start();
     }
 
     private void stopDelete(androidx.appcompat.app.AlertDialog progress, int reason) {

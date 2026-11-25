@@ -23,14 +23,14 @@ truncate -s 4G "$T/rootfs.img"
 e2fsck -fp "$T/rootfs.img" >/dev/null 2>&1 || true
 resize2fs "$T/rootfs.img" >/dev/null 2>&1 || true
 
-ssh-keygen -t ed25519 -N '' -C stryker-test -f "$T/id" >/dev/null
+ssh-keygen -t ed25519 -N '' -C xmrlab-test -f "$T/id" >/dev/null
 cp "$T/id.pub" "$T/share/.ssh/authorized_keys"
 
 say "booting"
 qemu-system-aarch64 \
 	-M virt,gic-version=3 -cpu cortex-a72 -m 2048 -smp 2,sockets=1,cores=2,threads=1 \
 	-kernel "$KERNEL" ${INITRD:+-initrd "$INITRD"} \
-	-append "root=/dev/vda rw rootwait rootflags=noatime console=ttyAMA0 loglevel=4 net.ifnames=0 mitigations=off stryker.rootless=1" \
+	-append "root=/dev/vda rw rootwait rootflags=noatime console=ttyAMA0 loglevel=4 net.ifnames=0 mitigations=off xmrlab.rootless=1" \
 	-drive "file=$T/rootfs.img,if=none,id=drive0,format=raw,cache=writeback,aio=threads,discard=unmap,detect-zeroes=unmap" \
 	-device virtio-blk-pci,drive=drive0 \
 	-netdev "user,id=net0,ipv6=off,hostfwd=tcp:127.0.0.1:$PORT-:22" \
@@ -38,7 +38,7 @@ qemu-system-aarch64 \
 	-device qemu-xhci,id=usbhc0,p2=8,p3=8 \
 	-device virtio-rng-pci \
 	-fsdev "local,id=fsdev0,security_model=none,path=$T/share" \
-	-device virtio-9p-pci,fsdev=fsdev0,mount_tag=strykershare \
+	-device virtio-9p-pci,fsdev=fsdev0,mount_tag=xmrlabshare \
 	-display none -serial "file:$T/console.log" -monitor none \
 	-pidfile "$T/qemu.pid" -daemonize
 
@@ -80,13 +80,13 @@ check() {
 
 say "checking the guest"
 check "root filesystem"    'findmnt -no SOURCE / | grep -q vda && echo /dev/vda'
-check "9p share mounted"   'mountpoint -q /sdcard/Stryker && echo /sdcard/Stryker'
-check "guest init ran"     'grep -q ready=1 /sdcard/Stryker/.ssh/ready && cat /sdcard/Stryker/.ssh/ready | tr "\n" " "'
-check "host key published" 'test -s /sdcard/Stryker/.ssh/host_fingerprint && cat /sdcard/Stryker/.ssh/host_fingerprint'
+check "9p share mounted"   'mountpoint -q /sdcard/XMRLab && echo /sdcard/XMRLab'
+check "guest init ran"     'grep -q ready=1 /sdcard/XMRLab/.ssh/ready && cat /sdcard/XMRLab/.ssh/ready | tr "\n" " "'
+check "host key published" 'test -s /sdcard/XMRLab/.ssh/host_fingerprint && cat /sdcard/XMRLab/.ssh/host_fingerprint'
 check "root has no password" 'grep -q "^root:[!*]" /etc/shadow && echo locked'
 check "kernel modules match"  'test -d /lib/modules/$(uname -r) && echo /lib/modules/$(uname -r)'
 check "loop devices"       'losetup -f'
-check "sftp subsystem"     'grep -qi "internal-sftp" /etc/ssh/sshd_config.d/10-stryker.conf && echo internal-sftp'
+check "sftp subsystem"     'grep -qi "internal-sftp" /etc/ssh/sshd_config.d/10-xmrlab.conf && echo internal-sftp'
 
 say "checking password authentication is refused"
 if ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \

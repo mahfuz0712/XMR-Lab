@@ -279,11 +279,11 @@ final class UmlUsb implements GuestUsb {
         drain(proc, startup.reader, UsbHostAccess.describe(device));
 
         String out = runAttachInGuest(port, startup.speed, startup.devid);
-        String busid = find(out, "STRYKER_USB_ATTACHED=(\\S+)");
-        String node = find(out, "STRYKER_USB_NODE=(\\S+)");
-        String netdev = find(out, "STRYKER_USB_NETDEV=(\\S+)");
-        String driver = find(out, "STRYKER_USB_DRIVER=(\\S+)");
-        String vhciPort = find(out, "STRYKER_USB_PORT=(\\d+)");
+        String busid = find(out, "XMRLAB_USB_ATTACHED=(\\S+)");
+        String node = find(out, "XMRLAB_USB_NODE=(\\S+)");
+        String netdev = find(out, "XMRLAB_USB_NETDEV=(\\S+)");
+        String driver = find(out, "XMRLAB_USB_DRIVER=(\\S+)");
+        String vhciPort = find(out, "XMRLAB_USB_PORT=(\\d+)");
 
         if (busid.isEmpty()) {
             if (!vhciPort.isEmpty()) detachInGuest(vhciPort);

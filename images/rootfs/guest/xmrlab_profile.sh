@@ -15,7 +15,7 @@ else
 fi
 __s_tip="${__s_brand}"'\$'"${__s_rst}"
 
-PS1="${__s_rail}┌──${__s_rst}${__s_dim}(${__s_rst}${__s_brand}⚡Stryker${__s_rst}${__s_dim})${__s_rst}${__s_dim}─[${__s_rst}${__s_path}\\w${__s_rst}${__s_dim}]${__s_rst}\n${__s_rail}└─${__s_rst}${__s_tip} "
+PS1="${__s_rail}┌──${__s_rst}${__s_dim}(${__s_rst}${__s_brand}⚡XMR Lab${__s_rst}${__s_dim})${__s_rst}${__s_dim}─[${__s_rst}${__s_path}\\w${__s_rst}${__s_dim}]${__s_rst}\n${__s_rail}└─${__s_rst}${__s_tip} "
 PS2="${__s_rail}└─${__s_rst}${__s_dim}>${__s_rst} "
 export PS1 PS2
 [ -z "$TERM" ] && export TERM=xterm-256color
@@ -30,9 +30,9 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias ports='netstat -tulpn 2>/dev/null || ss -tulpn'
 
-if [ -z "$__STRYKER_GREETED" ]; then
-    __STRYKER_GREETED=1
-    printf '\033[1;38;5;39m⚡ STRYKER\033[0m \033[2m- pentest shell\033[0m\n'
+if [ -z "$__XMRLAB_GREETED" ]; then
+    __XMRLAB_GREETED=1
+    printf '\033[1;38;5;39m⚡ XMR LAB\033[0m \033[2m- pentest shell\033[0m\n'
 fi
 
 unset __s_rail __s_path __s_dim __s_rst __s_brand __s_tip

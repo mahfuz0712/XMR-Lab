@@ -12,7 +12,7 @@ import com.stryker.terminal.bridge.StrykerLog;
 final class GuestConsole {
 
     private static final String TAG = "GuestConsole";
-    private static final String MARK = "__STRYKER_CON__";
+    private static final String MARK = "__XMRLAB_CON__";
     private static final int READ_TIMEOUT_MS = 20000;
 
     private GuestConsole() {
