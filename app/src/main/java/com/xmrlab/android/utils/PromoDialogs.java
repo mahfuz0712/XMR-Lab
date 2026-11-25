@@ -15,7 +15,7 @@ import java.util.Random;
 
 public final class PromoDialogs {
 
-    private static final String PREFS = "stryker_promo";
+    private static final String PREFS = "xmrlab_promo";
     private static final String KEY_LAUNCHES = "launches";
     private static final String KEY_GITHUB = "github_done";
     private static final String KEY_BLOG = "blog_done";

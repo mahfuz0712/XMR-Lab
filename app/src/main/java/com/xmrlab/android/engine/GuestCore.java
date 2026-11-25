@@ -15,7 +15,7 @@ public final class GuestCore {
     public static final String VERSION = "7";
 
     private static final String TAG = "GuestCore";
-    private static final String STAGED_NAME = "stryker-core.tar";
+    private static final String STAGED_NAME = "xmrlab-core.tar";
 
     private GuestCore() {
     }

@@ -135,7 +135,7 @@ public final class GadgetProfileEditorSheet {
             pid.setText("0xc31c");
             mfg.setText("Logitech");
             prod.setText("USB Keyboard");
-            serial.setText("STRYKER000");
+            serial.setText("XMRLAB000");
             chipKbd.setChecked(true);
         }
 
@@ -181,10 +181,10 @@ public final class GadgetProfileEditorSheet {
                     os,
                     fns,
                     vidVal, pidVal,
-                    textOf(mfg).isEmpty() ? "Stryker" : textOf(mfg),
+                    textOf(mfg).isEmpty() ? "XMRLab" : textOf(mfg),
                     textOf(prod).isEmpty() ? "Composite" : textOf(prod),
-                    textOf(serial).isEmpty() ? "STRYKER" : textOf(serial),
-                    "Stryker Gadget",
+                    textOf(serial).isEmpty() ? "XMRLAB" : textOf(serial),
+                    "XMR Lab Gadget",
                     chipMass.isChecked() ? massImagePath : null,
                     ro.isChecked(),
                     cdrom.isChecked(),

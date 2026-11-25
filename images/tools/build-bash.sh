@@ -45,11 +45,11 @@ rm -rf "bash-$BASH_V"
 tar xf "bash-$BASH_V.tar.gz"
 
 cat > tlsalign.c <<'EOF'
-__attribute__((aligned(64))) __thread char __stryker_tls_align[64];
+__attribute__((aligned(64))) __thread char __xmrlab_tls_align[64];
 
-void *__stryker_tls_align_ref(void)
+void *__xmrlab_tls_align_ref(void)
 {
-	return (void *)__stryker_tls_align;
+	return (void *)__xmrlab_tls_align;
 }
 EOF
 "$TOOL/aarch64-linux-android$API-clang" -Os -fno-emulated-tls -c -o tlsalign.o tlsalign.c
@@ -94,7 +94,7 @@ export CC="$TOOL/aarch64-linux-android$API-clang"
 export AR="$TOOL/llvm-ar" RANLIB="$TOOL/llvm-ranlib" STRIP="$TOOL/llvm-strip"
 export CC_FOR_BUILD=gcc CFLAGS_FOR_BUILD= LDFLAGS_FOR_BUILD=
 export CFLAGS="-Os -fno-strict-aliasing -ffile-prefix-map=$O=."
-export LDFLAGS="-static $O/tlsalign.o -Wl,-u,__stryker_tls_align_ref \
+export LDFLAGS="-static $O/tlsalign.o -Wl,-u,__xmrlab_tls_align_ref \
 -Wl,-z,max-page-size=$PAGE -Wl,-z,common-page-size=$PAGE"
 
 ./configure \

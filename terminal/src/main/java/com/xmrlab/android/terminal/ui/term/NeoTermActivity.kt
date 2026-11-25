@@ -168,7 +168,7 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
         true
       }
       R.id.menu_item_new_session -> {
-        addNewStrykerSession("XMR Lab")
+        addNewXmrlabSession("XMR Lab")
         true
       }
       R.id.menu_item_new_root_session -> {
@@ -461,11 +461,11 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
   }
 
   private fun addNewSession() {
-    addNewStrykerSession("XMR Lab")
+    addNewXmrlabSession("XMR Lab")
   }
 
   private fun addNewSession(sessionName: String?, systemShell: Boolean, animation: Animation) {
-    addNewStrykerSession("XMR Lab")
+    addNewXmrlabSession("XMR Lab")
   }
 
   private fun addNewSessionWithProfile(profile: ShellProfile) {
@@ -521,11 +521,11 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
     switchToSession(tab)
   }
 
-  private fun addNewStrykerSession(sessionName: String?) {
+  private fun addNewXmrlabSession(sessionName: String?) {
     val sessionCallback = TermSessionCallback()
     val viewClient = TermViewClient(this)
 
-    val chosen = com.xmrlab.android.terminal.backend.TerminalSession.shellChooser()?.strykerShellPath()
+    val chosen = com.xmrlab.android.terminal.backend.TerminalSession.shellChooser()?.xmrlabShellPath()
     val parameter = ShellParameter().callback(sessionCallback)
     if (chosen != null) {
       parameter.executablePath(chosen)
@@ -534,7 +534,7 @@ class NeoTermActivity : AppCompatActivity(), ServiceConnection, SharedPreference
       parameter.executablePath("ssh:guest")
     } else {
       parameter
-        .executablePath("${NeoTermPath.BIN_PATH}/stryker-ch")
+        .executablePath("${NeoTermPath.BIN_PATH}/xmrlab-ch")
         .initialCommand("clear")
     }
     val session = termService!!.createTermSession(parameter)

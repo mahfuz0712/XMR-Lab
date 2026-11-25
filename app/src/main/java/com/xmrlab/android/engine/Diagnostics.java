@@ -73,7 +73,7 @@ public final class Diagnostics {
     public static File collect(Context app) {
         try {
             File out = com.xmrlab.android.utils.Exports.fresh(
-                    app.getCacheDir(), "stryker-diagnostics", ".zip");
+                    app.getCacheDir(), "xmrlab-diagnostics", ".zip");
             ZipOutputStream zip = new ZipOutputStream(new FileOutputStream(out));
             try {
                 write(zip, "device.txt", deviceReport(app).getBytes(StandardCharsets.UTF_8));
@@ -84,7 +84,7 @@ public final class Diagnostics {
                 File log = new File(app.getCacheDir(), out.getName() + ".log");
                 LogStore store = LogStore.from(app);
                 store.export(log, new LogFilter());
-                copy(zip, "stryker-log.txt", log);
+                copy(zip, "xmrlab-log.txt", log);
                 log.delete();
             } finally {
                 zip.close();

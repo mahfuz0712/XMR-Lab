@@ -46,7 +46,7 @@ public class InstallService extends Service {
     public static final String TOOL_HYDRA = "hydra";
     public static final String TOOL_CAMERADAR = "cameradar";
 
-    public static final String NUCLEI_TEMPLATES_MARKER = "/root/.config/nuclei/.stryker-templates-ok";
+    public static final String NUCLEI_TEMPLATES_MARKER = "/root/.config/nuclei/.xmrlab-templates-ok";
 
     public static final String NUCLEI_FETCH_TEMPLATES =
             "export HOME=/root; mkdir -p /root/.config/nuclei; "

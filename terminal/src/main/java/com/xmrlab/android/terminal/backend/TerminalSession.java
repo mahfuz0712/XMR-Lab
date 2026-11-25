@@ -100,7 +100,7 @@ public class TerminalSession extends TerminalOutput {
   }
 
   public interface ShellChooser {
-    String strykerShellPath();
+    String xmrlabShellPath();
   }
 
   private static volatile ShellChooser sShellChooser;

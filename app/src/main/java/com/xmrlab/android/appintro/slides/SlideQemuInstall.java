@@ -414,7 +414,7 @@ public class SlideQemuInstall extends Fragment implements IntroPage {
         return new GuestEngine.BootListener() {
             @Override public void onBootLine(String line) {
                 lastBootLine.set(System.currentTimeMillis());
-                if (line != null && (line.contains("stryker") || line.contains("login")
+                if (line != null && (line.contains("xmrlab") || line.contains("login")
                         || line.contains("Kernel panic") || line.contains("error"))) {
                     log(LogLevel.INFO, line);
                 }

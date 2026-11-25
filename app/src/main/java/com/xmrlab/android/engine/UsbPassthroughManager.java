@@ -176,7 +176,7 @@ public final class UsbPassthroughManager implements GuestUsb {
             connection.close();
             return false;
         }
-        String qemuId = "stryker_usb_" + device.getDeviceId();
+        String qemuId = "xmrlab_usb_" + device.getDeviceId();
         try {
             JSONObject args = new JSONObject();
             args.put("driver", "usb-host");

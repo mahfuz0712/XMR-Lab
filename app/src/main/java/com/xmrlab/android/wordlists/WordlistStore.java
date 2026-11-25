@@ -30,7 +30,7 @@ public class WordlistStore {
         return core.guestShare() + "/wordlists";
     }
 
-    private static final String INDEX_FILE = ".stryker-index.json";
+    private static final String INDEX_FILE = ".xmrlab-index.json";
     private static final int SAMPLE_LINES = 40;
 
     private final Core core;

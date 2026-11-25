@@ -5,7 +5,7 @@ HERE=$(cd "$(dirname "$0")" && pwd)
 . "$HERE/lib/common.sh"
 
 BASE=${1:?usage: publish.sh <base-url>
-  e.g. https://github.com/zalexdev/strykerapp/releases/download}
+  e.g. https://github.com/mahfuz0712/XMR-Lab/releases/download}
 BASE=${BASE%/}
 PUB=$OUT_DIR/publish
 CHROOT_TAG=${CHROOT_TAG:-chroot-main}

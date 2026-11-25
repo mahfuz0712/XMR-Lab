@@ -82,7 +82,7 @@ class NeoTermService : Service() {
     File(usr).mkdirs()
     File(bin).deleteRecursively()
     extractAssetsDir("bin", "$bin/")
-    for (name in listOf("bash", "stryker-ch", "android-su")) {
+    for (name in listOf("bash", "xmrlab-ch", "android-su")) {
       try { File(bin, name).setExecutable(true, false) } catch (_: Exception) {}
     }
   }

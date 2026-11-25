@@ -55,7 +55,7 @@ public class LoggerFragment extends Fragment {
     private static final long COUNT_RESYNC_MS = 1500L;
 
     @SuppressLint("SdCardPath")
-    private static final String EXPORT_PREFIX = "stryker";
+    private static final String EXPORT_PREFIX = "xmrlab";
     private static final String EXPORT_SUFFIX = ".log";
 
     private Activity activity;

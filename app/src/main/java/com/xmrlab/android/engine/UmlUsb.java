@@ -234,7 +234,7 @@ final class UmlUsb implements GuestUsb {
             GuestExec.logToStore("USB: no free loopback port for the USB/IP server");
             return false;
         }
-        String sockName = "stryker-usb-" + port;
+        String sockName = "xmrlab-usb-" + port;
 
         AutoCloseable fdSocket;
         try {
