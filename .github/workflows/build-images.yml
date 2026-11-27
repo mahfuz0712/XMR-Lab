@@ -43,7 +43,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             debootstrap qemu-user-binfmt binfmt-support \
-            libssl-dev libelf-dev bc flex bison pigz
+            libssl-dev libelf-dev bc flex bison pigz \
+            gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
 
       - name: Set up Android NDK
         if: ${{ inputs.skip_uml == false }}
