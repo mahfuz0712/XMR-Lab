@@ -33,9 +33,15 @@ jobs:
         run: |
           # debootstrap + kernel build + both tarball/image outputs need real
           # room; the hosted runner's default free space is too tight once
-          # preinstalled toolchains we don't need are counted.
-          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache \
+          # preinstalled toolchains we don't need are counted. Leave
+          # /usr/local/lib/android alone when the NDK step below needs it --
+          # deleting it here leaves the parent dir without permissions for
+          # the (non-root) setup-android action to recreate it.
+          sudo rm -rf /usr/share/dotnet /opt/ghc /opt/hostedtoolcache \
                       /usr/local/.ghcup "$AGENT_TOOLSDIRECTORY" 2>/dev/null || true
+          if [ "${{ inputs.skip_uml }}" = "true" ]; then
+            sudo rm -rf /usr/local/lib/android 2>/dev/null || true
+          fi
           df -h /
 
       - name: Install build dependencies
