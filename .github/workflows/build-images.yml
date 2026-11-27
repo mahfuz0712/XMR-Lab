@@ -45,12 +45,23 @@ jobs:
             debootstrap qemu-user-binfmt binfmt-support \
             libssl-dev libelf-dev bc flex bison pigz
 
+      - name: Set up Android NDK
+        if: ${{ inputs.skip_uml == false }}
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'ndk;25.1.8937393'
+
       - name: Build images
         run: |
           if [ "${{ inputs.skip_uml }}" = "true" ]; then
             export SKIP_UML=1
+          else
+            export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/25.1.8937393"
           fi
-          sudo -E images/build-all.sh
+          # invoked via `bash`, not as ./images/build-all.sh, because the
+          # scripts aren't marked executable in git (100644) -- sudo's
+          # "command not found" on a non-executable file is misleading.
+          sudo -E bash images/build-all.sh
 
       - name: Show build output
         if: always()
