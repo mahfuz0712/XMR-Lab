@@ -1,94 +1,64 @@
 # XMR Lab
 
-**XMR Lab** is a tablet-first, cyber security and privacy research application for Android.
+**Linux. Without Limits.**
 
-It keeps the upstream application and engine architecture (Root/CHROOT, User Mode Linux,
-and rootless QEMU) while applying XMR Lab branding, a dark cyan/orange visual system,
-and a permanent tablet navigation rail.
+XMR Lab turns an Android tablet or phone into a full Linux-based security research
+workstation — no PC required. It boots a real Debian environment on-device (through a
+rootless virtual machine, User-Mode Linux, or a rooted chroot, depending on your device)
+and gives you a tablet-first toolkit for Wi-Fi auditing, network scanning, USB
+HID/gadget tools, and a full Linux terminal, all in one app.
 
-## Project status
+> **For authorized security testing and research only.** Only use XMR Lab against
+> networks, devices, and systems you own or have explicit permission to test. You are
+> responsible for complying with the laws that apply to you.
 
-The first pass covers application identity,
-adaptive (portrait and landscape) layouts, tablet navigation shell, HUD palette, asset endpoints, OTA manifest,
-and CI/local build configuration. Full visual QA and on-device engine validation are still
-required before a release is considered stable.
+## What you can do with it
 
-## Runtime assets
+- **A real Linux environment on your device** — a Debian (arm64) system you can `apt install`
+  into, with a full terminal, persistent storage, and SSH access, running as a rootless VM,
+  User-Mode Linux, or a chroot on rooted devices.
+- **Wi-Fi security testing** — handshake and PMKID capture, deauthentication, and
+  attack monitoring, built around your device's Wi-Fi adapter.
+- **Network reconnaissance** — Nmap-based scanning and host/service discovery.
+- **USB arsenal** — USB gadget/HID profiles (keyboard, storage, network, and more)
+  for physical-access testing, with an editor for building your own device identities.
+- **Remote desktop (VNC)** — a graphical desktop into the Linux environment when you
+  need more than a terminal.
+- **Exploit tooling** — a local exploit-db mirror, Nuclei scanning, and an MSF RPC
+  console for driving Metasploit from the Linux environment.
+- **Everything logged** — a built-in log viewer/exporter so you can review and keep
+  records of what a session did.
 
-Large Linux payloads are downloaded on first use from the XMR Lab GitHub Release tagged
-`xmr-assets-651` and verified against SHA-256 and expected size values in
-[`xmr_manifest.json`](xmr_manifest.json).
+## Requirements
 
-Expected release assets:
+- Android 7.0 (API 24) or newer, **arm64-v8a devices only**
+- A few GB of free storage — the Linux environment (kernel + root filesystem) is
+  downloaded on first run
+- Root is **not required** — the rootless VM and User-Mode Linux engines work on stock,
+  unrooted devices. A rooted device additionally unlocks the chroot engine.
+- A device with more RAM gives the Linux environment more headroom; older/low-RAM
+  devices will still work but may want to stick to the lighter engines
 
-- `chroot64-debian.tar.gz` — Root/CHROOT
-- `Image` — QEMU guest kernel
-- `initrd.img` — QEMU initramfs
-- `rootfs.imgz` — shared Debian root filesystem for UML and QEMU
+## Install
 
-QEMU, libslirp, UML kernel and support libraries are bundled in the APK under
-`app/src/main/jniLibs/arm64-v8a/`. The remote manifest therefore does not need to host
-those native libraries.
+1. Download the latest APK from **[the XMR Lab site](https://xmr-lab-landing-page.onrender.com/)**,
+   or from this repository's [Releases](../../releases) page.
+2. Install it like any APK from outside the Play Store — you'll need to allow
+   "install unknown apps" for your browser or file manager the first time.
+3. Open the app and follow the setup screens. On first run it downloads the Linux
+   kernel and root filesystem (a few hundred MB), verified against the checksums in
+   [`xmr_manifest.json`](xmr_manifest.json) — this only happens once.
+4. Pick an engine (rootless VM is the default and works on any supported device) and
+   you're ready to go.
 
-## Build locally
+## License
 
-### Requirements
+XMR Lab is free software, licensed under the **GNU General Public License v3.0** — see
+[`LICENSE`](LICENSE). It builds on several open-source projects; see the in-app
+*Settings → About → Open-source licenses* screen for the full list of bundled
+components and their licenses.
 
-- JDK 17
-- Android SDK Platform 37
-- Android Build Tools 37.0.0
-- Android NDK 25.1.8937393
-- CMake 3.22.1
-- Gradle wrapper (included)
+## Build it yourself
 
-Set `ANDROID_HOME` / `ANDROID_SDK_ROOT` and install the packages above with `sdkmanager`.
-
-### Windows (PowerShell)
-
-```powershell
-.\gradlew.bat assembleDebug
-```
-
-### Linux / Ubuntu / WSL
-
-```bash
-chmod +x ./gradlew
-./gradlew --no-daemon assembleDebug
-```
-
-APK output:
-
-```text
-app/build/outputs/apk/debug/
-```
-
-To build a release APK locally, configure the `XMRLAB_RELEASE_*` properties/environment
-variables in `app/build.gradle` and run:
-
-```bash
-./gradlew --no-daemon assembleRelease
-```
-
-Do not commit signing keystores or passwords.
-
-## GitHub Actions
-
-`.github/workflows/android.yml` builds a debug APK on pushes and pull requests to `main`.
-Use **Actions → XMR Lab Android CI → Run workflow** to choose `debug` or `release`.
-The workflow uploads the APK as a downloadable Actions artifact. Release signing is optional
-and uses repository secrets:
-
-- `XMRLAB_KEYSTORE_BASE64`
-- `XMRLAB_KEYSTORE_PASSWORD`
-- `XMRLAB_KEY_ALIAS`
-- `XMRLAB_KEY_PASSWORD`
-
-Without these secrets, the release build is unsigned.
-
-
-## Device scope
-
-The upstream build configuration is arm64-v8a only and requires Android API 24 or newer.
-Engine availability remains device-dependent: Root requires a rooted device, UML requires
-the kernel/runtime support already implemented upstream, and QEMU runs rootlessly with
-its own CPU/RAM overhead.
+Most people should just install the APK above. If you want to build from source
+instead, see [`BUILDING.md`](BUILDING.md).
