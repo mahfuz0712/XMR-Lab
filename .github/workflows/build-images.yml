@@ -107,7 +107,7 @@ jobs:
         run: |
           cd images/out
           files=()
-          for f in chroot64-debian.tar.gz vm/Image vm/initrd.img vm/rootfs.imgz vm/rootfs.img; do
+          for f in chroot64-debian.tar.gz vm/Image vm/initrd.img vm/rootfs.imgz; do
             [ -f "$f" ] && files+=("$f")
           done
           if [ "${#files[@]}" -eq 0 ]; then
