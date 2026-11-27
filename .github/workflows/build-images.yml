@@ -51,6 +51,21 @@ jobs:
             debootstrap qemu-user-binfmt binfmt-support \
             libssl-dev libelf-dev bc flex bison pigz \
             gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
+          # Some Ubuntu releases ship real qemu-*-static binaries under the
+          # qemu-user-static package; others only have qemu-user-binfmt/
+          # qemu-user, whose binary is just "qemu-aarch64" (no -static
+          # suffix). Try the static package too, but don't fail if it's a
+          # virtual/unavailable package there -- rootfs/build.sh only checks
+          # for a binary literally named qemu-aarch64-static on PATH, so
+          # make sure one exists either way.
+          sudo apt-get install -y --no-install-recommends qemu-user-static || true
+          if ! command -v qemu-aarch64-static >/dev/null 2>&1; then
+            real=$(command -v qemu-aarch64 2>/dev/null || true)
+            if [ -n "$real" ]; then
+              sudo ln -sf "$real" /usr/local/bin/qemu-aarch64-static
+            fi
+          fi
+          command -v qemu-aarch64-static
 
       - name: Set up Android NDK
         if: ${{ inputs.skip_uml == false }}
